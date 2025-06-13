@@ -1,0 +1,36 @@
+title = "Page Not Found (404)"
+url = "/404"
+layout = "default"
+==
+
+<div class="page-wrapper error-page" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+  <div class="content flex flex-col items-center text-center">
+    <h1 class="title" style="font-size: 192px; font-weight: bold;">404</h1>
+    <h5 style="font-size: 21px; margin-bottom: 1rem;">Oops! Something went wrong.</h5>
+    <p style="font-size: 16px; margin-bottom: 2rem;">We can't find the page you are looking for.</p>
+    <a href="https://modirumgespi.com/" class="btn-primary-dark-outline arrow-btn w-fit lg:justify-self-end !py-[.7rem] !px-[2rem] !gap-[1rem]" style="text-decoration: none;">
+      <span class="btn-text">Go back to home</span>
+      <span class="btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;">
+          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 640px) {
+    .error-page .title {
+      font-size: 96px !important;
+    }
+
+    .error-page h5 {
+      font-size: 18px !important;
+    }
+
+    .error-page p {
+      font-size: 14px !important;
+    }
+  }
+</style>

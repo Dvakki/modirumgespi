@@ -1,0 +1,110 @@
+url = "/"
+title = "Home Page"
+layout = "default"
+
+==
+<section class="hero-banner overflow-hidden">
+    <div class="banner--wrapper h-full relative">
+        <div class="container h-full grid grid-cols-1 lg:grid-cols-[1fr,.8fr] items-center section-padding--x">
+            <div class="content lg:mt-[-5rem] reveal-fade-in reveal-fade-in--right relative z-2">
+                <h1 class="hero-title mb-5 lg:mb-10 text-white leading-tight">
+                    A new style<br>
+                    of defence.
+                </h1>
+                <h3 class="mb-5 lg:mb-10 text-white">
+                    Excellence across <span class="text-primary--lighter">land, sea and air.</span>
+                </h3>
+                <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
+                    A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
+                </p>
+                <a href="{{ 'company'|page }}" class="gespi-cta btn-bg-gradient inline-block p-size flex w-fit mask-[url({{ 'globals/gespi-btn--mask.svg'|media }})]">
+                    <span></span>
+                    <span class="btn-text">
+                        ABOUT GESPI
+                    </span>
+                    <span class="btn-icon">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </span>
+                </a>
+            </div>
+            <div class="absolute top-0 left-0 w-full h-full z-0 reveal-fade-in reveal-fade-in--UP">
+                <div class="max-w-[27rem] absolute left-[-12rem] floating-el">
+                    {% partial 'icons/gespi-radial--blur' %}
+                </div>
+                <div class="max-w-[30rem] absolute bottom-[-8rem] floating-el floating-el--reverse">
+                    {% partial 'icons/gespi-radial--blur' %}
+                </div>
+                <div class="max-w-[20rem] absolute bottom-[3rem] right-[0rem] floating-el">
+                    {% partial 'icons/gespi-radial--blur' %}
+                </div>
+            </div>
+            <div class="flex lg:mt-[-5rem] reveal-fade-in reveal-fade-in--left items-center justify-center">
+                {% partial 'icons/gespi-icon' %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="hero-slider py-5 md:py-8 lg:p-10 overflow-x-hidden">
+        <div class="container lg:flex lg:items-center gap-[5vw]">
+            <div class="marquee lg:w-4/6 mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="70">
+                <div class="marquee__inner h-full">
+                    <div class="marquee__content flex h-full me-[3rem] gap-[3rem] !opacity-[1]">
+                            <div class="">
+                                <img src="{{ 'home/partners/a1.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/aalto.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/abu-dhabi-police.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/aselsan.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/banca-intesa.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/fortum.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/ipko.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/kuwait.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/nedaa.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/nuance.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/sar.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/sato.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/sparkasse.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/t-mobile.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/virgin-mobile.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                            <div class="">
+                                <img src="{{ 'home/partners/wipak.png'|media }}" alt="Modirum" class="!max-w-[250px]">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description lg:w-2/6 text-white reveal-fade-in reveal-fade-in--up">
+                <p class="p-size">
+                    AI-powered, fully integrated, turnkey solutions that help clients meet the evolving demands of modern defence and security.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+<footer class="site-footer overflow-hidden bg-gradient1 section-padding--t hasShape" id="main-footer">
+    <img src="{{ 'home/hero-shape.svg'|media }}" alt="Modirum" class="shape lazyload opacity-50 right-[-30vh] bottom-0 !max-w-[unset] w-[80vh] md:right-0 md:max-w-[80vh] lg:w-[110vh] lg:bottom-[-20vh] xl:right-[0] lg:!max-w-[unset] xl:bottom-[-10vh] xl:w-[110vh]">
+    <div class="container footer--wrapper relative z-20">
+        <div class="footer-top flex items-center justify-between flex-wrap mb-20 gap-[3rem]">
+            <h2 class="underline text-white">Connect with <br> us today.</h2>
+            <a href="{{ 'contact'|page }}" class="footer-cta md:ml-[20vw] shrink-0">
+                <button class="getintouch  p-[1rem] leading-[1.3] relative">
+                    
+                </button>
+                <span class="">
+                    Get in touch
+                </span>
+            </a>
+        </div>
+        <div class="footer-bottom lg:pb-[3vw]">
+            <div class="flex items-end justify-between border-b-2 border-white pb-10">
+                <a href="{{ 'home'|page }}" class="footer-logo">
+                    <img width="200"  src="{{ 'globals/logo-light.svg'|media }}" alt="Modirum" class="img-fluid lazyload" aria-label="Go to home">
+                </a>
+                <a href="https://www.linkedin.com/company/modirum/posts/?feedView=all" target="_blank" class="linkedin--link social--link">
+                    <svg class="hover:fill-[var(--primary-light)] transition-[fill,.3s,ease]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94048 4.99993C6.94011 5.81424 6.44608 6.54702 5.69134 6.85273C4.9366 7.15845 4.07187 6.97605 3.5049 6.39155C2.93793 5.80704 2.78195 4.93715 3.1105 4.19207C3.43906 3.44699 4.18654 2.9755 5.00048 2.99993C6.08155 3.03238 6.94097 3.91837 6.94048 4.99993ZM7.00048 8.47993H3.00048V20.9999H7.00048V8.47993ZM13.3205 8.47993H9.34048V20.9999H13.2805V14.4299C13.2805 10.7699 18.0505 10.4299 18.0505 14.4299V20.9999H22.0005V13.0699C22.0005 6.89993 14.9405 7.12993 13.2805 10.1599L13.3205 8.47993Z"></path></svg>
+                </a>
+            </div>
+            <div class="footer-menu flex gap-10 flex-col lg:flex-row justify-between py-10 lg:pt-10 lg:pb-0 text-white">
+                <ul class="flex flex-wrap gap-x-6 md:gap-x-10 gap-y-2 md:gap-y-0">
+                    {# <li><a class="btn-underlined btn-underlined--light btn-underlined--v2" href="#">Platforms</a></li> #}
+                    <li><a class="btn-underlined btn-underlined--light btn-underlined--v2" href="{{ 'about'|page }}">About us</a></li>
+                    <li><a class="btn-underlined btn-underlined--light btn-underlined--v2" href="{{ 'careers'|page }}">Careers</a></li>
+                    <li><a class="btn-underlined btn-underlined--light btn-underlined--v2" href="{{ 'news/index'|page }}">Media & News</a></li>
+                    <li><a class="btn-underlined btn-underlined--light btn-underlined--v2" href="{{ 'contact'|page }}">Contact</a></li>
+                </ul>
+                <p class="text-start lg:text-center opacity-50">
+                    © Modirum 2025. Web by <a href="https://kara5.com/" target="_blank" class="btn-underlined btn-underlined--light btn-underlined--v2">Kara5</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

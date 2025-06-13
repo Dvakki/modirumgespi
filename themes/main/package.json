@@ -1,0 +1,26 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Demo Theme ==========",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@barba/core": "^2.10.3",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.16",
+    "swiper": "^11.1.14",
+    "vite": "^5.4.10"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.48",
+    "sass": "^1.80.6",
+    "tailwindcss": "^3.4.14"
+  }
+}

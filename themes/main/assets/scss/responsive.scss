@@ -1,0 +1,73 @@
+@media (min-width: 1024px) {
+    .main-navigation {
+        display: flex;
+        justify-content: center;
+
+        .menu-list {
+            display: flex;
+            justify-content: flex-end;
+            gap: max(1rem, 2vw);
+
+            .list--link {
+                color: var(--menu-link-color);
+                font-size: 18px;
+            }
+        }
+    }
+    .nav-right {
+        color: white;
+    }
+}
+
+@media (max-width: 1023px) {
+    .mobile-navigation {
+        position: fixed;
+        z-index: 500;
+        top: 0; right: 0; bottom: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        transition: .3s all ease-in-out;
+    }
+
+    .menuBtn {
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        z-index: 501;
+        cursor: pointer;
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            height: 2px;
+            background-color: white;
+            transition: .3s all ease-in-out;
+        }
+
+        .line1 {
+            transform: translate(-50%, -10px);
+        }
+        .line2 {
+            transform: translate(-50%, -50%);
+        }
+        .line3 {
+            transform: translate(-50%, 10px);
+        }
+
+        &.active {
+            .line1 {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            .line2 {
+                transform: translate(50%, -50%);
+                opacity: 0;
+            }
+            .line3 {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+}

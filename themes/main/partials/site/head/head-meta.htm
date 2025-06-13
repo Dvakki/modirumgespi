@@ -1,0 +1,25 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="">
+{% if this.page.id == "home" %}
+    <title>Modirum Gespi | Modirum Gespi Title</title>
+    {% else %}
+    <title>{{ this.page.meta_title ? this.page.meta_title : this.page.title }} | Modirum Gespi</title>
+{% endif %}
+<link rel="shortcut icon" href="{{ 'globals/favicon.png'|media }}" type="image/x-icon" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Modirum Gespi | {{ this.page.meta_title ? this.page.meta_title : this.page.title }}" />
+<meta property="og:description" content="" />
+<meta property="og:site_name" content="Modirum Gespi" />
+<meta property="article:publisher" content="" />
+<meta property="article:modified_time" content="2024-12-06T13:19:26+00:00" />
+<meta name='image' property="og:image" content="{{ 'assets/images/featured-image.jpg'|theme }}" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Modirum Gespi" />
+<meta property="og:description" content="" />
