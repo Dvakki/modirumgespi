@@ -90,6 +90,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
     sessionStorage.setItem('loader', 'true');
 
+    const offsetTop = () => {
+        let header = document.querySelector(".site-header");
+        let offsetTop = document.querySelector('.offset-top')
+
+        if (!header) return;
+
+        console.log(header.offsetHeight);
+
+        offsetTop.style.marginTop =  `${header.offsetHeight}px`;
+    }
+
+    offsetTop();
+
 
     let desktopMQ = window.matchMedia("(min-width:1024px)");
     // init nav menu
@@ -162,7 +175,12 @@ window.addEventListener('DOMContentLoaded', () => {
             dropdownParents.forEach((parent) => {
                 let dropdownMenu = parent.querySelector('.dropdown-menu');
     
-                dropdownMenu.style.top = headerHeight + 'px';
+                const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize); // 1rem in px
+                const headerHeightRem = headerHeight / remInPx;
+
+                dropdownMenu.style.top = `${headerHeightRem}rem`;
+
+                console.log(headerHeightRem);
     
                 gsap.set(dropdownMenu, {autoAlpha: 0, yPercent: 5});
     
@@ -206,7 +224,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-        logo.setAttribute("src", logoDark);
+        // logo.setAttribute("src", logoDark);
+        logo.setAttribute("src", logoLight);
 
 
         window.onscroll = function () {
@@ -241,7 +260,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     header.addEventListener('mouseover', () => {
                         header.classList.add('visible');
                         header.classList.remove('transparent');
-                        logo.setAttribute('src', logoDark);
+                        // logo.setAttribute('src', logoDark);
                     });
             
                     header.addEventListener('mouseleave', () => {
@@ -255,17 +274,17 @@ window.addEventListener('DOMContentLoaded', () => {
                     console.log("not Intersecting");
                     header.classList.remove("transparent");
                     header.classList.add("dark");
-                    logo.setAttribute("src", logoDark);
+                    // logo.setAttribute("src", logoDark);
 
                     header.addEventListener('mouseover', () => {
                         header.classList.add("visible");
-                        logo.setAttribute('src', logoDark);
+                        // logo.setAttribute('src', logoDark);
                     });
             
                     header.addEventListener('mouseleave', () => {
                         header.classList.remove("visible");
                         header.classList.add("dark");
-                        logo.setAttribute('src', logoDark);
+                        // logo.setAttribute('src', logoDark);
                     });
                 }
             },
@@ -276,7 +295,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         } else {
             header.classList.add("dark");
-            logo.setAttribute('src', logoDark);
+            // logo.setAttribute('src', logoDark);
         }
 
     }

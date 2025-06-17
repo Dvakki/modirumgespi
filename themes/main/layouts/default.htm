@@ -8,12 +8,12 @@ description = "Default layout"
         {% partial 'site/head/head-styles' %}
         {% partial 'site/head/analytics-code' %}
     </head>
-    <body class="page-{{ this.page.id }} reveal-anim">
+    <body class="page-{{ this.page.id }} reveal-anim bg-gradient-document">
 
         {% partial 'site/preloader' %}
 
         <!-- Header -->
-        <header id="layout-header">
+        <header class="site-header {{ this.page.id != 'home' ? 'dark' : '' }}" id="main-header">
             {% partial 'site/header' %}
         </header>
 

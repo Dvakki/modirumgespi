@@ -1,114 +1,95 @@
-<header class="site-header {{ this.page.id != 'home' ? 'dark' : '' }}" id="main-header">
-    <div class="container header--wrapper py-[1rem] lg:py-0">
-        <a href="{{ 'home'|page }}" class="header-logo justify-self-start">
-            <img src="{{ 'globals/logo-light.svg'|media }}" alt="Modirum" data-light="{{ 'globals/logo-light.svg'|media }}" data-dark="{{ 'globals/logo-dark.svg'|media }}">
-        </a>
-        <nav class="main-navigation hidden lg:block">
-            <ul class="menu-list">
-                <li class="list--item">
-                    <a href="{{ 'company'|page }}" class="list--link">Company</a>
-                </li>
-                {# <li class="list--item dropdown-parent">
-                    <a href="javascript:;" class="list--link dropdown-parent--link">Group</a>
-                    <div class="dropdown-menu">
-                        <ul class="hover-opacity flex flex-col gap-[.5rem]">
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="{{ 'about'|page }}">
-                                    About us
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="{{ 'group/careers'|page }}">
-                                    Careers
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li> #}
-                <li class="list--item dropdown-parent">
-                    <a href="{{ 'products'|page }}" class="list--link dropdown-parent--link">Products</a>
-                    <div class="dropdown-menu">
-                        <ul class="hover-opacity flex flex-col gap-[.5rem]">
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="https://modirumplatforms.com/" target="_blank">
-                                    Modirum Platforms
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="https://modirumgespi.com/" target="_blank">
-                                    Modirum | Gespi
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="https://maksupay.com/" target="_blank">
-                                    Modirum Payments
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="https://unmanned.vc/" target="_blank">
-                                     UnmannedVC
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="dropdown-item">
-                                <a class="dropdown-link flex gap-[2rem] justify-between" href="#" target="_blank">
-                                    Modirum Consulting
-                                    <span class="icon icon--arrow">
-                                        {% partial 'icons/arrow-right--icon' %}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="list--item">
-                    <a href="{{ 'careers'|page }}" class="list--link">Careers</a>
-                </li>
-                <li class="list--item">
-                    <a href="{{ 'news'|page }}" class="list--link">News</a>
-                </li>
-            </ul>
-        </nav>
+<div class="container header--wrapper py-[1rem] lg:py-0 relative z-[1]">
+    <a href="{{ 'home'|page }}" class="header-logo justify-self-start">
+        <img src="{{ 'globals/logo-light.svg'|media }}" alt="Modirum" data-light="{{ 'globals/logo-light.svg'|media }}" data-dark="{{ 'globals/logo-dark.svg'|media }}">
+    </a>
+    <nav class="main-navigation hidden lg:block">
+        <ul class="menu-list">
+            <li class="list--item">
+                <a href="{{ 'company'|page }}" class="list--link">Company</a>
+            </li>
+            <li class="list--item dropdown-parent">
+                <a href="{{ 'products'|page }}" class="list--link dropdown-parent--link">Products</a>
+                <div class="dropdown-menu">
+                    <ul class="hover-opacity flex flex-col gap-[.5rem] relative z-[1]">
+                        <li class="dropdown-item">
+                            <a class="dropdown-link flex gap-[2rem] justify-between" href="https://modirumplatforms.com/" target="_blank">
+                                Modirum Platforms
+                                <span class="icon icon--arrow flex items-center justify-center">
+                                    {% partial 'icons/arrow-right--icon' %}
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="dropdown-link flex gap-[2rem] justify-between" href="https://modirumgespi.com/" target="_blank">
+                                Modirum | Gespi
+                                <span class="icon icon--arrow flex items-center justify-center">
+                                    {% partial 'icons/arrow-right--icon' %}
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="dropdown-link flex gap-[2rem] justify-between" href="https://maksupay.com/" target="_blank">
+                                Modirum Payments
+                                <span class="icon icon--arrow flex items-center justify-center">
+                                    {% partial 'icons/arrow-right--icon' %}
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="dropdown-link flex gap-[2rem] justify-between" href="https://unmanned.vc/" target="_blank">
+                                    UnmannedVC
+                                <span class="icon icon--arrow flex items-center justify-center">
+                                    {% partial 'icons/arrow-right--icon' %}
+                                </span>
+                            </a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="dropdown-link flex gap-[2rem] justify-between" href="#" target="_blank">
+                                Modirum Consulting
+                                <span class="icon icon--arrow flex items-center justify-center">
+                                    {% partial 'icons/arrow-right--icon' %}
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list--item">
+                <a href="{{ 'careers'|page }}" class="list--link">Careers</a>
+            </li>
+            <li class="list--item">
+                <a href="{{ 'news'|page }}" class="list--link">News</a>
+            </li>
+        </ul>
+    </nav>
 
-        
-        <div class="nav-right justify-self-end hidden lg:block">
-            {# <div class="search-wg flex items-center">
-                <span class="icon mr-5">
-                    {% partial 'icons/search--icon' %}
-                </span>
-                Search
-            </div> #}
-            <a href="{{ 'contact'|page }}" class="btn-primary-dark-outline arrow-btn w-fit lg:justify-self-end !py-[.7rem] !px-[2rem] !gap-[1rem]">
-                <span class="btn-text">Get in touch</span>
-                <span class="btn-icon">
-                    {% partial 'icons/arrow-right' %}
-                </span>
-            </a>
-        </div>
-        <button class="menuBtn justify-self-end block lg:hidden">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-        </button>
+    
+    <div class="nav-right justify-self-end hidden lg:block">
+        {# <div class="search-wg flex items-center">
+            <span class="icon mr-5">
+                {% partial 'icons/search--icon' %}
+            </span>
+            Search
+        </div> #}
+        {# <a href="{{ 'contact'|page }}" class="btn-primary-dark-outline arrow-btn w-fit lg:justify-self-end !py-[.7rem] !px-[2rem] !gap-[1rem]">
+            <span class="btn-text">Get in touch</span>
+            <span class="btn-icon">
+                {% partial 'icons/arrow-right' %}
+            </span>
+        </a> #}
+        <a href="{{ 'company'|page }}" class="gespi-cta btn-bg-gradient inline-block p-size flex w-fit mask-[url({{ 'globals/gespi-btn--mask.svg'|media }})] !pr-0">
+            <span></span>
+            <span class="btn-text uppercase">
+                Get in touch
+            </span>
+        </a>
     </div>
-</header>
+    <button class="menuBtn justify-self-end block lg:hidden">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+    </button>
+</div>
 
 <nav class="mobile-navigation slide-menu block lg:hidden" id="mobile-menu">
     <ul class="slide-menu__submenu flex flex-col" data-lenis-prevent>
