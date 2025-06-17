@@ -140,6 +140,221 @@ layout = "default"
     </div>
 </section>
 
-<section class="bg-gradient-document">
-test
+<section class="bg-gradient-document section-padding--y">
+    <div class="marquee mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="50">
+        <div class="marquee__inner h-full">
+            <div class="marquee__content flex h-full items-center me-[5rem] gap-[5rem] !opacity-[1]">
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR SOLUTIONS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container section-padding--b rounded">
+    <div class="bg-gradient4 border-[1px] border-[var(--primary-lighter)] section-padding rounded-[var(--btn-border-radius)]">
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-[5rem] mb-10">
+            <div class="hidden xl:block">
+                <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
+            </div>
+            <div class="flex justify-center flex-col">
+                <h2 class="text-white mb-5 lg:mb-10">
+                    Our Products
+                </h2>
+                <div class="block xl:hidden mb-5 lg:mb-10">
+                    <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
+                </div>
+                <p class="text-white mb-5 lg:mb-10">
+                    Empowering UAV operations with autonomous, adaptable, and seamlessly integrated solutions.
+                </p>
+                <a href="{{ 'company'|page }}" class="gespi-cta bg-transparent inline-block p-size flex w-fit uppercase">
+                    <span class="btn-text">
+                        Discover More
+                    </span>
+                    <span class="btn-icon">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
+                <h4 class="uppercase text-white mb-10 font-bold">
+                    AIR SYSTEMS
+                </h4>
+                <div class="flex items-center justify-center mb-5">
+                    <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
+                </div>
+                <div class="flex items-end justify-end">
+                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </a>
+                </div>
+            </div>
+            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
+                <h4 class="uppercase text-white mb-10 font-bold">
+                    COMMAND &<br>
+                    CONTROL
+                </h4>
+                <div class="flex items-center justify-center mb-5">
+                    <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
+                </div>
+                <div class="flex items-end justify-end">
+                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </a>
+                </div>
+            </div>
+            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
+                <h4 class="uppercase text-white mb-10 font-bold">
+                    NAVAL SYSTEMS
+                </h4>
+                <div class="flex items-center justify-center mb-5">
+                    <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
+                </div>
+                <div class="flex items-end justify-end">
+                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </a>
+                </div>
+            </div>
+            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
+                <h4 class="uppercase text-white mb-10 font-bold">
+                    AMMUNITION
+                </h4>
+                <div class="flex items-center justify-center mb-5">
+                    <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
+                </div>
+                <div class="flex items-end justify-end">
+                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </a>
+                </div>
+            </div>
+            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
+                <h4 class="uppercase text-white mb-10 font-bold">
+                    ENGINEERING<br>
+                    SERVICES
+                </h4>
+                <div class="flex items-center justify-center mb-5">
+                    <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
+                </div>
+                <div class="flex items-end justify-end">
+                    <a class="p-[1.5rem] inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        {% partial 'icons/arrow-right--diagonal' %}
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-[2rem]">
+                <p>
+                    Mission-proven solutions that meet the most challenging demands of modern defence and security.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-padding--b">
+    <div class="marquee mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="50">
+        <div class="marquee__inner h-full">
+            <div class="marquee__content flex h-full items-center me-[5rem] gap-[5rem] !opacity-[1]">
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR PARTNERS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR PARTNERS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR PARTNERS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR PARTNERS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR PARTNERS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                <div class="">
+                    <p class="text-9xl text-[#587554] font-bold">
+                        OUR PARTNERS
+                    </p>
+                </div>
+                <div class="">
+                    {% partial 'icons/gespi-icon--small' %}
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </section>

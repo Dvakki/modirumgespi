@@ -74,6 +74,11 @@ p, li {
     line-height: 1.5 !important;
 }
 
+.font-bold {
+    font-family: var(--font-bold);
+    font-weight: 900;
+}
+
 h3.section-title {
     text-align: justify;
     hyphens: auto;
@@ -669,6 +674,12 @@ $sec_padd_lg: max(4rem, 8vw);
         var(--primary-light)
     );
 }
+.bg-gradient3 {
+    background: linear-gradient(300.72deg, #343C33 10.3%, rgba(32, 44, 31, 0) 154.72%);
+}
+.bg-gradient4 {
+    background: linear-gradient(164.93deg, #191D17 -52.43%, #242A23 72.31%);
+}
 .bg-gradient-document {
     background: linear-gradient(180deg, #1B2019 0%, #242A23 9.78%);
 }
@@ -760,9 +771,13 @@ $sec_padd_lg: max(4rem, 8vw);
             -webkit-text-fill-color: transparent;
             -webkit-text-stroke: 2px var(--primary-light);
             text-wrap: nowrap;
-            opacity: 0.5;
+            opacity: 1;
             line-height: 1;
             text-transform: uppercase;
+
+            p {
+                color: #587554;
+            }
 
 
             .marquee-logo {
