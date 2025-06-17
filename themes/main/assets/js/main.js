@@ -562,6 +562,46 @@ window.addEventListener('DOMContentLoaded', () => {
     drawSvg();
     // DRAW SVG
 
+    const initHoverEffects = () => {
+        let buttons = document.querySelectorAll('.btn-lg-arrow');
+
+        buttons.forEach(button => {
+            const btntl = gsap.timeline({
+                paused: true,
+                duration: 0.01,
+                ease: 'sine.easeIn'
+            });
+            let line = button.querySelector('.line');
+            let text = button.querySelector('.btn-text');
+
+            btntl.fromTo(
+                button, {
+                    padding: "2rem 4rem",
+                }, {
+                    padding: "3rem 5rem",
+                }
+            ).fromTo(line, {
+                '--line-width' : "100%",
+            }, {
+                '--line-width': "0"
+            }, "<").fromTo(text, {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 1,
+            });
+
+            
+            button.addEventListener('mouseenter', () => {
+                btntl.play(0);
+            })
+
+            button.addEventListener('mouseleave', () => {
+                btntl.reverse();
+            })
+        })
+    }
+    initHoverEffects();
+
     window.addEventListener('resize', () => {
         initHeader();
         parallaxInit();

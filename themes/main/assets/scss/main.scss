@@ -684,6 +684,86 @@ $sec_padd_lg: max(4rem, 8vw);
     background: linear-gradient(180deg, #1B2019 0%, #242A23 9.78%);
 }
 
+.gradient-border-item {
+
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        z-index: 0;
+        left: -1px;
+        bottom: -1px;
+        right: -1px;
+        background: linear-gradient(
+            140deg,
+            var(--primary-dark),
+            var(--primary-light)
+        );
+    }
+}
+
+.partners-section {
+    box-shadow: 0px 0px 192px 18px rgba(25,29,23,0.75) inset;
+    -webkit-box-shadow: 0px 0px 192px 18px rgba(25,29,23,0.75) inset;
+    -moz-box-shadow: 0px 0px 192px 18px rgba(25,29,23,0.75) inset;
+}
+
+.btn-lg-arrow {
+    --arrow-size: 2.5rem;
+    background-color: var(--primary-dark);
+    border-radius: var(--btn-border-radius);
+    padding: max(1rem, 2vw) max(2rem, 3vw);
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    .line {
+        position: absolute;
+        top: 50%;
+        width: 80%;
+        transform: translateY(-50%);
+        --line-width: 100%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: var(--line-width);
+            height: 2px;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img, svg {
+            // width: var(--arrow-size, 2rem);
+            // height: var(--arrow-size, 2rem);
+            // border: 2px solid red;
+            position: absolute;
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
+        }
+    }
+
+    .btn-text {
+        color: white;
+        text-transform: uppercase;
+        font-size: 16px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        background-color: var(--primary-light);
+    }
+}
+
 .hero-banner {
     position: relative;
     background-color: var(--primary-dark);
