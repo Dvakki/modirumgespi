@@ -4,8 +4,8 @@ layout = "default"
 
 ==
 <section class="hero-banner overflow-hidden">
-    <div class="h-full flex flex-col justify-between relative">
-        <div class="banner--wrapper offset-top pt-[3rem]">
+    <div class="h-full grid grid-cols-1 relative">
+        <div class="banner--wrapper offset-top 2xl:pt-[3rem]">
             <div class="container h-full grid grid-cols-1 lg:grid-cols-[1fr,.8fr] gap-[5rem] items-center section-padding--x">
                 <div class="content reveal-fade-in reveal-fade-in--right relative z-2">
                     <h1 class="hero-title mb-5 lg:mb-10 text-white leading-tight">
@@ -84,7 +84,7 @@ layout = "default"
     </div>
 </section>
 
-<section class="bg-[var(--primary-dark)] relative gradient-before">
+<section class="intersecting-section bg-[var(--primary-dark)] relative gradient-before">
     <div class="container section-padding--y">
         <div class="grid grid-cols-1 lg:grid-cols-[1fr,.9fr]">
             <div>
@@ -140,7 +140,7 @@ layout = "default"
     </div>
 </section>
 
-<section class="bg-gradient-document section-padding--y">
+<section class="section-padding--y">
     <div class="marquee mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="50">
         <div class="marquee__inner h-full">
             <div class="marquee__content flex h-full items-center me-[5rem] gap-[5rem] !opacity-[1]">
@@ -360,73 +360,78 @@ layout = "default"
 </section>
 
 <section class="container section-padding--b">
-    <div class="partners-section bg-gradient4 border-[1px] border-[var(--primary-lighter)] section-padding rounded-[var(--btn-border-radius)]">
-        <div class="grid grid-cols-2 xl:grid-cols-4">
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
+    <div class="flex items-center justify-center">
+        <h2 class="text-white mb-5 lg:mb-10 text-center">
+            Partners & Memberships
+        </h2>
+    </div>
+    <div class="partners-section bg-[var(--primary-mid)] p-[2rem] rounded-[var(--btn-border-radius)]">
+        <div class="partners-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2px] bg-gradient5 w-full">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
                     <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/embraer.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/emgepron.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/erillisverkot.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/GOL.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/IFI.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/imbel.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/dde.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/finish-defence.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/meprolight.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
+                <div class="z-[10] relative w-full h-full flex items-center justify-center">
+                    <img class="img-fluid" src="{{ 'partners/arnold.png'|media }}" alt="">
                 </div>
             </div>
-            <div class="">
-                <div class="z-[10] relative w-full h-full section-padding !py-[3rem]">
-                    <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
-                </div>
+            <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem] flex items-center justify-center">
+                <p>
+                    and many more...
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="latest-news-section section-padding--b overflow-x-hidden">
+<section class="latest-news-section overflow-x-hidden">
     <div class="container">
         <div class="section-header flex gap-5 flex-col md:flex-row justify-between md:items-end mb-10 lg:mb-20">
             <div class="flex flex-col gap-[1rem] reveal-fade-in reveal-fade-in--right">
