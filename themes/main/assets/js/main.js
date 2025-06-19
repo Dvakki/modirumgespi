@@ -128,14 +128,14 @@ window.addEventListener('DOMContentLoaded', () => {
             // menu.classList.toggle('active');
             body.classList.toggle('freeze');
 
-            if( header.classList.contains('active')) {
-                header.classList.add('dark');
-                header.classList.remove('transparent');
-                logo.setAttribute('src', logoDark);
+            // if( header.classList.contains('active')) {
+            //     header.classList.add('dark');
+            //     header.classList.remove('transparent');
+            //     logo.setAttribute('src', logoDark);
 
-            } else {
+            // } else {
 
-            }
+            // }
 
             if (body.classList.contains('freeze')) {
                 lenis.stop();
@@ -179,8 +179,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 const headerHeightRem = headerHeight / remInPx;
 
                 dropdownMenu.style.top = `${headerHeightRem}rem`;
-
-                console.log(headerHeightRem);
     
                 gsap.set(dropdownMenu, {autoAlpha: 0, yPercent: 5});
     
@@ -214,13 +212,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-        header.addEventListener('mouseover', () => {
-            header.classList.add("visible");
-        });
+        // header.addEventListener('mouseover', () => {
+        //     header.classList.add("visible");
+        // });
 
-        header.addEventListener('mouseleave', () => {
-            header.classList.remove("visible");
-        });
+        // header.addEventListener('mouseleave', () => {
+        //     header.classList.remove("visible");
+        // });
 
 
 
@@ -245,57 +243,57 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if(!heroBanner) return;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    console.log("Intersecting");
-                    header.classList.remove('dark');
+        // const observer = new IntersectionObserver(
+        //     ([entry]) => {
+        //         if (entry.isIntersecting) {
+        //             console.log("Intersecting");
+        //             header.classList.remove('dark');
                     
-                    if(!header.classList.contains('visible')) {
-                        header.classList.add('transparent');
-                        header.classList.remove('dark');
-                        logo.setAttribute("src", logoLight);
-                    } 
+        //             if(!header.classList.contains('visible')) {
+        //                 header.classList.add('transparent');
+        //                 header.classList.remove('dark');
+        //                 logo.setAttribute("src", logoLight);
+        //             } 
 
-                    header.addEventListener('mouseover', () => {
-                        header.classList.add('visible');
-                        header.classList.remove('transparent');
-                        // logo.setAttribute('src', logoDark);
-                    });
+        //             header.addEventListener('mouseover', () => {
+        //                 header.classList.add('visible');
+        //                 header.classList.remove('transparent');
+        //                 // logo.setAttribute('src', logoDark);
+        //             });
             
-                    header.addEventListener('mouseleave', () => {
-                        header.classList.remove('visible');
-                        header.classList.remove('dark');
-                        logo.setAttribute('src', logoLight);
-                    });
+        //             header.addEventListener('mouseleave', () => {
+        //                 header.classList.remove('visible');
+        //                 header.classList.remove('dark');
+        //                 logo.setAttribute('src', logoLight);
+        //             });
 
 
-                } else {
-                    console.log("not Intersecting");
-                    header.classList.remove("transparent");
-                    header.classList.add("dark");
-                    // logo.setAttribute("src", logoDark);
+        //         } else {
+        //             console.log("not Intersecting");
+        //             header.classList.remove("transparent");
+        //             header.classList.add("dark");
+        //             // logo.setAttribute("src", logoDark);
 
-                    header.addEventListener('mouseover', () => {
-                        header.classList.add("visible");
-                        // logo.setAttribute('src', logoDark);
-                    });
+        //             header.addEventListener('mouseover', () => {
+        //                 header.classList.add("visible");
+        //                 // logo.setAttribute('src', logoDark);
+        //             });
             
-                    header.addEventListener('mouseleave', () => {
-                        header.classList.remove("visible");
-                        header.classList.add("dark");
-                        // logo.setAttribute('src', logoDark);
-                    });
-                }
-            },
-            { root: null, threshold: 0.1 } // Adjust threshold if necessary
-        );
+        //             header.addEventListener('mouseleave', () => {
+        //                 header.classList.remove("visible");
+        //                 header.classList.add("dark");
+        //                 // logo.setAttribute('src', logoDark);
+        //             });
+        //         }
+        //     },
+        //     { root: null, threshold: 0.1 } // Adjust threshold if necessary
+        // );
     
-        observer.observe(heroBanner);
+        // observer.observe(heroBanner);
 
-        } else {
-            header.classList.add("dark");
-            // logo.setAttribute('src', logoDark);
+        // } else {
+        //     header.classList.add("dark");
+        //     // logo.setAttribute('src', logoDark);
         }
 
     }

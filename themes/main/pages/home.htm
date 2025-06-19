@@ -3,20 +3,20 @@ title = "Home Page"
 layout = "default"
 
 ==
-<section class="hero-banner overflow-hidden">
+<section class="hero-banner overflow-hidden ">
     <div class="h-full grid grid-cols-1 relative">
-        <div class="banner--wrapper offset-top 2xl:pt-[3rem]">
-            <div class="container h-full grid grid-cols-1 lg:grid-cols-[1fr,.8fr] gap-[5rem] items-center section-padding--x">
-                <div class="content reveal-fade-in reveal-fade-in--right relative z-2">
-                    <h1 class="hero-title mb-5 lg:mb-10 text-white leading-tight">
+        <div class="banner--wrapper justify-between offset-top md:pt-[3rem]">
+            <div class="container h-full grid grid-cols-1 md:grid-cols-[1fr,.8fr] gap-[2rem] lg:gap-[5rem] items-center lg:px-[5rem] relative">
+                <div class="content py-[3rem] reveal-fade-in reveal-fade-in--right relative z-2">
+                    <h1 class="hero-title mb-5 lg:mb-10 text-white">
                         A new style<br>
                         of defence.
                     </h1>
-                    <h3 class="mb-10 text-white">
+                    <h3 class="mb-5 lg:mb-10 text-white">
                         Excellence across <span class="text-primary--lighter">land, sea and air.</span>
                     </h3>
-                    <div class="mb-10 flex lg:hidden reveal-fade-in reveal-fade-in--left items-center justify-center">
-                        <img class="img-fluid" src="{{ 'home/gespi-diagram.svg'|media }}" alt="">
+                    <div class="mb-10 flex md:hidden reveal-fade-in reveal-fade-in--left items-center justify-center">
+                        <img class="img-fluid" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
                     </div>
                     <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
                         A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
@@ -31,68 +31,47 @@ layout = "default"
                         </span>
                     </a>
                 </div>
-                <div class="absolute top-0 left-0 w-full h-full z-0 reveal-fade-in reveal-fade-in--UP">
-                    <div class="max-w-[27rem] absolute left-[-8rem] floating-el">
-                        {% partial 'icons/gespi-radial--blur' %}
-                    </div>
-                    <div class="max-w-[30rem] absolute bottom-[-7rem] floating-el floating-el--reverse">
-                        {% partial 'icons/gespi-radial--blur' %}
-                    </div>
-                    <div class="max-w-[20rem] absolute bottom-[0rem] right-[0rem] floating-el">
-                        {% partial 'icons/gespi-radial--blur' %}
-                    </div>
-                </div>
-                <div class="hidden lg:flex reveal-fade-in reveal-fade-in--left items-center justify-center">
+                
+                <div class="hidden md:flex reveal-fade-in reveal-fade-in--left items-center justify-center">
                     <img class="img-fluid" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
                 </div>
             </div>
-        </div>
-        
-        <div class="hero-slider py-5 md:py-8 lg:p-10 overflow-hidden">
-            <div class="container lg:flex lg:items-center gap-[5vw]">
-                <div class="marquee lg:w-4/6 mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="20">
-                    <div class="marquee__inner h-full">
-                        <div class="marquee__content flex h-full me-[5rem] gap-[5rem] !opacity-[1]">
-                            <div class="">
-                                <img src="{{ 'clients/cyber-essentials.png'|media }}" alt="Modirum" class="!max-w-[250px]">
-                            </div>
-                            <div class="">
-                                <img src="{{ 'clients/sword-1.png'|media }}" alt="Modirum" class="!max-w-[250px]">
-                            </div>
-                            <div class="">
-                                <img src="{{ 'clients/anac.png'|media }}" alt="Modirum" class="!max-w-[250px]">
-                            </div>
-                            <div class="">
-                                <img src="{{ 'clients/eed.png'|media }}" alt="Modirum" class="!max-w-[250px]">
-                            </div>
-                            <div class="">
-                                <img src="{{ 'clients/sword-2.png'|media }}" alt="Modirum" class="!max-w-[250px]">
-                            </div>
-                            <div class="">
-                                <img src="{{ 'clients/qms.png'|media }}" alt="Modirum" class="!max-w-[250px]">
-                            </div>
-                        </div>
-                    </div>
+            <div class="absolute top-0 left-0 w-full h-full z-0 reveal-fade-in reveal-fade-in--up overflow-hidden">
+                <div class="max-w-[27rem] absolute left-[-8rem] floating-el">
+                    {% partial 'icons/gespi-radial--blur' %}
                 </div>
-                <div class="description lg:w-2/6 text-white reveal-fade-in reveal-fade-in--up">
-                    <p class="p-size">
-                        AI-powered, fully integrated, turnkey solutions that help clients meet the evolving demands of modern defence and security.
-                    </p>
+                <div class="max-w-[30rem] absolute bottom-[-7rem] floating-el floating-el--reverse">
+                    {% partial 'icons/gespi-radial--blur' %}
+                </div>
+                <div class="max-w-[20rem] absolute bottom-[0rem] right-[0rem] floating-el">
+                    {% partial 'icons/gespi-radial--blur' %}
+                </div>
+            </div>
+        </div>
+        <div class="mt-[2rem] flex items-end">
+            <div class="container hero-slider py-5 md:py-8 lg:p-10 overflow-hidden self-end">
+                <div class="lg:flex lg:items-center gap-[5vw]">
+                    {% partial 'site/marquee/certificates-marquee' %}
+                    <div class="description lg:w-2/6 text-white reveal-fade-in reveal-fade-in--up">
+                        <p class="p-size">
+                            AI-powered, fully integrated, turnkey solutions that help clients meet the evolving demands of modern defence and security.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="intersecting-section bg-[var(--primary-dark)] relative gradient-before">
+<section class="intersecting-section bg-gradient-document relative overflow-hidden section-padding--b">
     <div class="container section-padding--y">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr,.9fr]">
-            <div>
-                <h2 class="mb-5 lg:mb-10 text-white leading-tight max-w-[100ch]">
-                    AI-Powered Solutions
-                    <span class="text-primary--lighter w-full block">for Complex Challenges.</span>
+        <div class="grid grid-cols-1">
+            <div class="max-w-[78.3ch]">
+                <h2 class="mb-5 lg:mb-10 text-white ">
+                    AI-Powered Solutions<br class="hidden sm:block">
+                    <span class="text-primary--lighter">for Complex Challenges.</span>
                 </h2>
-                <p>
+                <p class="">
                     By investing in cutting-edge research and development, and collaborating with premier industry partners, we aim to shape the future of defence and security operations worldwide.
                 </p>
             </div>
@@ -102,13 +81,13 @@ layout = "default"
         <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
     </div>
 
-    <div class="container section-padding--b relative">
+    <div class="container relative">
         <div class="max-w-[40rem] absolute top-[-13rem] left-[-8rem] floating-el z-[0]">
             {% partial 'icons/gespi-radial--blur' %}
         </div>
-        <div class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative aspect-[2]">
-            <div class="section-padding !pb-[4rem] h-full flex items-end">
-                <div class="grid grid-cols-2 z-[1] relative section-padding--t">
+        <div class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative lg:aspect-[2]">
+            <div class="p-[2rem] py-[3rem] xl:p-[5rem] h-full flex items-end">
+                <div class="grid grid-cols-1 xl:grid-cols-2 z-[1] relative">
                     <div>
                         <h4 class="mb-5 text-white">
                             A Full-Spectrum Solution
@@ -116,11 +95,11 @@ layout = "default"
                         <h2 class="mb-5 text-white">
                             DISCOVER SISU AI
                         </h2>
-                        <p class="p-size">
+                        <p class="p-size mb-5 xl:mb-0">
                             AI-driven system designed for autonomous UAV operations. SISU AI enables UAV’s to operate as a coordinated unit, eliminating the need for human pilots.
                         </p>
                     </div>
-                    <div class="flex items-end justify-end">
+                    <div class="flex xl:items-end xl:justify-end">
                         <a href="{{ 'company'|page }}" class="gespi-cta bg-transparent inline-block p-size flex w-fit uppercase">
                             <span class="btn-text">
                                 Discover More
@@ -134,72 +113,23 @@ layout = "default"
                 <video class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover" autoplay mute playsinline loop>
                     <source src="{{ 'home/sisu-video.mp4'|media }}" type="video/mp4">
                 </video>
+                <div class="overlay absolute top-0 left-0 bg-[var(--primary-dark)] h-full w-full opacity-[.5]">
+
+                </div>
             </div>
-            
         </div>
+        {# <div class="max-w-[25rem] absolute bottom-[-10rem] right-[-14rem] floating-el--reverse z-[0]">
+            {% partial 'icons/gespi-radial--blur' %}
+        </div> #}
     </div>
 </section>
 
-<section class="section-padding--y">
-    <div class="marquee mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="50">
-        <div class="marquee__inner h-full">
-            <div class="marquee__content flex h-full items-center me-[5rem] gap-[5rem] !opacity-[1]">
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR SOLUTIONS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR SOLUTIONS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR SOLUTIONS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR SOLUTIONS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR SOLUTIONS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR SOLUTIONS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                
-            </div>
-        </div>
-    </div>
+<section class="section-padding--b">
+    {% partial 'site/marquee/solutions-marquee' %}
 </section>
 
 <section class="container section-padding--b rounded">
-    <div class="bg-gradient4 border-[1px] border-[var(--primary-lighter)] section-padding rounded-[var(--btn-border-radius)]">
+    <div class="border-gradient-outline bg-gradient4 section-padding rounded-[var(--btn-border-radius)]">
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-[5rem] mb-10">
             <div class="hidden xl:block">
                 <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
@@ -225,71 +155,81 @@ layout = "default"
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
-                <h4 class="uppercase text-white mb-10 font-bold">
-                    AIR SYSTEMS
-                </h4>
-                <div class="flex items-center justify-center mb-5">
-                    <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
+            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] ">
+                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold">
+                        COMMAND &<br>
+                        CONTROL
+                    </h4>
+                    <div class="flex items-center justify-center mb-5">
+                        <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
+                    </div>
+                    <div class="flex items-end justify-end">
+                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-end justify-end">
-                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                        {% partial 'icons/arrow-right--diagonal' %}
-                    </a>
-                </div>
-            </div>
-            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
-                <h4 class="uppercase text-white mb-10 font-bold">
-                    COMMAND &<br>
-                    CONTROL
-                </h4>
-                <div class="flex items-center justify-center mb-5">
-                    <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
-                </div>
-                <div class="flex items-end justify-end">
-                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                        {% partial 'icons/arrow-right--diagonal' %}
-                    </a>
-                </div>
-            </div>
-            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
-                <h4 class="uppercase text-white mb-10 font-bold">
-                    NAVAL SYSTEMS
-                </h4>
-                <div class="flex items-center justify-center mb-5">
-                    <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
-                </div>
-                <div class="flex items-end justify-end">
-                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                        {% partial 'icons/arrow-right--diagonal' %}
-                    </a>
+            </a>
+            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold">
+                        AIR SYSTEMS
+                    </h4>
+                    <div class="flex items-center justify-center mb-5">
+                        <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
+                    </div>
+                    <div class="flex items-end justify-end">
+                        <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
-                <h4 class="uppercase text-white mb-10 font-bold">
-                    AMMUNITION
-                </h4>
-                <div class="flex items-center justify-center mb-5">
-                    <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
-                </div>
-                <div class="flex items-end justify-end">
-                    <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                        {% partial 'icons/arrow-right--diagonal' %}
-                    </a>
+            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold">
+                        NAVAL SYSTEMS
+                    </h4>
+                    <div class="flex items-center justify-center mb-5">
+                        <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
+                    </div>
+                    <div class="flex items-end justify-end">
+                        <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="rounded-[var(--btn-border-radius)] bg-gradient3 border-[1px] border-[var(--primary-lighter)] p-[2rem]">
-                <h4 class="uppercase text-white mb-10 font-bold">
-                    ENGINEERING<br>
-                    SERVICES
-                </h4>
-                <div class="flex items-center justify-center mb-5">
-                    <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
+            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold">
+                        AMMUNITION
+                    </h4>
+                    <div class="flex items-center justify-center mb-5">
+                        <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
+                    </div>
+                    <div class="flex items-end justify-end">
+                        <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </a>
+                    </div>
                 </div>
-                <div class="flex items-end justify-end">
-                    <a class="p-[1.5rem] inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                        {% partial 'icons/arrow-right--diagonal' %}
-                    </a>
+            </div>
+            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold">
+                        ENGINEERING &<br>
+                        SERVICES
+                    </h4>
+                    <div class="flex items-center justify-center mb-5">
+                        <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
+                    </div>
+                    <div class="flex items-end justify-end">
+                        <a class="p-[1.5rem] inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="flex items-center justify-center p-[2rem]">
@@ -302,61 +242,7 @@ layout = "default"
 </section>
 
 <section class="section-padding--b">
-    <div class="marquee mb-8 lg:mb-0 reveal-fade-in reveal-fade-in--up" data-marquee-duration="50">
-        <div class="marquee__inner h-full">
-            <div class="marquee__content flex h-full items-center me-[5rem] gap-[5rem] !opacity-[1]">
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR PARTNERS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR PARTNERS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR PARTNERS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR PARTNERS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR PARTNERS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                <div class="">
-                    <p class="text-9xl text-[#587554] font-bold">
-                        OUR PARTNERS
-                    </p>
-                </div>
-                <div class="">
-                    {% partial 'icons/gespi-icon--small' %}
-                </div>
-                
-            </div>
-        </div>
-    </div>
+    {% partial 'site/marquee/partners-marquee' %}
 </section>
 
 <section class="container section-padding--b">
@@ -366,7 +252,7 @@ layout = "default"
         </h2>
     </div>
     <div class="partners-section bg-[var(--primary-mid)] p-[2rem] rounded-[var(--btn-border-radius)]">
-        <div class="partners-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2px] bg-gradient5 w-full">
+        <div class="partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2px] bg-gradient5 w-full">
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
                 <div class="z-[10] relative w-full h-full flex items-center justify-center">
                     <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
