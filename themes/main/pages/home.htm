@@ -49,7 +49,7 @@ layout = "default"
             </div>
         </div>
         <div class="mt-[2rem] flex items-end">
-            <div class="container hero-slider py-5 md:py-8 lg:p-10 overflow-hidden self-end">
+            <div class="container hero-slider py-5 md:p-8 overflow-hidden self-end">
                 <div class="lg:flex lg:items-center gap-[5vw]">
                     {% partial 'site/marquee/certificates-marquee' %}
                     <div class="description lg:w-2/6 text-white reveal-fade-in reveal-fade-in--up">
@@ -66,7 +66,7 @@ layout = "default"
 <section class="intersecting-section bg-gradient-document relative overflow-hidden section-padding--b">
     <div class="container section-padding--y">
         <div class="grid grid-cols-1">
-            <div class="max-w-[78.3ch]">
+            <div class="max-w-[79ch]">
                 <h2 class="mb-5 lg:mb-10 text-white ">
                     AI-Powered Solutions<br class="hidden sm:block">
                     <span class="text-primary--lighter">for Complex Challenges.</span>
@@ -85,7 +85,7 @@ layout = "default"
         <div class="max-w-[40rem] absolute top-[-13rem] left-[-8rem] floating-el z-[0]">
             {% partial 'icons/gespi-radial--blur' %}
         </div>
-        <div class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative lg:aspect-[2]">
+        <div class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative sm:aspect-[1.4] md:aspect-[1.6] lg:aspect-[2]">
             <div class="p-[2rem] py-[3rem] xl:p-[5rem] h-full flex items-end">
                 <div class="grid grid-cols-1 xl:grid-cols-2 z-[1] relative">
                     <div>
@@ -110,7 +110,7 @@ layout = "default"
                         </a>
                     </div>
                 </div>
-                <video class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover" autoplay mute playsinline loop>
+                <video class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover" autoplay muted playsinline loop>
                     <source src="{{ 'home/sisu-video.mp4'|media }}" type="video/mp4">
                 </video>
                 <div class="overlay absolute top-0 left-0 bg-[var(--primary-dark)] h-full w-full opacity-[.5]">
@@ -155,8 +155,8 @@ layout = "default"
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] ">
-                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         COMMAND &<br>
                         CONTROL
@@ -171,8 +171,8 @@ layout = "default"
                     </div>
                 </div>
             </a>
-            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         AIR SYSTEMS
                     </h4>
@@ -180,14 +180,14 @@ layout = "default"
                         <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
                     </div>
                     <div class="flex items-end justify-end">
-                        <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
                             {% partial 'icons/arrow-right--diagonal' %}
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+            </a>
+            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         NAVAL SYSTEMS
                     </h4>
@@ -195,14 +195,14 @@ layout = "default"
                         <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
                     </div>
                     <div class="flex items-end justify-end">
-                        <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
                             {% partial 'icons/arrow-right--diagonal' %}
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+            </a>
+            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         AMMUNITION
                     </h4>
@@ -210,14 +210,14 @@ layout = "default"
                         <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
                     </div>
                     <div class="flex items-end justify-end">
-                        <a class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
                             {% partial 'icons/arrow-right--diagonal' %}
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+            </a>
+            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         ENGINEERING &<br>
                         SERVICES
@@ -226,12 +226,12 @@ layout = "default"
                         <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
                     </div>
                     <div class="flex items-end justify-end">
-                        <a class="p-[1.5rem] inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
+                        <div class="p-[1.5rem] inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
                             {% partial 'icons/arrow-right--diagonal' %}
-                        </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <div class="flex items-center justify-center p-[2rem]">
                 <p>
                     Mission-proven solutions that meet the most challenging demands of modern defence and security.
@@ -251,7 +251,7 @@ layout = "default"
             Partners & Memberships
         </h2>
     </div>
-    <div class="partners-section bg-[var(--primary-mid)] p-[2rem] rounded-[var(--btn-border-radius)]">
+    <div class="partners-section border-gradient-outline bg-[var(--primary-mid)] p-[3rem] rounded-[var(--btn-border-radius)]">
         <div class="partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2px] bg-gradient5 w-full">
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
                 <div class="z-[10] relative w-full h-full flex items-center justify-center">
@@ -333,15 +333,15 @@ layout = "default"
             </a>
         </div>
         <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-[2vw]">
-            <article class="fp-post">
+            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white">
                 <div class="flex flex-col justify-between h-full">
-                    <div>
+                    <div class="p-[1.5rem]">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ 'news/quantumgate/banner.gif'|media }}" alt="Modirum" class="img-fluid lazyload">
+                            <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
                         <div class="post-content px-6 mb-10">
-                            <h5 class="mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">Modirum Platforms and QuantumGate Forge Strategic Partnership to Enhance Cybersecurity in a Post-Quantum World</h5>
-                            <p class="text-base overflow-hidden text-ellipsis line-clamp-3">As quantum advancements accelerate, organizations must prepare for a paradigm shift in cybersecurity. This strategic collaboration integrates QuantumGate’s cutting-edge cryptographic solutions into Modirum Platforms’ enterprise software ecosystem, reinforcing security across key industries, including telecommunications, critical communications, banking and finance, government, energy, and healthcare.</p>
+                            <h5 class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">Modirum Platforms and QuantumGate Forge Strategic Partnership to Enhance Cybersecurity in a Post-Quantum World</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As quantum advancements accelerate, organizations must prepare for a paradigm shift in cybersecurity. This strategic collaboration integrates QuantumGate’s cutting-edge cryptographic solutions into Modirum Platforms’ enterprise software ecosystem, reinforcing security across key industries, including telecommunications, critical communications, banking and finance, government, energy, and healthcare.</p>
                         </div>
                     </div>
                     <a href="{{ 'news/quantumgate'|page }}" class="btn-lg-arrow primary-dark">
@@ -353,15 +353,15 @@ layout = "default"
                     </a>
                 </div>
             </article>
-            <article class="fp-post">
+            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white">
                 <div class="flex flex-col justify-between h-full">
-                    <div>
+                    <div class="p-[1.5rem]">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ 'news/news-1.jpg'|media }}" alt="Modirum" class="img-fluid lazyload">
+                            <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
                         <div class="post-content px-6 mb-10">
-                            <h5 class="mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">Modirum Platforms at MWC Barcelona 2025</h5>
-                            <p class="text-base overflow-hidden text-ellipsis line-clamp-3">We are pleased to announce that Modirum Platforms will be participating in MWC Barcelona 2025. The event will take place at Fira Gran Via in Barcelona from March 3 to 6, bringing together industry leaders, experts, and decision-makers in the field of digital connectivity.</p>
+                            <h5 class="text-lg mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">Modirum Platforms at MWC Barcelona 2025</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">We are pleased to announce that Modirum Platforms will be participating in MWC Barcelona 2025. The event will take place at Fira Gran Via in Barcelona from March 3 to 6, bringing together industry leaders, experts, and decision-makers in the field of digital connectivity.</p>
                         </div>
                     </div>
                     <a href="{{ 'news/modirum-at-mwc-barcelona'|page }}" class="btn-lg-arrow primary-dark">
@@ -373,15 +373,15 @@ layout = "default"
                     </a>
                 </div>
             </article>
-            <article class="fp-post">
+            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white">
                 <div class="flex flex-col justify-between h-full">
-                    <div>
+                    <div class="p-[1.5rem]">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ 'news/news-2.jpg'|media }}" alt="Modirum" class="img-fluid lazyload">
+                            <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
                         <div class="post-content px-6 mb-10">
-                            <h5 class="mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">CEO Annual Letter: Reflecting on a Transformative Year and Looking Ahead</h5>
-                            <p class="text-base overflow-hidden text-ellipsis line-clamp-3">As we close 2024, I am filled with immense pride and gratitude for the incredible progress we have achieved together at Modirum Platforms. This has been a year of transformation, growth, and laying the foundation for an even brighter future.</p>
+                            <h5 class="text-lg mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">CEO Annual Letter: Reflecting on a Transformative Year and Looking Ahead</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As we close 2024, I am filled with immense pride and gratitude for the incredible progress we have achieved together at Modirum Platforms. This has been a year of transformation, growth, and laying the foundation for an even brighter future.</p>
                         </div>
                     </div>
                     <a href="{{ 'news/ceo-annual-letter'|page }}" class="btn-lg-arrow primary-dark">
