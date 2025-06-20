@@ -27,7 +27,11 @@ layout = "default"
                             ABOUT GESPI
                         </span>
                         <span class="btn-icon">
-                            {% partial 'icons/arrow-right--diagonal' %}
+                            <div class="arrow-hover-btn" href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </div>
                         </span>
                     </a>
                 </div>
@@ -100,12 +104,16 @@ layout = "default"
                         </p>
                     </div>
                     <div class="flex xl:items-end xl:justify-end">
-                        <a href="{{ 'company'|page }}" class="gespi-cta bg-transparent inline-block p-size flex w-fit uppercase">
+                        <a href="{{ 'company'|page }}" class="gespi-cta gespi-cta--transparent inline-block p-size flex w-fit uppercase">
                             <span class="btn-text">
                                 Discover More
                             </span>
                             <span class="btn-icon">
-                                {% partial 'icons/arrow-right--diagonal' %}
+                                <div class="arrow-hover-btn" href="">
+                                    <span class="arrow">
+                                        {% partial 'icons/arrow-right--diagonal' %}
+                                    </span>
+                                </div>
                             </span>
                         </a>
                     </div>
@@ -149,7 +157,11 @@ layout = "default"
                         Discover More
                     </span>
                     <span class="btn-icon">
-                        {% partial 'icons/arrow-right--diagonal' %}
+                        <div class="arrow-hover-btn" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </div>
                     </span>
                 </a>
             </div>
@@ -161,13 +173,15 @@ layout = "default"
                         COMMAND &<br>
                         CONTROL
                     </h4>
-                    <div class="flex items-center justify-center mb-5">
+                    <div class="flex items-center justify-center img-cont">
                         <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end">
-                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                            {% partial 'icons/arrow-right--diagonal' %}
-                        </div>
+                    <div class="flex items-end justify-end mt-[1.3rem]">
+                        <button class="gradient-card--button p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </a>
@@ -176,13 +190,15 @@ layout = "default"
                     <h4 class="uppercase text-white mb-10 font-bold">
                         AIR SYSTEMS
                     </h4>
-                    <div class="flex items-center justify-center mb-5">
+                    <div class="flex items-center justify-center img-cont">
                         <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end">
-                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                            {% partial 'icons/arrow-right--diagonal' %}
-                        </div>
+                    <div class="flex items-end justify-end mt-5">
+                        <button class="gradient-card--button p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </a>
@@ -191,13 +207,15 @@ layout = "default"
                     <h4 class="uppercase text-white mb-10 font-bold">
                         NAVAL SYSTEMS
                     </h4>
-                    <div class="flex items-center justify-center mb-5">
+                    <div class="flex items-center justify-center img-cont">
                         <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end">
-                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                            {% partial 'icons/arrow-right--diagonal' %}
-                        </div>
+                    <div class="flex items-end justify-end mt-5">
+                        <button class="gradient-card--button p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </a>
@@ -206,13 +224,15 @@ layout = "default"
                     <h4 class="uppercase text-white mb-10 font-bold">
                         AMMUNITION
                     </h4>
-                    <div class="flex items-center justify-center mb-5">
+                    <div class="flex items-center justify-center img-cont">
                         <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end">
-                        <div class="p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                            {% partial 'icons/arrow-right--diagonal' %}
-                        </div>
+                    <div class="flex items-end justify-end mt-5">
+                        <button class="gradient-card--button p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </a>
@@ -222,13 +242,15 @@ layout = "default"
                         ENGINEERING &<br>
                         SERVICES
                     </h4>
-                    <div class="flex items-center justify-center mb-5">
+                    <div class="flex items-center justify-center img-cont">
                         <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end">
-                        <div class="p-[1.5rem] inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)]" href="">
-                            {% partial 'icons/arrow-right--diagonal' %}
-                        </div>
+                    <div class="flex items-end justify-end mt-5">
+                        <button class="gradient-card--button p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </a>
@@ -323,12 +345,16 @@ layout = "default"
             <div class="flex flex-col gap-[1rem] reveal-fade-in reveal-fade-in--right">
                 <h2 class="text-white">Latest News</h2>
             </div>
-            <a href="{{ 'news/index'|page }}" class="gespi-cta bg-transparent inline-block p-size flex w-fit uppercase">
+            <a href="{{ 'news/index'|page }}" class="gespi-cta inline-block p-size flex w-fit uppercase">
                 <span class="btn-text">
                     Discover More
                 </span>
                 <span class="btn-icon">
-                    {% partial 'icons/arrow-right--diagonal' %}
+                    <div class="arrow-hover-btn" href="">
+                        <span class="arrow">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </span>
+                    </div>
                 </span>
             </a>
         </div>

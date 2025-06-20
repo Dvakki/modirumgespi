@@ -96,13 +96,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (!header) return;
 
-        console.log(header.offsetHeight);
-
         offsetTop.style.marginTop =  `${header.offsetHeight}px`;
     }
 
     offsetTop();
-
 
     let desktopMQ = window.matchMedia("(min-width:1024px)");
     // init nav menu
@@ -112,7 +109,6 @@ window.addEventListener('DOMContentLoaded', () => {
         let header = document.querySelector('.site-header');
         let logo = header.querySelector('.header-logo img');
         let logoDark = logo.getAttribute('data-dark');
-        console.log(logoDark);
         let logoLight = logo.getAttribute('data-light');
         let headerHeight = header.offsetHeight; 
         let menuElement = document.getElementById('mobile-menu');
@@ -139,13 +135,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
             if (body.classList.contains('freeze')) {
                 lenis.stop();
-                console.log('lenis stopped');
             } else {
                 lenis.start();
-                console.log('lenis started');
             }
-
-            
 
             if(button.classList.contains('active')) {
                 menu.open();
@@ -305,7 +297,6 @@ window.addEventListener('DOMContentLoaded', () => {
         let animSection = document.querySelectorAll(".reveal-anim");
 
         animSection.forEach((section) => {
-            console.log(section);
             let revealFadeIn = section.querySelectorAll(".reveal-fade-in");
             let revealIMGWrapper = section.querySelectorAll('.reveal-img-wrapper');
             
@@ -536,30 +527,6 @@ window.addEventListener('DOMContentLoaded', () => {
     parallaxInit();
     // /PARALLAX ANIM
 
-    // DRAW SVG
-    function drawSvg() {
-        let gespiIcon = document.querySelector('.gespi-icon');
-
-        console.log(gespiIcon);
-
-        if(!gespiIcon) return;
-
-        let line = gespiIcon.querySelector('#path');
-        console.log(path);
-        let topEllipse = document.querySelector('.radial-blur-elem');
-
-
-        gsap.to(topEllipse, {
-            duartion: 50,
-            motionPath: {
-                path: 'M185.301 103.553L186.044 103.966V102.65L186.141 102.598L369.5 1.59473V287.134L304.145 250.922L304.638 123.733L304.641 122.886L303.897 123.292L187.696 186.89L185.785 185.868H185.786L68.6055 121.086L67.8643 120.676V329.751L68.1172',
-                autoRotate: true,
-            },
-        });
-    }
-    drawSvg();
-    // DRAW SVG
-
     const initHoverEffects = () => {
         let buttons = document.querySelectorAll('.btn-lg-arrow');
 
@@ -600,8 +567,22 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     initHoverEffects();
 
+    function btnSize() {
+        let btns = document.querySelectorAll('.gespi-cta');
+
+        btns.forEach((btn) => {
+            let btnWidth = btn.offsetWidth;
+            let btnAttribute = window.getComputedStyle(btn);
+            let btnAttributeValue = btnAttribute.getPropertyValue("--btn-size");
+            let btnSize = `${btnWidth}px`;
+            btn.style.setProperty("--btn-size", btnSize);
+        });
+    }
+    btnSize();
+
     window.addEventListener('resize', () => {
         initHeader();
         parallaxInit();
+        btnSize();
     });
 });
