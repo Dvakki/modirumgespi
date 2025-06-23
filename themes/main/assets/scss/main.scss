@@ -412,8 +412,11 @@ $sec_padd: max(1.5rem, 5vw);
     }
 }
 
-$sec_padd_lg: max(3rem, 7vw);
+
+$sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
+
 .section-padding-lg {
+    
     padding: $sec_padd_lg;
 
     &--t {
@@ -1370,6 +1373,7 @@ $sec_padd_lg: max(3rem, 7vw);
 
 .gespi-icon--small {
     opacity: .5;
+    height: auto
 }
 
 @import './responsive.scss';
