@@ -90,7 +90,7 @@ layout = "default"
             {% partial 'icons/gespi-radial--blur' %}
         </div>
         <div class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative sm:aspect-[1.4] md:aspect-[1.6] lg:aspect-[2]">
-            <div class="p-[2rem] py-[3rem] xl:p-[5rem] h-full flex items-end">
+            <div class="p-[1.5rem] sm:p- py-[3rem] xl:p-[5rem] h-full flex items-end">
                 <div class="grid grid-cols-1 xl:grid-cols-2 z-[1] relative">
                     <div>
                         <h4 class="mb-5 text-white">
@@ -119,9 +119,9 @@ layout = "default"
                     </div>
                 </div>
                 <video class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover" autoplay muted playsinline loop>
-                    <source src="{{ 'home/sisu-video.mp4'|media }}" type="video/mp4">
+                    <source src="{{ 'home/sisu_video.mp4'|media }}" type="video/mp4">
                 </video>
-                <div class="overlay absolute top-0 left-0 bg-[var(--primary-dark)] h-full w-full opacity-[.5]">
+                <div class="overlay absolute top-0 left-0 bg-[var(--primary-dark)] h-full w-full opacity-[.5] rounded-[var(--btn-border-radius)]">
 
                 </div>
             </div>
@@ -137,7 +137,7 @@ layout = "default"
 </section>
 
 <section class="container section-padding--b rounded">
-    <div class="border-gradient-outline bg-gradient4 section-padding rounded-[var(--btn-border-radius)]">
+    <div class="border-gradient-outline bg-gradient4 rounded-[var(--btn-border-radius)] p-[1.5rem] py-[3rem] sm:p-[3rem] xl:p-[5rem]">
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-[5rem] mb-10">
             <div class="hidden xl:block">
                 <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
@@ -203,7 +203,7 @@ layout = "default"
                 </div>
             </a>
             <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         NAVAL SYSTEMS
                     </h4>
@@ -220,7 +220,7 @@ layout = "default"
                 </div>
             </a>
             <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         AMMUNITION
                     </h4>
@@ -237,7 +237,7 @@ layout = "default"
                 </div>
             </a>
             <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3]">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold">
                         ENGINEERING &<br>
                         SERVICES
@@ -254,7 +254,7 @@ layout = "default"
                     </div>
                 </div>
             </a>
-            <div class="flex items-center justify-center p-[2rem]">
+            <div class="flex items-center justify-center p-0 md:p-[2rem]">
                 <p>
                     Mission-proven solutions that meet the most challenging demands of modern defence and security.
                 </p>
@@ -274,7 +274,7 @@ layout = "default"
         </h2>
     </div>
     <div class="partners-section border-gradient-outline bg-[var(--primary-mid)] p-[3rem] rounded-[var(--btn-border-radius)]">
-        <div class="partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2px] bg-gradient5 w-full">
+        <div class="partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] md:gap-[2px] bg-gradient5 w-full">
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
                 <div class="z-[10] relative w-full h-full flex items-center justify-center">
                     <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
@@ -358,10 +358,10 @@ layout = "default"
                 </span>
             </a>
         </div>
-        <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-[2vw]">
+        <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white">
                 <div class="flex flex-col justify-between h-full">
-                    <div class="p-[1.5rem]">
+                    <div class="">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
                             <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
@@ -381,7 +381,7 @@ layout = "default"
             </article>
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white">
                 <div class="flex flex-col justify-between h-full">
-                    <div class="p-[1.5rem]">
+                    <div class="">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
                             <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
@@ -401,7 +401,7 @@ layout = "default"
             </article>
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white">
                 <div class="flex flex-col justify-between h-full">
-                    <div class="p-[1.5rem]">
+                    <div class="">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
                             <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
