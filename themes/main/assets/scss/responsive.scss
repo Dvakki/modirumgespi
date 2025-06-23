@@ -1,3 +1,11 @@
+
+@media(min-width: 540px) {
+    .container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .main-navigation {
         display: flex;
@@ -16,6 +24,14 @@
     }
     .nav-right {
         color: white;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .container {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
 

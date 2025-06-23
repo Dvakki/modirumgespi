@@ -1,14 +1,22 @@
-<footer class="site-footer overflow-hidden section-padding--t hasShape" id="main-footer">
-    <div class="container footer--wrapper relative z-20">
-        <div class="footer-content bg-gradient4 section-padding--x pt-[4rem] rounded-[var(--btn-border-radius)]">
-            <div class="flex items-end justify-between pb-[2rem]">
+<footer class="site-footer overflow-hidden section-padding-lg--t hasShape" id="main-footer">
+    <div class="xl:container section-padding--x lg:!px-[3rem] footer--wrapper relative z-20">
+        <div class="footer-content bg-gradient4 section-padding--x pt-[2rem] lg:pt-[4rem] rounded-[var(--btn-border-radius)]">
+            <div class="hidden lg:flex items-end justify-between pb-[2rem]">
                 <a href="{{ 'home'|page }}" class="footer-logo">
                     <img width="300"  src="{{ 'globals/logo-light.svg'|media }}" alt="Modirum" class="img-fluid lazyload" aria-label="Go to home">
                 </a>
             </div>
-            <div class="footer-top flex items-center justify-between flex-wrap mb-20 gap-[3rem]">
+            <div class="footer-top flex items-center justify-between mb-20 gap-[3rem]">
                 <h2 class="underline text-white fs-inbetween">Connect with <br> us today.</h2>
-                <img src="{{ 'globals/gespi-icon.png'|media }}" alt="">
+                <img class="hidden xs:block w-[80px] sm:w-[120px] md:w-[135px] lg:w-[175px]" src="{{ 'globals/gespi-icon.png'|media }}" alt="">
+            </div>
+            <div class="flex lg:hidden items-center justify-between pb-[2rem] gap-[2rem] flex-wrap">
+                <a href="{{ 'home'|page }}" class="footer-logo">
+                    <img src="{{ 'globals/logo-light.svg'|media }}" alt="Modirum" class="img-fluid max-w-[200px]" aria-label="Go to home">
+                </a>
+                <a class="flex items-center justify-center w-[1.4rem]" href="">
+                    {% partial 'icons/social/linkedin' %}
+                </a>
             </div>
             <div class="footer-bottom">
                 <div class="footer-menu border-t-[1px] border-[var(--border-light)] flex gap-10 flex-col lg:flex-row justify-between py-10 lg:py-10 text-white">
@@ -20,7 +28,7 @@
                         <li><a class="btn-underlined btn-underlined--light btn-underlined--v2 p-size" href="{{ 'news/index'|page }}">News</a></li>
                         <li><a class="btn-underlined btn-underlined--light btn-underlined--v2 p-size" href="{{ 'contact'|page }}">Contact</a></li>
                     </ul>
-                    <a class="flex items-center justify-center w-[1.2rem]" href="">
+                    <a class="hidden lg:flex items-center justify-center w-[1.2rem]" href="">
                         {% partial 'icons/social/linkedin' %}
                     </a>
                 </div>
