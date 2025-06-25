@@ -1,0 +1,95 @@
+url = "/news/:slug"
+layout = "default"
+title = "News Single"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = 404
+==
+
+<section class="bg-gradient-document inner-banner offset-top box-section overflow-hidden">
+    <div class="banner--wrapper box-wrapper section-padding--y bg-gradient3 bg-gradient3--reversed relative overflow-hidden">
+        <div class="absolute right-0 top-0 flex items-center justify-center section-padding--t reveal-fade-in">
+            <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
+        </div>
+        <div class="container relative">
+            <ul class="breadcrumbs breadcrumbs--light mb-10">
+                <li class="item">
+                    <a href="{{ 'home'|page }}" class="link btn-underlined btn-underlined--light btn-underlined--v2">Home</a>
+                </li>
+                <li class="separator">
+                    {% partial 'icons/arrow-sm-right--icon' %}
+                </li>
+                <li class="item">
+                    <a href="{{ 'news/index'|page }}" class="link btn-underlined btn-underlined--light btn-underlined--v2 font-light">Media & News</a>
+                </li>
+                <li class="separator">
+                    {% partial 'icons/arrow-sm-right--icon' %}
+                </li>
+                <li class="item">
+                    <a class="link btn-underlined btn-underlined--light btn-underlined--v2 font-light active">{{ post.title }}</a>
+                </li>
+            </ul>
+
+            <div class="content">
+                <h2 class="fs-inbetween banner-title text-white mb-5 lg:mb-10 text-white">{{ post.title }}</h2>
+                <h5 class="text-white">
+                    {{ post.published_at is empty ? "" : post.published_at|date("d.m.Y") }}
+                </h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container section-padding--y">
+
+    <div class="dynamic-content flex flex-wrap gap-[3rem]">
+
+        {{ post.content_html|raw }}
+
+    </div>
+
+</section>
+
+{% put styles %}
+    <style>
+        .dynamic-content strong {
+            color: var(--primary-lighter);
+        }
+
+        .dynamic-content a {
+            padding: max(1rem, 1.3vw) max(2rem, 2.7vw);
+            border: 1px solid transparent;
+            border-radius: var(--btn-border-radius, 15px);
+            font-family: var(--font-light);
+            line-height: 1;
+            cursor: pointer;
+            transition: 0.2s all ease-in-out;
+            border: initial;
+            padding: initial;
+            background-color: initial;
+            border-radius: initial;
+            position: relative;
+            overflow: unset;
+            width: fit-content;
+        }
+
+        .dynamic-content a::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            transition: transform 0.3s ease;
+            will-change: transform;
+            transform-origin: right;
+            transform: scaleX(1);
+            background-color: white;
+        }
+
+        .dynamic-content a:hover::before {
+            transform: scaleX(0);
+        }
+    </style>
+{% endput %}

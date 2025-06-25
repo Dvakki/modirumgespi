@@ -21,18 +21,22 @@ layout = "default"
                     <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
                         A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
                     </p>
-                    <a href="javascript:;" class=" gespi-cta btn-bg-gradient inline-block p-size flex w-fit">
-                        <span></span>
-                        <span class="btn-text">
-                            ABOUT GESPI
-                        </span>
-                        <span class="btn-icon">
-                            <div class="arrow-hover-btn" href="">
-                                <span class="arrow">
-                                    {% partial 'icons/arrow-right--diagonal' %}
-                                </span>
-                            </div>
-                        </span>
+                    <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                        <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
+                            <span></span>
+                            <span class="btn-text relative !z-[5]">
+                                About Gespi
+                            </span>
+                            <span class="btn-icon">
+                                <div class="arrow-hover-btn" href="">
+                                    <span class="arrow">
+                                        {% partial 'icons/arrow-right--diagonal' %}
+                                    </span>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="blob blob--btn z-[-1]"></div>
+                        <div class="fakeblob z-[-1]"></div>
                     </a>
                 </div>
                 
@@ -104,17 +108,22 @@ layout = "default"
                         </p>
                     </div>
                     <div class="flex xl:items-end xl:justify-end">
-                        <a href="javascript:;" class="gespi-cta inline-block p-size flex w-fit uppercase">
-                            <span class="btn-text">
-                                Discover More
-                            </span>
-                            <span class="btn-icon">
-                                <div class="arrow-hover-btn" href="">
-                                    <span class="arrow">
-                                        {% partial 'icons/arrow-right--diagonal' %}
-                                    </span>
-                                </div>
-                            </span>
+                        <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                            <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
+                                <span></span>
+                                <span class="btn-text relative !z-[5]">
+                                    Discover More
+                                </span>
+                                <span class="btn-icon">
+                                    <div class="arrow-hover-btn" href="">
+                                        <span class="arrow">
+                                            {% partial 'icons/arrow-right--diagonal' %}
+                                        </span>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="blob blob--btn z-[-1]"></div>
+                            <div class="fakeblob z-[-1]"></div>
                         </a>
                     </div>
                 </div>
@@ -152,31 +161,36 @@ layout = "default"
                 <p class="text-white mb-5 lg:mb-10">
                     Empowering UAV operations with autonomous, adaptable, and seamlessly integrated solutions.
                 </p>
-                <a href="javascript:;" class="gespi-cta bg-transparent inline-block p-size flex w-fit uppercase">
-                    <span class="btn-text">
-                        Discover More
-                    </span>
-                    <span class="btn-icon">
-                        <div class="arrow-hover-btn" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </div>
-                    </span>
+                <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                    <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
+                        <span></span>
+                        <span class="btn-text relative !z-[5]">
+                            Discover More
+                        </span>
+                        <span class="btn-icon">
+                            <div class="arrow-hover-btn" href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="blob blob--btn z-[-1]"></div>
+                    <div class="fakeblob z-[-1]"></div>
                 </a>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] reveal-fade-in reveal-fade-in--up">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
-                    <h4 class="uppercase text-white mb-10 font-bold">
+            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         COMMAND &<br>
                         CONTROL
                     </h5>
-                    <div class="flex items-center justify-center img-cont">
+                    <div class="flex items-center justify-center img-cont relative z-[5]">
                         <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end mt-[1.3rem]">
+                    <div class="flex items-end justify-end mt-[1.3rem] relative z-[5]">
                         <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
                             <span class="arrow">
                                 {% partial 'icons/arrow-right--diagonal' %}
@@ -184,16 +198,18 @@ layout = "default"
                         </button>
                     </div>
                 </div>
+                <div class="blob"></div>
+                <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] reveal-fade-in reveal-fade-in--up">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
-                    <h4 class="uppercase text-white mb-10 font-bold">
+            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         AIR SYSTEMS
                     </h5>
-                    <div class="flex items-center justify-center img-cont">
+                    <div class="flex items-center justify-center img-cont relative z-[5]">
                         <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end mt-5">
+                    <div class="flex items-end justify-end mt-5 relative z-[5]">
                         <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
                             <span class="arrow">
                                 {% partial 'icons/arrow-right--diagonal' %}
@@ -201,16 +217,18 @@ layout = "default"
                         </button>
                     </div>
                 </div>
+                <div class="blob"></div>
+                <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] reveal-fade-in reveal-fade-in--up">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
-                    <h4 class="uppercase text-white mb-10 font-bold">
+            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         NAVAL SYSTEMS
                     </h5>
-                    <div class="flex items-center justify-center img-cont">
+                    <div class="flex items-center justify-center img-cont relative z-[5]">
                         <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end mt-5">
+                    <div class="flex items-end justify-end mt-5 relative z-[5]">
                         <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
                             <span class="arrow">
                                 {% partial 'icons/arrow-right--diagonal' %}
@@ -218,16 +236,18 @@ layout = "default"
                         </button>
                     </div>
                 </div>
+                <div class="blob"></div>
+                <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] reveal-fade-in reveal-fade-in--up">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
-                    <h4 class="uppercase text-white mb-10 font-bold">
+            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+                    <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         AMMUNITION
                     </h5>
-                    <div class="flex items-center justify-center img-cont">
+                    <div class="flex items-center justify-center img-cont relative z-[5]">
                         <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end mt-5">
+                    <div class="flex items-end justify-end mt-5 relative z-[5]">
                         <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
                             <span class="arrow">
                                 {% partial 'icons/arrow-right--diagonal' %}
@@ -235,17 +255,19 @@ layout = "default"
                         </button>
                     </div>
                 </div>
+                <div class="blob"></div>
+                <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="gradient-card block rounded-[var(--btn-border-radius)] border-gradient-outline z-[3] reveal-fade-in reveal-fade-in--up">
-                <div class="gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
-                    <h4 class="uppercase text-white mb-10 font-bold">
+            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full hover-blob--inner">
+                    <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         ENGINEERING &<br>
                         SERVICES
                     </h5>
-                    <div class="flex items-center justify-center img-cont">
+                    <div class="flex items-center justify-center img-cont relative z-[5]">
                         <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
                     </div>
-                    <div class="flex items-end justify-end mt-5">
+                    <div class="flex items-end justify-end mt-5 relative z-[5]">
                         <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
                             <span class="arrow">
                                 {% partial 'icons/arrow-right--diagonal' %}
@@ -253,6 +275,8 @@ layout = "default"
                         </button>
                     </div>
                 </div>
+                <div class="blob"></div>
+                <div class="fakeblob"></div>
             </a>
             <div class="flex items-center justify-center p-0 md:p-[2rem] reveal-fade-in reveal-fade-in--up">
                 <p>
@@ -275,6 +299,12 @@ layout = "default"
     </div>
     <div class="partners-section border-gradient-outline bg-[var(--primary-mid)] p-[1.5rem] md:p-[3rem] rounded-[var(--btn-border-radius)]">
         <div class="hidden sm:grid partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] md:gap-[2px] bg-gradient5 w-full">
+            <div class="absolute top-0 left-0 w-full h-full z-[-1]">
+                <div class="hover-blob-container">
+                    <div class="blob !max-w-[550px] !top-[-150px] !left-[-80px] !opacity-[1]"></div>
+                    <div class="fakeblob"></div>
+                </div>
+            </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
                 <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
@@ -435,17 +465,22 @@ layout = "default"
             <div class="flex flex-col gap-[1rem]">
                 <h2 class="text-white">Latest News</h2>
             </div>
-            <a href="javascript:;" class="gespi-cta inline-block p-size flex w-fit uppercase">
-                <span class="btn-text">
-                    Discover More
-                </span>
-                <span class="btn-icon">
-                    <div class="arrow-hover-btn" href="">
-                        <span class="arrow">
-                            {% partial 'icons/arrow-right--diagonal' %}
-                        </span>
-                    </div>
-                </span>
+            <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
+                    <span></span>
+                    <span class="btn-text relative !z-[5]">
+                        Discover More
+                    </span>
+                    <span class="btn-icon">
+                        <div class="arrow-hover-btn" href="">
+                            <span class="arrow">
+                                {% partial 'icons/arrow-right--diagonal' %}
+                            </span>
+                        </div>
+                    </span>
+                </div>
+                <div class="blob blob--btn z-[-1]"></div>
+                <div class="fakeblob z-[-1]"></div>
             </a>
         </div>
         <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -460,12 +495,14 @@ layout = "default"
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As quantum advancements accelerate, organizations must prepare for a paradigm shift in cybersecurity. This strategic collaboration integrates QuantumGate’s cutting-edge cryptographic solutions into Modirum Platforms’ enterprise software ecosystem, reinforcing security across key industries, including telecommunications, critical communications, banking and finance, government, energy, and healthcare.</p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="btn-lg-arrow primary-dark">
-                        <span class="btn-text">Read article</span>
-                        <span class="line">
+                    <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                        <span class="btn-text relative z-[5]">Read article</span>
+                        <span class="line relative z-[5]">
                             {% partial 'icons/arrow-lg-right--icon' %}
                             {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
                         </span>
+                        <div class="blob !top-[-220px] !left-[-170px]"></div>
+                        <div class="fakeblob"></div>
                     </a>
                 </div>
             </article>
@@ -480,12 +517,14 @@ layout = "default"
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">We are pleased to announce that Modirum Platforms will be participating in MWC Barcelona 2025. The event will take place at Fira Gran Via in Barcelona from March 3 to 6, bringing together industry leaders, experts, and decision-makers in the field of digital connectivity.</p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="btn-lg-arrow primary-dark">
-                        <span class="btn-text">Read article</span>
-                        <span class="line">
+                    <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                        <span class="btn-text relative z-[5]">Read article</span>
+                        <span class="line relative z-[5]">
                             {% partial 'icons/arrow-lg-right--icon' %}
                             {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
                         </span>
+                        <div class="blob !top-[-220px] !left-[-170px]"></div>
+                        <div class="fakeblob"></div>
                     </a>
                 </div>
             </article>
@@ -500,11 +539,14 @@ layout = "default"
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As we close 2024, I am filled with immense pride and gratitude for the incredible progress we have achieved together at Modirum Platforms. This has been a year of transformation, growth, and laying the foundation for an even brighter future.</p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="btn-lg-arrow primary-dark">
-                        <span class="btn-text">Read article</span>
-                        <span class="line">
+                    <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                        <span class="btn-text relative z-[5]">Read article</span>
+                        <span class="line relative z-[5]">
                             {% partial 'icons/arrow-lg-right--icon' %}
+                            {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
                         </span>
+                        <div class="blob !top-[-220px] !left-[-170px]"></div>
+                        <div class="fakeblob"></div>
                     </a>
                 </div>
             </article>

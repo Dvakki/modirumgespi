@@ -1,4 +1,73 @@
 url = "/news"
-title = "News Page"
 layout = "default"
+title = "News"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 100
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
 ==
+<?php
+use RainLab\Blog\Models\Post;
+
+    function onStart() {
+
+        $this['news'] = Post::where('published','1')->orderBy('published_at', 'desc')->paginate(50);
+
+    }
+?>
+==
+
+<section class="bg-gradient-document latest-news-section offset-top">
+    <div class="relative overflow-hidden section-padding-lg--y">
+        <div class="xl:container xl:!px-[3rem] z-[10] relative">
+            <div class="grid grid-cols-1">
+                <div class="max-w-[79ch] reveal-fade-in reveal-fade-in--up">
+                    <h2 class="mb-5 lg:mb-10 text-white">
+                        Latest News
+                    </h2>
+                    <p class="max-w-[59ch]">
+                        Explore our News and Blog section and stay ahead with the latest advancements in defence and security
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="absolute section-padding--t right-0 top-0 flex items-center justify-center reveal-fade-in">
+                <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="xl:container section-padding--x xl:!px-[3rem] overflow-hidden">
+        
+        <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {% for post in news %}
+            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
+                <div class="flex flex-col justify-between h-full">
+                    <div class="">
+                        <div class="post-thumbnail mb-5 flex items-center justify-center">
+                            <img src="{{ post.featured_images[0].path }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
+                        </div>
+                        <div class="post-content px-6 mb-10">
+                            <h5 class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">{{ post.title|raw }}</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">{{ post.excerpt|raw }}</p>
+                        </div>
+                    </div>
+                    <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}" class="hover-blob-container btn-lg-arrow primary-dark">
+                        <span class="btn-text relative z-[5]">Read article</span>
+                        <span class="line relative z-[5]">
+                            {% partial 'icons/arrow-lg-right--icon' %}
+                            {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
+                        </span>
+                        <div class="blob !top-[-220px] !left-[-170px]"></div>
+                        <div class="fakeblob"></div>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -530,6 +530,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const initHoverEffects = () => {
         let buttons = document.querySelectorAll('.btn-lg-arrow');
 
+        if(!buttons) return;
         buttons.forEach(button => {
             const btntl = gsap.timeline({
                 paused: true,
@@ -569,7 +570,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function btnSize() {
         let btns = document.querySelectorAll('.gespi-cta');
-
+        if(!btns) return;
         btns.forEach((btn) => {
             let btnWidth = btn.offsetWidth;
             let btnAttribute = window.getComputedStyle(btn);
@@ -580,6 +581,26 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     btnSize();
 
+    const allCards = document.querySelectorAll(".hover-blob-container");
+    if(!allCards) return;
+
+    window.addEventListener("mousemove", (ev) => {
+        allCards.forEach((e) => {
+            const blob = e.querySelector(".blob");
+            const fblob = e.querySelector(".fakeblob");
+            const rec = fblob.getBoundingClientRect();
+            blob.animate(
+            [{
+                transform: `translate(${ev.clientX - rec.left - (rec.width / 2)}px,${ev.clientY - rec.top - (rec.height / 2)}px)`,
+            }],
+            {
+                duration: 300,
+                fill: "forwards",
+            }
+            );
+        });
+    });
+    
     window.addEventListener('resize', () => {
         initHeader();
         parallaxInit();
