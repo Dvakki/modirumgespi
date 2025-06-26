@@ -21,23 +21,25 @@ layout = "default"
                     <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
                         A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
                     </p>
-                    <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                        <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
-                            <span></span>
-                            <span class="btn-text relative !z-[5]">
-                                About Gespi
-                            </span>
-                            <span class="btn-icon">
-                                <div class="arrow-hover-btn" href="">
-                                    <span class="arrow">
-                                        {% partial 'icons/arrow-right--diagonal' %}
-                                    </span>
-                                </div>
-                            </span>
-                        </div>
-                        <div class="blob blob--btn z-[-1]"></div>
-                        <div class="fakeblob z-[-1]"></div>
-                    </a>
+                    <div class="hover-blob-wrap">
+                        <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                            <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                <span class="btn-text relative !z-[12]">
+                                    About Gespi
+                                </span>
+                                <span class="btn-icon !z-[12]">
+                                    <div class="arrow-hover-btn" href="">
+                                        <span class="arrow">
+                                            {% partial 'icons/arrow-right--diagonal' %}
+                                        </span>
+                                    </div>
+                                </span>
+                                <div class="blob blob--btn z-[-1]"></div>
+                                <div class="fakeblob z-[-1]"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="hidden md:flex items-center justify-center">
@@ -108,23 +110,25 @@ layout = "default"
                         </p>
                     </div>
                     <div class="flex xl:items-end xl:justify-end">
-                        <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                            <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
-                                <span></span>
-                                <span class="btn-text relative !z-[5]">
-                                    Discover More
-                                </span>
-                                <span class="btn-icon">
-                                    <div class="arrow-hover-btn" href="">
-                                        <span class="arrow">
-                                            {% partial 'icons/arrow-right--diagonal' %}
-                                        </span>
-                                    </div>
-                                </span>
-                            </div>
-                            <div class="blob blob--btn z-[-1]"></div>
-                            <div class="fakeblob z-[-1]"></div>
-                        </a>
+                        <div class="hover-blob-wrap">
+                            <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                    <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                    <span class="btn-text relative !z-[12]">
+                                        Discover More
+                                    </span>
+                                    <span class="btn-icon !z-[12]">
+                                        <div class="arrow-hover-btn" href="">
+                                            <span class="arrow">
+                                                {% partial 'icons/arrow-right--diagonal' %}
+                                            </span>
+                                        </div>
+                                    </span>
+                                    <div class="blob blob--btn z-[-1]"></div>
+                                    <div class="fakeblob z-[-1]"></div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <video class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover" autoplay muted playsinline loop>
@@ -146,7 +150,7 @@ layout = "default"
 </section>
 
 <section class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] rounded reveal-fade-in reveal-fade-in--up">
-    <div class="border-gradient-outline bg-gradient4 rounded-[var(--btn-border-radius)] p-[1.5rem] py-[3rem] sm:p-[3rem] xl:p-[5rem]">
+    <div class="border-gradient-outline bg-gradient4 rounded-[var(--btn-border-radius)] p-[1.5rem] py-[3rem] sm:p-[3rem] xl:p-[5rem] hover-blob-wrap">
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-[5rem] mb-10">
             <div class="hidden xl:block reveal-fade-in reveal-fade-in--up">
                 <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
@@ -161,23 +165,25 @@ layout = "default"
                 <p class="text-white mb-5 lg:mb-10">
                     Empowering UAV operations with autonomous, adaptable, and seamlessly integrated solutions.
                 </p>
-                <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                    <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
-                        <span></span>
-                        <span class="btn-text relative !z-[5]">
-                            Discover More
-                        </span>
-                        <span class="btn-icon">
-                            <div class="arrow-hover-btn" href="">
-                                <span class="arrow">
-                                    {% partial 'icons/arrow-right--diagonal' %}
-                                </span>
-                            </div>
-                        </span>
-                    </div>
-                    <div class="blob blob--btn z-[-1]"></div>
-                    <div class="fakeblob z-[-1]"></div>
-                </a>
+                <div class="hover-blob-wrap">
+                    <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                        <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                            <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                            <span class="btn-text relative !z-[12]">
+                                Discover More
+                            </span>
+                            <span class="btn-icon !z-[12]">
+                                <div class="arrow-hover-btn" href="">
+                                    <span class="arrow">
+                                        {% partial 'icons/arrow-right--diagonal' %}
+                                    </span>
+                                </div>
+                            </span>
+                            <div class="blob blob--btn z-[-1]"></div>
+                            <div class="fakeblob z-[-1]"></div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
@@ -291,7 +297,7 @@ layout = "default"
     {% partial 'site/marquee/partners-marquee' %}
 </section>
 
-<section class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] reveal-fade-in reveal-fade-in--up">
+<section class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] reveal-fade-in reveal-fade-in--up hover-blob-wrap">
     <div class="flex items-center justify-center">
         <h2 class="text-white mb-5 lg:mb-10 text-center">
             Partners & Memberships
@@ -301,7 +307,7 @@ layout = "default"
         <div class="hidden sm:grid partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] md:gap-[2px] bg-gradient5 w-full">
             <div class="absolute top-0 left-0 w-full h-full z-[-1]">
                 <div class="hover-blob-container">
-                    <div class="blob !max-w-[550px] !top-[-150px] !left-[-80px] !opacity-[1]"></div>
+                    <div class="blob !max-w-[70%] !opacity-[1]"></div>
                     <div class="fakeblob"></div>
                 </div>
             </div>
@@ -465,23 +471,25 @@ layout = "default"
             <div class="flex flex-col gap-[1rem]">
                 <h2 class="text-white">Latest News</h2>
             </div>
-            <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
-                    <span></span>
-                    <span class="btn-text relative !z-[5]">
-                        Discover More
-                    </span>
-                    <span class="btn-icon">
-                        <div class="arrow-hover-btn" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </div>
-                    </span>
-                </div>
-                <div class="blob blob--btn z-[-1]"></div>
-                <div class="fakeblob z-[-1]"></div>
-            </a>
+            <div class="hover-blob-wrap">
+                <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                    <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                        <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                        <span class="btn-text relative !z-[12]">
+                            Discover More
+                        </span>
+                        <span class="btn-icon !z-[12]">
+                            <div class="arrow-hover-btn" href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </div>
+                        </span>
+                        <div class="blob blob--btn z-[-1]"></div>
+                        <div class="fakeblob z-[-1]"></div>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
@@ -495,15 +503,17 @@ layout = "default"
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As quantum advancements accelerate, organizations must prepare for a paradigm shift in cybersecurity. This strategic collaboration integrates QuantumGate’s cutting-edge cryptographic solutions into Modirum Platforms’ enterprise software ecosystem, reinforcing security across key industries, including telecommunications, critical communications, banking and finance, government, energy, and healthcare.</p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
-                        <span class="btn-text relative z-[5]">Read article</span>
-                        <span class="line relative z-[5]">
-                            {% partial 'icons/arrow-lg-right--icon' %}
-                            {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
-                        </span>
-                        <div class="blob !top-[-220px] !left-[-170px]"></div>
-                        <div class="fakeblob"></div>
-                    </a>
+                    <div class="hover-blob-wrap">
+                        <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                            <span class="btn-text relative z-[5]">Read article</span>
+                            <span class="line relative z-[5]">
+                                {% partial 'icons/arrow-lg-right--icon' %}
+                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
+                            </span>
+                            <div class="blob"></div>
+                            <div class="fakeblob"></div>
+                        </a>
+                    </div>
                 </div>
             </article>
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
@@ -517,15 +527,17 @@ layout = "default"
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">We are pleased to announce that Modirum Platforms will be participating in MWC Barcelona 2025. The event will take place at Fira Gran Via in Barcelona from March 3 to 6, bringing together industry leaders, experts, and decision-makers in the field of digital connectivity.</p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
-                        <span class="btn-text relative z-[5]">Read article</span>
-                        <span class="line relative z-[5]">
-                            {% partial 'icons/arrow-lg-right--icon' %}
-                            {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
-                        </span>
-                        <div class="blob !top-[-220px] !left-[-170px]"></div>
-                        <div class="fakeblob"></div>
-                    </a>
+                    <div class="hover-blob-wrap">
+                        <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                            <span class="btn-text relative z-[5]">Read article</span>
+                            <span class="line relative z-[5]">
+                                {% partial 'icons/arrow-lg-right--icon' %}
+                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
+                            </span>
+                            <div class="blob"></div>
+                            <div class="fakeblob"></div>
+                        </a>
+                    </div>
                 </div>
             </article>
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
@@ -539,15 +551,17 @@ layout = "default"
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As we close 2024, I am filled with immense pride and gratitude for the incredible progress we have achieved together at Modirum Platforms. This has been a year of transformation, growth, and laying the foundation for an even brighter future.</p>
                         </div>
                     </div>
-                    <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
-                        <span class="btn-text relative z-[5]">Read article</span>
-                        <span class="line relative z-[5]">
-                            {% partial 'icons/arrow-lg-right--icon' %}
-                            {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
-                        </span>
-                        <div class="blob !top-[-220px] !left-[-170px]"></div>
-                        <div class="fakeblob"></div>
-                    </a>
+                    <div class="hover-blob-wrap">
+                        <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                            <span class="btn-text relative z-[5]">Read article</span>
+                            <span class="line relative z-[5]">
+                                {% partial 'icons/arrow-lg-right--icon' %}
+                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
+                            </span>
+                            <div class="blob"></div>
+                            <div class="fakeblob"></div>
+                        </a>
+                    </div>
                 </div>
             </article>
         </div>

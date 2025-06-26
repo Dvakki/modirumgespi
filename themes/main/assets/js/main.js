@@ -581,23 +581,47 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     btnSize();
 
-    const allCards = document.querySelectorAll(".hover-blob-container");
-    if(!allCards) return;
+    let animationFrameId = null;
 
-    window.addEventListener("mousemove", (ev) => {
-        allCards.forEach((e) => {
-            const blob = e.querySelector(".blob");
-            const fblob = e.querySelector(".fakeblob");
-            const rec = fblob.getBoundingClientRect();
-            blob.animate(
-            [{
-                transform: `translate(${ev.clientX - rec.left - (rec.width / 2)}px,${ev.clientY - rec.top - (rec.height / 2)}px)`,
-            }],
-            {
-                duration: 300,
-                fill: "forwards",
-            }
-            );
+    function handleMouseMove(ev, wrap) {
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+
+        animationFrameId = requestAnimationFrame(() => {
+            const containers = wrap.querySelectorAll(".hover-blob-container");
+
+            containers.forEach((container) => {
+                const blob = container.querySelector(".blob");
+                const fblob = container.querySelector(".fakeblob");
+
+                if (!blob || !fblob) return;
+
+                const fblobRect = fblob.getBoundingClientRect();
+                const blobRect = blob.getBoundingClientRect();
+
+                const mouseX = ev.clientX;
+                const mouseY = ev.clientY;
+
+                const offsetX = mouseX - fblobRect.left - blobRect.width / 2;
+                const offsetY = mouseY - fblobRect.top - blobRect.height / 2;
+
+                blob.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            });
+        });
+    }
+
+    const hoverBlobWraps = document.querySelectorAll('.hover-blob-wrap');
+    if (!hoverBlobWraps) return;
+
+    hoverBlobWraps.forEach((wrap) => {
+        const mouseMoveHandler = (ev) => handleMouseMove(ev, wrap);
+
+        wrap.addEventListener('mouseenter', () => {
+            window.addEventListener('mousemove', mouseMoveHandler);
+        });
+
+        wrap.addEventListener('mouseleave', () => {
+            window.removeEventListener('mousemove', mouseMoveHandler);
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
         });
     });
     

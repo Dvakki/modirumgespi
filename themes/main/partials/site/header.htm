@@ -65,16 +65,18 @@
 
     
     <div class="nav-right justify-self-end hidden lg:block">
-        <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-            <div class="hover-blob--inner rounded-[var(--btn-border-radius)]  relative z-[11] flex w-fit">
-                <span></span>
-                <span class="btn-text relative !z-[5]">
-                    Get in Touch
-                </span>
-            </div>
-            <div class="blob blob--btn z-[-1]"></div>
-            <div class="fakeblob z-[-1]"></div>
-        </a>
+        <div class="hover-blob-wrap">
+            <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                    <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                    <span class="btn-text relative !z-[12]">
+                        Get in touch
+                    </span>
+                    <div class="blob blob--btn z-[-1]"></div>
+                    <div class="fakeblob z-[-1]"></div>
+                </div>
+            </a>
+        </div>
     </div>
     <button class="menuBtn justify-self-end block lg:hidden">
         <span class="line line1"></span>

@@ -1310,7 +1310,22 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
 .btn-bg-gradient {
     background: linear-gradient(86.04deg, var(--primary-lighter) -16.34%, var(--primary-dark) 109.5%);
 }
+.btn-bg-gradient2 {
+    background: linear-gradient(86.04deg, var(--primary-lighter) -16.34%, var(--primary-dark) 100.5%);
+    background-size: 100%;
+    background-position: left;
+    transition: background-size .3s ease, background-position 1s ease;
+}
 
+.gespi-cta {
+    &:hover {
+        .btn-bg-gradient2 {
+            background-size: 1000%;
+            background-position: right;
+            transition: background-size 1s ease;
+        }
+    }
+}
 
 
 .gespi-cta {
@@ -1325,7 +1340,7 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
     // background-size: var((--btn-size));
     // background-repeat: no-repeat;
     // transition: background-size .4s ease;
-    background: var(--gradient1);
+    // background: var(--gradient1);
     background-size: var(--btn-size);
     overflow: hidden;
     position: relative;
@@ -1338,6 +1353,7 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
         left: 0;
         width: 100%;
         height: 100%;
+        // background: var(--btn-gradient);
         background: var(--btn-gradient);
         background-size: var((--btn-size));
         background-repeat: no-repeat;
@@ -1382,7 +1398,8 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
 
     &:hover {
         &::before {
-            background-size: calc(var(--btn-size) * 2);
+            // background-size: calc(var(--btn-size) * 2);
+            background: var(--primary-dark);
             transition: background-size .3s ease;
         }
         .blob--btn {
@@ -1517,22 +1534,28 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
 
     .blob {
         filter: blur(80px);
-        position: absolute;
-        z-index: 3;
-        /* to keep it at below everything else */
-        top: -155px;
-        /* to align it at top */
-        left: -155px;
-        /* to align it at left */
+        // position: absolute;
+        z-index: 1;
+        // /* to keep it at below everything else */
+        // top: -155px;
+        // /* to align it at top */
+        // left: -155px;
+        // /* to align it at left */
         width: 150%;
         aspect-ratio: 1/1;
         border-radius: 50%;
-        /* to make it circular */
+        // /* to make it circular */
         background: radial-gradient(49.84% 49.84% at 42.55% 50.16%, rgba(137, 183, 131, 1) 0%, rgba(0, 0, 0, .1) 100%);
         background-repeat: no-repeat;
-        opacity: 1;
+        // opacity: 1;
         user-select: none;
-        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0); /* starting point */
+        will-change: transform; /* performance hint */
+        pointer-events: none; /* ensures mouse doesn't interfere */
+        transition: transform 0.3s ease-out; /* optional smoothness */
 
         &--btn {
             top: 10px;
