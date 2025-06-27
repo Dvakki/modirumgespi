@@ -613,7 +613,7 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
     }
     .header-logo {
         img {
-            width: max(10rem, 12vw);
+            width: max(13rem, 12vw);
             mix-blend-mode: multiply;
         }
     }
@@ -626,7 +626,7 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
         // box-shadow: 0 1px 7px 0 hsla(0, 0%, 90%);
         
         .header--wrapper {
-            grid-template-columns: auto 1fr auto;
+            grid-template-columns: repeat(3,1fr);
             // gap: 3rem;
         }
     }
