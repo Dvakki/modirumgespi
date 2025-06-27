@@ -272,7 +272,9 @@ body {
                 padding-bottom: max(1rem, 2vw);
 
                 .list--link {
+                    transition: color .3s ease;
                     &:hover {
+                        transition: color .3s ease;
                         color: var(--primary-lighter);
                     }
                 }

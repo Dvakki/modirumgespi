@@ -2,6 +2,23 @@ url = "/"
 title = "Home Page"
 layout = "default"
 
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 100
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
+==
+<?php
+use RainLab\Blog\Models\Post;
+
+    function onStart() {
+
+        $this['news'] = Post::where('published','1')->orderBy('published_at', 'desc')->paginate(50);
+
+    }
+?>
 ==
 <section class="hero-banner overflow-hidden ">
     <div class="h-full grid grid-cols-1 relative">
@@ -472,7 +489,7 @@ layout = "default"
                 <h2 class="text-white">Latest News</h2>
             </div>
             <div class="hover-blob-wrap">
-                <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                <a href="{{ "news/index"|page }}" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
                     <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
                         <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
                         <span class="btn-text relative !z-[12]">
@@ -492,19 +509,20 @@ layout = "default"
             </div>
         </div>
         <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {% for post in news %}
             <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
                 <div class="flex flex-col justify-between h-full">
                     <div class="">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
+                            <img src="{{ post.featured_images[0].path }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
                         <div class="post-content px-6 mb-10">
-                            <h5 class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">Modirum Platforms and QuantumGate Forge Strategic Partnership to Enhance Cybersecurity in a Post-Quantum World</h5>
-                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As quantum advancements accelerate, organizations must prepare for a paradigm shift in cybersecurity. This strategic collaboration integrates QuantumGate’s cutting-edge cryptographic solutions into Modirum Platforms’ enterprise software ecosystem, reinforcing security across key industries, including telecommunications, critical communications, banking and finance, government, energy, and healthcare.</p>
+                            <h5 class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">{{ post.title|raw }}</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">{{ post.excerpt|raw }}</p>
                         </div>
                     </div>
                     <div class="hover-blob-wrap">
-                        <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
+                        <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}" class="hover-blob-container btn-lg-arrow primary-dark">
                             <span class="btn-text relative z-[5]">Read article</span>
                             <span class="line relative z-[5]">
                                 {% partial 'icons/arrow-lg-right--icon' %}
@@ -516,54 +534,7 @@ layout = "default"
                     </div>
                 </div>
             </article>
-            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
-                <div class="flex flex-col justify-between h-full">
-                    <div class="">
-                        <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
-                        </div>
-                        <div class="post-content px-6 mb-10">
-                            <h5 class="text-lg mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">Modirum Platforms at MWC Barcelona 2025</h5>
-                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">We are pleased to announce that Modirum Platforms will be participating in MWC Barcelona 2025. The event will take place at Fira Gran Via in Barcelona from March 3 to 6, bringing together industry leaders, experts, and decision-makers in the field of digital connectivity.</p>
-                        </div>
-                    </div>
-                    <div class="hover-blob-wrap">
-                        <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
-                            <span class="btn-text relative z-[5]">Read article</span>
-                            <span class="line relative z-[5]">
-                                {% partial 'icons/arrow-lg-right--icon' %}
-                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
-                            </span>
-                            <div class="blob"></div>
-                            <div class="fakeblob"></div>
-                        </a>
-                    </div>
-                </div>
-            </article>
-            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
-                <div class="flex flex-col justify-between h-full">
-                    <div class="">
-                        <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ 'news/news-placeholder.png'|media }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
-                        </div>
-                        <div class="post-content px-6 mb-10">
-                            <h5 class="text-lg mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">CEO Annual Letter: Reflecting on a Transformative Year and Looking Ahead</h5>
-                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">As we close 2024, I am filled with immense pride and gratitude for the incredible progress we have achieved together at Modirum Platforms. This has been a year of transformation, growth, and laying the foundation for an even brighter future.</p>
-                        </div>
-                    </div>
-                    <div class="hover-blob-wrap">
-                        <a href="javascript:;" class="hover-blob-container btn-lg-arrow primary-dark">
-                            <span class="btn-text relative z-[5]">Read article</span>
-                            <span class="line relative z-[5]">
-                                {% partial 'icons/arrow-lg-right--icon' %}
-                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
-                            </span>
-                            <div class="blob"></div>
-                            <div class="fakeblob"></div>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            {% endfor %}
         </div>
     </div>
 </section>

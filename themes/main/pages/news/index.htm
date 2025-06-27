@@ -23,7 +23,7 @@ use RainLab\Blog\Models\Post;
 
 <section class="bg-gradient-document latest-news-section offset-top">
     <div class="relative overflow-hidden section-padding-lg--y">
-        <div class="xl:container xl:!px-[3rem] z-[10] relative">
+        <div class="xl:container section-padding--x xl:!px-[3rem] z-[10] relative">
             <div class="grid grid-cols-1">
                 <div class="max-w-[79ch] reveal-fade-in reveal-fade-in--up">
                     <h2 class="mb-5 lg:mb-10 text-white">
@@ -56,15 +56,17 @@ use RainLab\Blog\Models\Post;
                             <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">{{ post.excerpt|raw }}</p>
                         </div>
                     </div>
-                    <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}" class="hover-blob-container btn-lg-arrow primary-dark">
-                        <span class="btn-text relative z-[5]">Read article</span>
-                        <span class="line relative z-[5]">
-                            {% partial 'icons/arrow-lg-right--icon' %}
-                            {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
-                        </span>
-                        <div class="blob !top-[-220px] !left-[-170px]"></div>
-                        <div class="fakeblob"></div>
-                    </a>
+                    <div class="hover-blob-wrap">
+                        <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}" class="hover-blob-container btn-lg-arrow primary-dark">
+                            <span class="btn-text relative z-[5]">Read article</span>
+                            <span class="line relative z-[5]">
+                                {% partial 'icons/arrow-lg-right--icon' %}
+                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
+                            </span>
+                            <div class="blob"></div>
+                            <div class="fakeblob"></div>
+                        </a>
+                    </div>
                 </div>
             </article>
             {% endfor %}

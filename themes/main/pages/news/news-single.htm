@@ -12,7 +12,7 @@ categoryPage = 404
         <div class="absolute right-0 top-0 flex items-center justify-center section-padding--t reveal-fade-in">
             <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
         </div>
-        <div class="container relative">
+        <div class="xl:container section-padding--x xl:!px-[3rem] relative">
             <ul class="breadcrumbs breadcrumbs--light mb-10">
                 <li class="item">
                     <a href="{{ 'home'|page }}" class="link btn-underlined btn-underlined--light btn-underlined--v2">Home</a>
@@ -21,7 +21,7 @@ categoryPage = 404
                     {% partial 'icons/arrow-sm-right--icon' %}
                 </li>
                 <li class="item">
-                    <a href="{{ 'news/index'|page }}" class="link btn-underlined btn-underlined--light btn-underlined--v2 font-light">Media & News</a>
+                    <a href="{{ 'news/index'|page }}" class="link btn-underlined btn-underlined--light btn-underlined--v2 font-light">News</a>
                 </li>
                 <li class="separator">
                     {% partial 'icons/arrow-sm-right--icon' %}
@@ -41,7 +41,7 @@ categoryPage = 404
     </div>
 </section>
 
-<section class="container section-padding--y">
+<section class="xl:container section-padding--x xl:!px-[3rem] pt-[var(--container-offset)]">
 
     <div class="dynamic-content flex flex-wrap gap-[3rem]">
 
@@ -55,6 +55,7 @@ categoryPage = 404
     <style>
         .dynamic-content strong {
             color: var(--primary-lighter);
+            font-family: var(--font-bold);
         }
 
         .dynamic-content a {
