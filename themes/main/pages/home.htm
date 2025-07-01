@@ -148,7 +148,7 @@ use RainLab\Blog\Models\Post;
                             loop: true,
                             centeredSlides: true,
                             slidesPerView: 1.2,
-                            speed: 700,
+                            speed: 1000,
                             autoplay: {
                                 delay: 4000,
                                 reverseDirection: true,
@@ -172,7 +172,7 @@ use RainLab\Blog\Models\Post;
                 {% put styles %}
                     <style>
                         .hero-card-swiper .swiper-slide {
-                            filter: brightness(.8) blur(3px);
+                            filter: brightness(.8) blur(2px);
                             transform: scale(0.9);
                             transition: filter .5s ease, transform .5s ease;
                             transition-property: unset !important;
@@ -186,12 +186,12 @@ use RainLab\Blog\Models\Post;
                         .hero-card-swiper .swiper-slide img {
                             filter: none;
                             transform: scale(1);
-                            transition: filter .5s ease, transform .7s ease;
+                            transition: filter .5s ease, transform 1s ease;
                         }
                         .hero-card-swiper .swiper-slide-active img {
                             filter: brightness(1);
                             transform: scale(1.15);
-                            transition: filter .5s ease, transform .7s ease-out;
+                            transition: filter .5s ease, transform 1s ease-out;
                         }
                         .hero-card-swiper .swiper-slide .hero-card-slide-content {
                             opacity: 0;
