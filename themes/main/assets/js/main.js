@@ -54,7 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
             {
                 display: 'block',
                 autoAlpha: 1,
-                // display: 'flex',
             })
 
             preloaderTL.fromTo(preloaderLogoDark, {

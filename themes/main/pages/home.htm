@@ -20,10 +20,10 @@ use RainLab\Blog\Models\Post;
     }
 ?>
 ==
-<section class="hero-banner overflow-hidden ">
+<section class="hero-banner overflow-hidden">
     <div class="h-full grid grid-cols-1 relative">
         <div class="banner--wrapper justify-between offset-top pt-[3rem]">
-            <div class="xl:container h-full grid grid-cols-1 md:grid-cols-[1fr,.8fr] gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem]  2xl:!px-[6rem]  reveal-fade-in reveal-fade-in--up">
+            <div class="xl:container h-full grid grid-cols-1 md:grid-cols-2 gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem]  2xl:!px-[6rem]  reveal-fade-in reveal-fade-in--up">
                 <div class="content py-[3rem]relative z-2">
                     <h1 class="hero-title mb-5 lg:mb-10 text-white">
                         A new style<br>
@@ -32,9 +32,9 @@ use RainLab\Blog\Models\Post;
                     <h3 class="mb-5 lg:mb-10 text-white">
                         Excellence across <span class="text-primary--lighter">land, sea and air.</span>
                     </h3>
-                    <div class="mb-10 flex md:hidden items-center justify-center">
+                    {# <div class="mb-10 flex md:hidden items-center justify-center">
                         <img class="img-fluid" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
-                    </div>
+                    </div> #}
                     <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
                         A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
                     </p>
@@ -58,10 +58,121 @@ use RainLab\Blog\Models\Post;
                         </a>
                     </div>
                 </div>
-                
-                <div class="hidden md:flex items-center justify-center">
-                    <img class="img-fluid" width="600" height="600" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
+
+                <div class="hero-card-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide w-full lg:w-[80%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
+                            <a href="javascript:;" class="block h-full">
+                                <img class="w-full h-full object-cover" src="{{ 'home/naval-system-3.jpeg'|media }}" alt="">
+                                <div class="hero-card-slide-content h-full">
+                                    <div class="bg-gradient-overlay absolute bottom-0 left-0 h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                    <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                        <div class="flex flex-col gap-[1rem]">
+                                            <h4 class="font-bold uppercase">
+                                                Land
+                                            </h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore dignissimos voluptatem, dolores mollitia neque?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide w-full lg:w-[80%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
+                            <a href="javascript:;" class="block h-full">
+                                <img class="h-[100%] w-full h-full object-cover" src="{{ 'home/air-systems.jpeg'|media }}" alt="">
+                                <div class="hero-card-slide-content h-full">
+                                    <div class="bg-gradient-overlay absolute bottom-0 left-0 h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                    <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                        <div class="flex flex-col gap-[1rem]">
+                                            <h4 class="font-bold uppercase">
+                                                Sea
+                                            </h4>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore dignissimos voluptatem, dolores mollitia neque?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide w-full lg:w-[80%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
+                            <a href="javascript:;">
+                                <img class="h-[100%] w-full h-full object-cover" src="{{ 'home/air-systems.jpeg'|media }}" alt="">
+                                <div class="hero-card-slide-content h-full">
+                                    <div class="bg-gradient-overlay absolute bottom-0 left-0 h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                    <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                        <div class="flex flex-col gap-[1rem]">
+                                            <h4 class="font-bold uppercase">
+                                                Air
+                                            </h4>
+                                            <p>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore dignissimos voluptatem, dolores mollitia neque?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
+                {% put scripts %}
+                    <script>
+                        var swiper = new Swiper(".hero-card-swiper", {
+                            slidesPerView: 'auto',
+                            effect: "cards",
+                            allowTouchMove: true,
+                            // autoplay: true,
+                            speed: 500,
+                            freeMode: false,
+                            loop: false,
+                            cardsEffect: {
+                                perSlideOffset: 15, // Space between cards in pixels
+                                perSlideRotate: 0, // Rotation angle in degrees
+                            },
+                        });
+                    </script>
+                {% endput %}
+
+                {% put styles %}
+                    <style>
+                        .hero-card-swiper .swiper-slide {
+                            filter: brightness(.5);
+                            transition: filter .5s ease;
+                            transition-property: unset !important;
+                            overflow: hidden;
+                            height: 600px;
+                        }
+                        .hero-card-swiper .swiper-slide-active {
+                            filter: brightness(1);
+                            transition: filter .5s ease;
+                        }
+                        .hero-card-swiper .swiper-slide img {
+                            filter: brightness(1);
+                            transform: scale(1);
+                            transition: filter .5s ease, transform .7s ease;
+                        }
+                        .hero-card-swiper .swiper-slide-active img {
+                            filter: brightness(1);
+                            transform: scale(1.15);
+                            transition: filter .5s ease, transform .7s ease-out;
+                        }
+                        .hero-card-swiper .swiper-slide .hero-card-slide-content {
+                            opacity: 0;
+                            transition: opacity .7s ease;
+                        }
+                        .hero-card-swiper .swiper-slide-active .hero-card-slide-content {
+                            opacity: 1;
+                            transition: opacity .7s ease;
+                        }
+                    </style>
+                {% endput %}
+                
+                {# <div class="hidden md:flex items-center justify-center">
+                    <img class="img-fluid" width="600" height="600" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
+                </div> #}
             </div>
             <div class="absolute top-0 left-0 w-full h-full z-0 reveal-fade-in overflow-hidden">
                 <div class="max-w-[27rem] absolute left-[-8rem] floating-el">
@@ -75,7 +186,7 @@ use RainLab\Blog\Models\Post;
                 </div>
             </div>
         </div>
-        <div class="xl:container mt-[2rem] flex items-end section-padding--x xl:!px-[3rem] reveal-fade-in reveal-fade-in--up">
+        <div class="xl:container mt-[3rem] flex items-end section-padding--x xl:!px-[3rem] reveal-fade-in reveal-fade-in--up">
             <div class="hero-slider py-5 overflow-hidden self-end">
                 <div class="lg:flex lg:items-center gap-[5vw]">
                     {% partial 'site/marquee/certificates-marquee' %}
