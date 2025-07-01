@@ -115,6 +115,60 @@ use RainLab\Blog\Models\Post;
                                     </div>
                                 </a>
                             </div>
+                            <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;" class="block h-full flex items-center justify-center">
+                                    <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt="">
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Land
+                                                </h5>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore dignissimos voluptatem, dolores mollitia neque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;" class="block h-full flex items-center justify-center">
+                                    <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt="">
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Sea
+                                                </h4>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore dignissimos voluptatem, dolores mollitia neque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a class="block h-full flex items-center justify-center" href="javascript:;">
+                                    <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt="">
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Air
+                                                </h4>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum inventore dignissimos voluptatem, dolores mollitia neque?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,12 +211,10 @@ use RainLab\Blog\Models\Post;
                                 prev: {
                                     translate: ["-20%", 0, -250],
                                     rotate: [0, 0, 0],
-                                    opacity: 1,
                                 },
                                 next: {
                                     translate: ["20%", 0, -250],
                                     rotate: [0, 0, 0],
-                                    opacity: 1,
                                 },
                             },
                         });
@@ -172,26 +224,33 @@ use RainLab\Blog\Models\Post;
                 {% put styles %}
                     <style>
                         .hero-card-swiper .swiper-slide {
-                            filter: brightness(.8) blur(2px);
+                            filter: blur(2px);
                             transform: scale(0.9);
-                            transition: filter .5s ease, transform .5s ease;
+                            opacity: 0 !important;
+                            transition: filter .5s ease, transform .5s ease, opacity .5s ease;
                             transition-property: unset !important;
-                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                        }
+                        .hero-card-swiper .swiper-slide-next {
+                            opacity: .7 !important;
+                        }
+                        .hero-card-swiper .swiper-slide-prev {
+                            opacity: .7 !important;
                         }
                         .hero-card-swiper .swiper-slide-active {
                             filter: none;
-                            transition: filter .5s ease, transform .5s ease;
+                            transition: filter .5s ease, transform .5s ease, opacity .5s ease;
                             z-index: 3;
+                            opacity: 1 !important;
+                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
                         }
                         .hero-card-swiper .swiper-slide img {
-                            filter: none;
                             transform: scale(1);
                             transition: filter .5s ease, transform 1s ease;
                         }
                         .hero-card-swiper .swiper-slide-active img {
-                            filter: brightness(1);
                             transform: scale(1.15);
-                            transition: filter .5s ease, transform 1s ease-out;
+                            transition: transform 1s ease-out;
                         }
                         .hero-card-swiper .swiper-slide .hero-card-slide-content {
                             opacity: 0;
@@ -200,13 +259,6 @@ use RainLab\Blog\Models\Post;
                         .hero-card-swiper .swiper-slide-active .hero-card-slide-content {
                             opacity: 1;
                             transition: opacity .7s ease;
-                        }
-                        .hero-card-swiper .swiper-slide-prev,
-                        .hero-card-swiper .swiper-slide-next {
-                        z-index: 2;
-                        }
-                        .hero-card-swiper .swiper-slide-next {
-                            transition: transform .5s ease;
                         }
                     </style>
                 {% endput %}
