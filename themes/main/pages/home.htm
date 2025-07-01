@@ -29,7 +29,7 @@ use RainLab\Blog\Models\Post;
                         A new style<br>
                         of defence.
                     </h1>
-                    <h3 class="mb-5 lg:mb-10 text-white">
+                    <h4 class="mb-5 lg:mb-10 text-white">
                         Excellence across <span class="text-primary--lighter">land, sea and air.</span>
                     </h3>
                     {# <div class="mb-10 flex md:hidden items-center justify-center">
@@ -61,7 +61,7 @@ use RainLab\Blog\Models\Post;
 
                 <div class="hero-card-swiper swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide w-full lg:w-[80%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
+                        <div class="swiper-slide w-full w-[99%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
                             <a href="javascript:;" class="block h-full">
                                 <img class="w-full h-full object-cover" src="{{ 'home/naval-system-3.jpeg'|media }}" alt="">
                                 <div class="hero-card-slide-content h-full">
@@ -79,7 +79,7 @@ use RainLab\Blog\Models\Post;
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide w-full lg:w-[80%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
+                        <div class="swiper-slide w-full w-[99%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
                             <a href="javascript:;" class="block h-full">
                                 <img class="h-[100%] w-full h-full object-cover" src="{{ 'home/air-systems.jpeg'|media }}" alt="">
                                 <div class="hero-card-slide-content h-full">
@@ -97,7 +97,7 @@ use RainLab\Blog\Models\Post;
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide w-full lg:w-[80%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
+                        <div class="swiper-slide w-full w-[99%] rounded-[var(--btn-border-radius)] w-fit reveal-fade-in reveal-fade-in--left">
                             <a href="javascript:;">
                                 <img class="h-[100%] w-full h-full object-cover" src="{{ 'home/air-systems.jpeg'|media }}" alt="">
                                 <div class="hero-card-slide-content h-full">
@@ -124,8 +124,10 @@ use RainLab\Blog\Models\Post;
                             slidesPerView: 'auto',
                             effect: "cards",
                             allowTouchMove: true,
-                            // autoplay: true,
-                            speed: 500,
+                            autoplay: {
+                                delay: 3500,
+                            },
+                            speed: 700,
                             freeMode: false,
                             loop: false,
                             cardsEffect: {
