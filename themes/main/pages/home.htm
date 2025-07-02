@@ -496,7 +496,7 @@ use RainLab\Blog\Models\Post;
                         }
                     }
 
-                    function handleSlideVideo() {
+                    async function handleSlideVideo() {
                         const swiper = getActiveHeroSwiper();
                         if (!swiper) return;
 
@@ -506,19 +506,33 @@ use RainLab\Blog\Models\Post;
                         // Pause and reset all other videos
                         document.querySelectorAll('.hero-slide-video').forEach((vid) => {
                             if (vid !== video) {
-                                vid.pause();
-                                vid.currentTime = 0;
-                                vid.removeEventListener('timeupdate', onVideoAlmostEnded);
+                            vid.pause();
+                            vid.currentTime = 0;
+                            vid.removeEventListener('timeupdate', onVideoAlmostEnded);
                             }
                         });
 
                         if (video) {
+                            try {
                             if (video.readyState >= 1) {
-                                video.play();
+                                if (video.paused) {
+                                await video.play();
+                                }
                             } else {
-                                video.addEventListener('loadedmetadata', () => {
-                                    video.play();
+                                video.addEventListener('loadedmetadata', async () => {
+                                if (video.paused) {
+                                    try {
+                                    await video.play();
+                                    } catch (e) {
+                                    // Handle play error silently
+                                    // console.log('Video play interrupted:', e);
+                                    }
+                                }
                                 }, { once: true });
+                            }
+                            } catch (err) {
+                            // Play() promise was rejected or interrupted
+                            // console.log('Video play() failed:', err);
                             }
 
                             video.removeEventListener('timeupdate', onVideoAlmostEnded);
