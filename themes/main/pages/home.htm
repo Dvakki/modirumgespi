@@ -32,9 +32,138 @@ use RainLab\Blog\Models\Post;
                     <h4 class="mb-5 lg:mb-10 text-white">
                         Excellence across <span class="text-primary--lighter">land, sea and air.</span>
                     </h3>
-                    {# <div class="mb-10 flex md:hidden items-center justify-center">
-                        <img class="img-fluid" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
-                    </div> #}
+                    <div class="block lg:hidden hero-card-swiper mobile-hero-swiper swiper my-10">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                        <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Sea
+                                                </h5>
+                                                <p>
+                                                    Secure maritime superiority with AI-enhanced naval systems—robust, agile, and mission-ready from Modirum | Gespi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
+                                        <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Land
+                                                </h4>
+                                                <p>
+                                                    Elevate ground dominance with our advanced C2 and ISR solutions—seamless intelligence, resilient communications, decisive action.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
+                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                        <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Air
+                                                </h4>
+                                                <p>
+                                                    Command the skies with cutting-edge UAVs, swarming drones, and precision optics by Modirum | Gespi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                        <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Sea
+                                                </h5>
+                                                <p>
+                                                    Secure maritime superiority with AI-enhanced naval systems—robust, agile, and mission-ready from Modirum | Gespi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
+                                        <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Land
+                                                </h4>
+                                                <p>
+                                                    Elevate ground dominance with our advanced C2 and ISR solutions—seamless intelligence, resilient communications, decisive action.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                                <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
+                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                        <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Air
+                                                </h4>
+                                                <p>
+                                                    Command the skies with cutting-edge UAVs, swarming drones, and precision optics by Modirum | Gespi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev hero-swiper-prev"></div>
+                        <div class="swiper-button-next hero-swiper-next"></div>
+                    </div>
                     <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
                         A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
                     </p>
@@ -59,12 +188,12 @@ use RainLab\Blog\Models\Post;
                     </div>
                 </div>
                 <div class="flex min-w-[100%]">
-                    <div class="hero-card-swiper swiper">
+                    <div class="hidden lg:block hero-card-swiper desktop-hero-swiper swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
                                     {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
                                         <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
@@ -85,7 +214,7 @@ use RainLab\Blog\Models\Post;
                             <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
                                     {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
                                         <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
@@ -106,7 +235,7 @@ use RainLab\Blog\Models\Post;
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
                                     {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
                                         <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
@@ -127,7 +256,7 @@ use RainLab\Blog\Models\Post;
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
                                     {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
                                         <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
@@ -148,7 +277,7 @@ use RainLab\Blog\Models\Post;
                             <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
                                     {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
                                         <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
@@ -169,7 +298,7 @@ use RainLab\Blog\Models\Post;
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
                                     {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
                                         <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
@@ -194,73 +323,129 @@ use RainLab\Blog\Models\Post;
                 </div>
                 {% put scripts %}
                     <script>
-                        // var swiper = new Swiper(".hero-card-swiper", {
-                        //     effect: "cards",
-                        //     grabCursor: true,
-                        //     centeredSlides: true,
-                        //     loop: true,
-                        //     slidesPerView: 'auto',
-                        //     initialSlide: 1,
-                        //     autoplay: {
-                        //         reverseDirection: true,
-                        //         delay: 3500,
-                        //     },
-                        //     speed: 700,
-                        //     freeMode: false,
-                        //     cardsEffect: {
-                        //         perSlideOffset: 20,
-                        //         perSlideRotate: 0,
-                        //         rotate: false,
-                        //         slideShadows: true,
-                        //     },
-                        // });
+                        let desktopSwiper = null;
+                        let mobileSwiper = null;
 
-                        const heroSwiper = new Swiper(".hero-card-swiper", {
-                            effect: "creative",
-                            // grabCursor: true,
-                            allowTouchMove: false,
-                            initialSlide: 2,
-                            loop: true,
-                            centeredSlides: true,
-                            slidesPerView: 1.2,
-                            navigation: {
-                                nextEl: '.hero-swiper-next',
-                                prevEl: '.hero-swiper-prev',
-                            },
-                            speed: 650,
-                            autoplay: {
-                                delay: 5000,
-                            },
-                            creativeEffect: {
-                                prev: {
-                                    translate: ["-20%", 0, -250],
-                                    rotate: [0, 0, 0],
-                                },
-                                next: {
-                                    translate: ["20%", 0, -250],
-                                    rotate: [0, 0, 0],
-                                },
-                            },
-                            on: {
-                                init: function () {
-                                    handleVideoAndAutoplay(this);
-                                },
-                                slideChangeTransitionStart: function () {
-                                    handleVideoAndAutoplay(this);
+                        function initSwipers() {
+                            const isMobile = window.innerWidth <= 1024;
 
-                                    const allVideos = document.querySelectorAll('.hero-card-swiper .hero-slide-video');
+                            if (isMobile && !mobileSwiper) {
+                                const heroSwiper = new Swiper(".mobile-hero-swiper", {
+                                    effect: "creative",
+                                    // grabCursor: true,
+                                    allowTouchMove: false,
+                                    initialSlide: 2,
+                                    loop: true,
+                                    centeredSlides: true,
+                                    slidesPerView: 1.2,
+                                    navigation: {
+                                        nextEl: '.hero-swiper-next',
+                                        prevEl: '.hero-swiper-prev',
+                                    },
+                                    speed: 650,
+                                    autoplay: {
+                                        delay: 5000,
+                                    },
+                                    creativeEffect: {
+                                        prev: {
+                                            translate: ["-20%", 0, -250],
+                                            rotate: [0, 0, 0],
+                                        },
+                                        next: {
+                                            translate: ["20%", 0, -250],
+                                            rotate: [0, 0, 0],
+                                        },
+                                    },
+                                    on: {
+                                        init: function () {
+                                            handleVideoAndAutoplay(this);
+                                        },
+                                        slideChangeTransitionStart: function () {
+                                            handleVideoAndAutoplay(this);
 
-                                    allVideos.forEach((video) => {
-                                        const parentSlide = video.closest('.swiper-slide');
-                                        if (parentSlide.classList.contains('swiper-slide-active')) {
-                                            video.play();
-                                        } else {
-                                            video.pause();
-                                            video.currentTime = 0;
-                                        }
-                                    });
-                                },
-                            },
+                                            const allVideos = document.querySelectorAll('.hero-card-swiper .hero-slide-video');
+
+                                            allVideos.forEach((video) => {
+                                                const parentSlide = video.closest('.swiper-slide');
+                                                if (parentSlide.classList.contains('swiper-slide-active')) {
+                                                    video.play();
+                                                } else {
+                                                    video.pause();
+                                                    video.currentTime = 0;
+                                                }
+                                            });
+                                        },
+                                    },
+                                });
+                            }
+
+                            if (!isMobile && !desktopSwiper) {
+                                const heroSwiper = new Swiper(".desktop-hero-swiper", {
+                                    effect: "creative",
+                                    // grabCursor: true,
+                                    allowTouchMove: false,
+                                    initialSlide: 2,
+                                    loop: true,
+                                    centeredSlides: true,
+                                    slidesPerView: 1.2,
+                                    navigation: {
+                                        nextEl: '.hero-swiper-next',
+                                        prevEl: '.hero-swiper-prev',
+                                    },
+                                    speed: 650,
+                                    autoplay: {
+                                        delay: 5000,
+                                    },
+                                    creativeEffect: {
+                                        prev: {
+                                            translate: ["-20%", 0, -250],
+                                            rotate: [0, 0, 0],
+                                        },
+                                        next: {
+                                            translate: ["20%", 0, -250],
+                                            rotate: [0, 0, 0],
+                                        },
+                                    },
+                                    on: {
+                                        init: function () {
+                                            handleVideoAndAutoplay(this);
+                                        },
+                                        slideChangeTransitionStart: function () {
+                                            handleVideoAndAutoplay(this);
+
+                                            const allVideos = document.querySelectorAll('.hero-card-swiper .hero-slide-video');
+
+                                            allVideos.forEach((video) => {
+                                                const parentSlide = video.closest('.swiper-slide');
+                                                if (parentSlide.classList.contains('swiper-slide-active')) {
+                                                    video.play();
+                                                } else {
+                                                    video.pause();
+                                                    video.currentTime = 0;
+                                                }
+                                            });
+                                        },
+                                    },
+                                });
+                            }
+                        }
+
+                        initSwipers();
+                        window.addEventListener('resize', () => {
+                            // Optional: destroy swiper if switching views
+                            const isMobile = window.innerWidth <= 1024;
+
+                            if (isMobile && desktopSwiper) {
+                                desktopSwiper.destroy();
+                                desktopSwiper = null;
+                            }
+
+                            if (!isMobile && mobileSwiper) {
+                                mobileSwiper.destroy();
+                                mobileSwiper = null;
+                            }
+
+                            initSwipers();
                         });
 
                         function handleVideoAndAutoplay(swiperInstance) {
@@ -363,10 +548,9 @@ use RainLab\Blog\Models\Post;
                         
                     </style>
                 {% endput %}
-                
-                {# <div class="hidden md:flex items-center justify-center">
-                    <img class="img-fluid" width="600" height="600" src="{{ 'home/gespi_diagram.svg'|media }}" alt="">
-                </div> #}
+                <div class="absolute right-0 top-0 section-padding--t flex items-center justify-center reveal-fade-in w-[90%]">
+                    <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
+                </div>
             </div>
             <div class="absolute top-0 left-0 w-full h-full z-0 reveal-fade-in overflow-hidden">
                 <div class="max-w-[27rem] absolute left-[-8rem] floating-el">
@@ -380,7 +564,7 @@ use RainLab\Blog\Models\Post;
                 </div>
             </div>
         </div>
-        <div class="xl:container  flex items-end section-padding--x xl:!px-[3rem] reveal-fade-in reveal-fade-in--up">
+        <div class="xl:container flex items-end section-padding--x xl:!px-[3rem] reveal-fade-in reveal-fade-in--up">
             <div class="hero-slider py-5 overflow-hidden self-end">
                 <div class="lg:flex lg:items-center justify-between gap-[5vw]">
                     {% partial 'site/marquee/certificates-marquee' %}
