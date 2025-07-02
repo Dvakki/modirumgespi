@@ -24,7 +24,7 @@ use RainLab\Blog\Models\Post;
     <div class="grid grid-cols-1 relative h-full">
         <div class="banner--wrapper flex items-center justify-between offset-top">
             <div class="xl:container w-full grid grid-cols-1 lg:grid-cols-[.8fr,1fr] gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem] 2xl:!px-[6rem] section-padding--y">
-                <div class="content py-[3rem]relative z-2">
+                <div class="content py-[3rem]relative z-2 reveal-fade-in">
                     <h1 class="hero-title mb-5 lg:mb-10 text-white">
                         A new style<br>
                         of defence.
@@ -36,7 +36,6 @@ use RainLab\Blog\Models\Post;
                         <div class="swiper-wrapper">
                             <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
                                     <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
                                         <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
                                     </video>
@@ -57,7 +56,6 @@ use RainLab\Blog\Models\Post;
                             </div>
                             <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
                                     <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
                                         <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
                                     </video>
@@ -188,7 +186,7 @@ use RainLab\Blog\Models\Post;
                     </div>
                 </div>
                 <div class="flex min-w-[100%]">
-                    <div class="hidden lg:block hero-card-swiper desktop-hero-swiper swiper">
+                    <div class="hidden lg:block hero-card-swiper desktop-hero-swiper swiper reveal-fade-in">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">

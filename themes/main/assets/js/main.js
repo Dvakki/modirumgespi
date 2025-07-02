@@ -34,32 +34,203 @@ document.querySelectorAll('.anchor').forEach((anchor) => {
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    // REVEAL ANIM
+    const revealAnim = () => {
+        let animSection = document.querySelectorAll(".reveal-anim");
+
+        animSection.forEach((section) => {
+            let revealFadeIn = section.querySelectorAll(".reveal-fade-in");
+            let revealIMGWrapper = section.querySelectorAll('.reveal-img-wrapper');
+            
+            // Set initial state for all .reveal-fade-in elements
+            revealFadeIn.forEach((item) => {
+                gsap.set(item, { autoAlpha: 0 });
+            });
+
+            revealIMGWrapper.forEach(wrapper => {
+                let revealIMG = wrapper.querySelector(".reveal-img");
+                let revealIMGOverlay = wrapper.querySelector(".reveal-img-overlay");
+                let duration = revealIMG.getAttribute("data-duration");
+            
+                let imageTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: wrapper,
+                        start: "top 80%", // Trigger when the top of the element is 80% in view
+                        toggleActions: "play none none none", // Reverse on scroll up
+                        // markers: true,
+                    }
+                });
+
+                if(revealIMG.classList.contains("reveal-img--right")) {
+                    let setOverlayValues =  gsap.set(revealIMGOverlay, {scaleX: 0, transformOrigin: "left",});
+                    let setImageValues = gsap.set(revealIMG, {autoAlpha: 0});
+
+                    imageTl.add(setOverlayValues, setImageValues);
+
+                    imageTl
+                    .fromTo(revealIMGOverlay, {
+                        'border-top-right-radius': '50%', 
+                        'border-bottom-right-radius': '50%', 
+                    },{
+                        scaleX: 1,
+                        ease: "expo.Out",
+                        duration: duration,
+                        'border-top-right-radius': '0%', 
+                        'border-bottom-right-radius': '0%', 
+                    })
+
+                    imageTl
+                    .to(revealIMGOverlay, {
+                        scaleX: 0,
+                        ease: "sine.inOut",
+                        duration: duration,
+                        transformOrigin: "right",
+                        
+                    },">+.5")
+
+                    .to(revealIMG, {
+                        autoAlpha: 1,
+                        scale: 1,
+                        duration: duration,
+                        ease: "sine.out"
+                    }, "<+.15") // Overlap animations slightly for a smoother transition
+                    .to(revealIMGOverlay, {
+                        autoAlpha: 0,
+                        duration: 0.3
+                    }, "-=0.2");
+
+                } else {
+                    let setOverlayValues =  gsap.set(revealIMGOverlay, {scaleY: 0, transformOrigin: "top",});
+                    let setImageValues = gsap.set(revealIMG, {autoAlpha: 0});
+
+                    imageTl.add(setOverlayValues, setImageValues);
+
+                    imageTl
+                        .to(revealIMGOverlay, {
+                            scaleY: 1,
+                            ease: "sine.inOut",
+                            duration: duration
+                        })
+                        .to(revealIMGOverlay, {
+                            scaleY: 0,
+                            ease: "sine.inOut",
+                            transformOrigin: "bottom",
+                            duration: duration
+                        },'>')
+                        .fromTo(revealIMG, {
+                            autoAlpha: 0,
+                        }, {
+                            autoAlpha: 1,
+                            scale: 1,
+                            duration: duration,
+                            ease: "sine.out"
+                        }, "<+.15") // Overlap animations slightly for a smoother transition
+                        .to(revealIMGOverlay, {
+                            autoAlpha: 0,
+                            duration: 0.3
+                        }, "-=0.2");
+                    }
+            });
+
+            // IMAGE REVEAL
+            // revealIMG.forEach(image => {
+            //     if (image.classList.contains('reveal-img--right')) {
+            //         gsap.set(image, {clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)'});
+            //     } else if (image.classList.contains('reveal-img--left')) {
+            //         gsap.set(image, {clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)'});
+            //     } else if (image.classList.contains('reveal-img--top')) {
+            //         gsap.set(image, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'});
+            //     } else if (image.classList.contains('reveal-img--bottom')) {
+            //         gsap.set(image, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'});
+            //     }
+
+            //     gsap.to(image, {
+            //         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            //         autoAlpha: 1,
+            //         scale: 1,
+            //         duration: 1.05,
+            //         ease: 'smooth',
+            //         scrollTrigger: {
+            //             trigger: image,
+            //             scrub: false,
+            //             start: "center-=20% bottom-=20%",
+            //             end: "top top+=80%",
+            //             // markers: true,
+            //             invalidateOnRefresh: true,
+            //         },
+            //     });
+            // });
+
+            // FADE IN LEFT,RIGHT & UP
+            revealFadeIn.forEach(item => {
+                gsap.set(item, {autoAlpha: 0});
+                if (item.classList.contains('reveal-fade-in--right')) {
+                    gsap.set(item, {autoAlpha: 0, xPercent: -10});
+                } else if (item.classList.contains('reveal-fade-in--left')) {
+                    gsap.set(item, {autoAlpha: 0, xPercent: 10});
+                } else if (item.classList.contains('reveal-fade-in--up')) {
+                    gsap.set(item, {autoAlpha: 0, yPercent: 10});
+                }
+
+                gsap.to(item, {
+                    autoAlpha: 1,
+                    xPercent: 0,
+                    scale: 1,
+                    duration: .7,
+                    ease: 'expo.easeInOut',
+                    scrollTrigger: {
+                        trigger: item,
+                        scrub: false,
+                        start: "top bottom",
+                        end: "top top+=80%",
+                        // markers: true,
+                        invalidateOnRefresh: true,
+                    },
+                });
+
+                if(item.classList.contains('reveal-fade-in--up')) {
+                    gsap.to(item, {
+                        autoAlpha: 1,
+                        yPercent: 0,
+                        duration: .7,
+                        ease: 'sine.out',
+                        scrollTrigger: {
+                            trigger: item,
+                            scrub: false,
+                            start: "top bottom",
+                            end: "top top+=80%",
+                            // markers: true,
+                            invalidateOnRefresh: true,
+                        },
+                    });
+                } 
+            });
+        });
+    }
+
     let data = sessionStorage.getItem("loader");
     const preloader = document.querySelector(".preloader");
     let preloaderLogoDark = document.querySelector(".preload-logo-dark");
+
     if (data) {
-        // dont play loader
-        preloader.parentElement.removeChild(preloader);
-
+        // Skip preloader
+        preloader?.remove();
+        revealAnim(); // ← Just run directly
     } else {
-        // play loader
         function hero() {
-
             let preloaderTL = gsap.timeline({});
 
-            // PRELOADER
+            // PRELOADER animations
             preloaderTL.fromTo(preloaderLogoDark, {
                 autoAlpha: 0,
-            },
-            {
+            }, {
                 display: 'block',
                 autoAlpha: 1,
-            })
+            });
 
             preloaderTL.fromTo(preloaderLogoDark, {
                 clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
-            },
-            {
+            }, {
                 clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
                 duration: 1.7,
                 ease: 'Expo.easeInOut',
@@ -67,24 +238,31 @@ window.addEventListener('DOMContentLoaded', () => {
 
             preloaderTL.to(".preloader-logo-wrapper", {
                 autoAlpha: 0,
-                duration: .7,
+                duration: 0.7,
                 ease: 'Expo.easeOut',
-            })
+            });
 
             preloaderTL.fromTo(".preloader", {
                 transformOrigin: "top",
-            },
-            {
+            }, {
                 yPercent: 0,
                 scaleY: 0,
                 transformOrigin: 'bottom',
                 duration: 1.4,
                 ease: 'Expo.easeInOut',
             }, "<");
-            // /PRELOADER
+
+            preloaderTL.call(() => {
+                revealAnim();
+            }, null, preloaderTL.duration() - 0.4)
+
+            // Remove preloader at the very end
+            .call(() => {
+                preloader?.remove();
+            });
         }
+
         hero();
-        // /HERO TIMELINE
     }
 
     sessionStorage.setItem('loader', 'true');
@@ -290,178 +468,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     initHeader();
-
-    // REVEAL ANIM
-    const revealAnim = () => {
-        let animSection = document.querySelectorAll(".reveal-anim");
-
-        animSection.forEach((section) => {
-            let revealFadeIn = section.querySelectorAll(".reveal-fade-in");
-            let revealIMGWrapper = section.querySelectorAll('.reveal-img-wrapper');
-            
-
-            revealIMGWrapper.forEach(wrapper => {
-                let revealIMG = wrapper.querySelector(".reveal-img");
-                let revealIMGOverlay = wrapper.querySelector(".reveal-img-overlay");
-                let duration = revealIMG.getAttribute("data-duration");
-            
-                let imageTl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: wrapper,
-                        start: "top 80%", // Trigger when the top of the element is 80% in view
-                        toggleActions: "play none none none", // Reverse on scroll up
-                        // markers: true,
-                    }
-                });
-
-                if(revealIMG.classList.contains("reveal-img--right")) {
-                    let setOverlayValues =  gsap.set(revealIMGOverlay, {scaleX: 0, transformOrigin: "left",});
-                    let setImageValues = gsap.set(revealIMG, {autoAlpha: 0});
-
-                    imageTl.add(setOverlayValues, setImageValues);
-
-                    imageTl
-                    .fromTo(revealIMGOverlay, {
-                        'border-top-right-radius': '50%', 
-                        'border-bottom-right-radius': '50%', 
-                    },{
-                        scaleX: 1,
-                        ease: "expo.Out",
-                        duration: duration,
-                        'border-top-right-radius': '0%', 
-                        'border-bottom-right-radius': '0%', 
-                    })
-
-                    imageTl
-                    .to(revealIMGOverlay, {
-                        scaleX: 0,
-                        ease: "sine.inOut",
-                        duration: duration,
-                        transformOrigin: "right",
-                        
-                    },">+.5")
-
-                    .to(revealIMG, {
-                        autoAlpha: 1,
-                        scale: 1,
-                        duration: duration,
-                        ease: "sine.out"
-                    }, "<+.15") // Overlap animations slightly for a smoother transition
-                    .to(revealIMGOverlay, {
-                        autoAlpha: 0,
-                        duration: 0.3
-                    }, "-=0.2");
-
-                } else {
-                    let setOverlayValues =  gsap.set(revealIMGOverlay, {scaleY: 0, transformOrigin: "top",});
-                    let setImageValues = gsap.set(revealIMG, {autoAlpha: 0});
-
-                    imageTl.add(setOverlayValues, setImageValues);
-
-                    imageTl
-                        .to(revealIMGOverlay, {
-                            scaleY: 1,
-                            ease: "sine.inOut",
-                            duration: duration
-                        })
-                        .to(revealIMGOverlay, {
-                            scaleY: 0,
-                            ease: "sine.inOut",
-                            transformOrigin: "bottom",
-                            duration: duration
-                        },'>')
-                        .fromTo(revealIMG, {
-                            autoAlpha: 0,
-                        }, {
-                            autoAlpha: 1,
-                            scale: 1,
-                            duration: duration,
-                            ease: "sine.out"
-                        }, "<+.15") // Overlap animations slightly for a smoother transition
-                        .to(revealIMGOverlay, {
-                            autoAlpha: 0,
-                            duration: 0.3
-                        }, "-=0.2");
-                    }
-            });
-
-            // IMAGE REVEAL
-            // revealIMG.forEach(image => {
-            //     if (image.classList.contains('reveal-img--right')) {
-            //         gsap.set(image, {clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)'});
-            //     } else if (image.classList.contains('reveal-img--left')) {
-            //         gsap.set(image, {clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)'});
-            //     } else if (image.classList.contains('reveal-img--top')) {
-            //         gsap.set(image, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'});
-            //     } else if (image.classList.contains('reveal-img--bottom')) {
-            //         gsap.set(image, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'});
-            //     }
-
-            //     gsap.to(image, {
-            //         clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-            //         autoAlpha: 1,
-            //         scale: 1,
-            //         duration: 1.05,
-            //         ease: 'smooth',
-            //         scrollTrigger: {
-            //             trigger: image,
-            //             scrub: false,
-            //             start: "center-=20% bottom-=20%",
-            //             end: "top top+=80%",
-            //             // markers: true,
-            //             invalidateOnRefresh: true,
-            //         },
-            //     });
-            // });
-
-            // FADE IN LEFT,RIGHT & UP
-            revealFadeIn.forEach(item => {
-                gsap.set(item, {autoAlpha: 0});
-                if (item.classList.contains('reveal-fade-in--right')) {
-                    gsap.set(item, {autoAlpha: 0, xPercent: -10});
-                } else if (item.classList.contains('reveal-fade-in--left')) {
-                    gsap.set(item, {autoAlpha: 0, xPercent: 10});
-                } else if (item.classList.contains('reveal-fade-in--up')) {
-                    gsap.set(item, {autoAlpha: 0, yPercent: 10});
-                }
-
-                gsap.to(item, {
-                    autoAlpha: 1,
-                    xPercent: 0,
-                    scale: 1,
-                    duration: .7,
-                    ease: 'expo.easeInOut',
-                    scrollTrigger: {
-                        trigger: item,
-                        scrub: false,
-                        start: "top bottom",
-                        end: "top top+=80%",
-                        // markers: true,
-                        invalidateOnRefresh: true,
-                    },
-                });
-
-                if(item.classList.contains('reveal-fade-in--up')) {
-                    gsap.to(item, {
-                        autoAlpha: 1,
-                        yPercent: 0,
-                        duration: .7,
-                        ease: 'sine.out',
-                        scrollTrigger: {
-                            trigger: item,
-                            scrub: false,
-                            start: "top bottom",
-                            end: "top top+=80%",
-                            // markers: true,
-                            invalidateOnRefresh: true,
-                        },
-                    });
-                } 
-            });
-        });
-    }
-    revealAnim();
-    // REVEAL ANIM
 
     const init = () => {
         const marquee = document.querySelectorAll('.marquee')

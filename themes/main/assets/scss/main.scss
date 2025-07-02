@@ -1583,6 +1583,14 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
     }
 }
 
+.reveal-anim .reveal-fade-in,
+.reveal-anim .reveal-img,
+.reveal-anim .reveal-img-overlay {
+  opacity: 0;
+  visibility: hidden;
+  /* optionally, for smoother appearance */
+  transform: translate3d(0,0,0); /* triggers GPU acceleration */
+}
 
 // NEWS
 .fp-news-wrapper {
