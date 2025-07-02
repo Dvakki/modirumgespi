@@ -8,14 +8,28 @@ layout = "default"
     <h1 class="title" style="font-size: 192px; font-weight: bold;">404</h1>
     <h5 style="font-size: 21px; margin-bottom: 1rem;">Oops! Something went wrong.</h5>
     <p style="font-size: 16px; margin-bottom: 2rem;">We can't find the page you are looking for.</p>
-    <a href="https://modirumgespi.com/" class="btn-primary-dark-outline arrow-btn w-fit lg:justify-self-end !py-[.7rem] !px-[2rem] !gap-[1rem]" style="text-decoration: none;">
-      <span class="btn-text">Go back to home</span>
-      <span class="btn-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 20px; height: 20px;">
-          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-        </svg>
-      </span>
-    </a>
+    <div class="hover-blob-wrap">
+        <a href="{{ 'home'|page }}"
+            class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+            <div
+                class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                <span
+                    class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                <span class="btn-text relative !z-[12]">
+                    Go Back to Home
+                </span>
+                <span class="btn-icon !z-[12]">
+                    <div class="arrow-hover-btn" href="">
+                        <span class="arrow">
+                            {% partial 'icons/arrow-right--diagonal' %}
+                        </span>
+                    </div>
+                </span>
+                <div class="blob blob--btn z-[-1]"></div>
+                <div class="fakeblob z-[-1]"></div>
+            </div>
+        </a>
+    </div>
   </div>
 </div>
 

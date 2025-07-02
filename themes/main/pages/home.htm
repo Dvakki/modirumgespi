@@ -23,8 +23,7 @@ use RainLab\Blog\Models\Post;
 <section class="hero-banner overflow-hidden">
     <div class="grid grid-cols-1 relative h-full">
         <div class="banner--wrapper flex items-center justify-between offset-top">
-            <div
-                class="xl:container w-full grid grid-cols-1 lg:grid-cols-[.8fr,1fr] gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem] 2xl:!px-[6rem] section-padding--y">
+            <div class="xl:container w-full grid grid-cols-1 lg:grid-cols-[.8fr,1fr] gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem] 2xl:!px-[6rem] section-padding--y">
                 <div class="content py-[3rem]relative z-2 reveal-fade-in">
                     <h1 class="hero-title mb-5 lg:mb-10 text-white">
                         A new style<br>
@@ -32,205 +31,205 @@ use RainLab\Blog\Models\Post;
                     </h1>
                     <h4 class="mb-5 lg:mb-10 text-white">
                         Excellence across <span class="text-primary--lighter">land, sea and air.</span>
-                        </h3>
-                        <div class="block lg:hidden hero-card-swiper mobile-hero-swiper swiper my-10">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                    <a href="javascript:;"
-                                        class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                        <video muted playsinline preload="auto"
-                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
-                                            <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
-                                        </video>
-                                        <div class="hero-card-slide-content h-full">
-                                            <div
-                                                class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
-                                            </div>
-                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                                <div class="flex flex-col gap-[1rem]">
-                                                    <h4 class="font-bold uppercase">
-                                                        Sea
-                                                        </h5>
-                                                        <p>
-                                                            Secure maritime superiority with AI-enhanced naval
-                                                            systems—robust, agile, and mission-ready from
-                                                            Modirum | Gespi.
-                                                        </p>
-                                                </div>
-                                            </div>
+                    </h4>
+                    <div class="block lg:hidden hero-card-swiper mobile-hero-swiper swiper my-10">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;"
+                                    class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                        <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
                                         </div>
-                                    </a>
-                                </div>
-                                <div
-                                    class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                    <a href="javascript:;"
-                                        class="hero-slide block h-full flex items-center justify-center">
-                                        <video muted playsinline preload="auto"
-                                            class="hero-slide-video w-full h-full object-cover object-center"
-                                            alt="Land">
-                                            <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
-                                        </video>
-                                        <div class="hero-card-slide-content h-full">
-                                            <div
-                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
-                                            </div>
-                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                                <div class="flex flex-col gap-[1rem]">
-                                                    <h4 class="font-bold uppercase">
-                                                        Land
-                                                    </h4>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Sea
+                                                    </h5>
                                                     <p>
-                                                        Elevate ground dominance with our advanced C2 and ISR
-                                                        solutions—seamless intelligence, resilient communications,
-                                                        decisive action.
+                                                        Secure maritime superiority with AI-enhanced naval
+                                                        systems—robust, agile, and mission-ready from
+                                                        Modirum | Gespi.
                                                     </p>
-                                                </div>
                                             </div>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                    <a class="hero-slide block h-full flex items-center justify-center"
-                                        href="javascript:;">
-                                        {# <img class="w-full h-full object-cover object-center"
-                                            src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                        <video muted playsinline preload="auto"
-                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
-                                            <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
-                                        </video>
-                                        <div class="hero-card-slide-content h-full">
-                                            <div
-                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
-                                            </div>
-                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                                <div class="flex flex-col gap-[1rem]">
-                                                    <h4 class="font-bold uppercase">
-                                                        Air
-                                                    </h4>
-                                                    <p>
-                                                        Command the skies with cutting-edge UAVs, swarming drones, and
-                                                        precision optics by Modirum | Gespi.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                    <a href="javascript:;"
-                                        class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                        {# <img class="w-full h-full object-cover object-center"
-                                            src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
-                                        <video muted playsinline preload="auto"
-                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
-                                            <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
-                                        </video>
-                                        <div class="hero-card-slide-content h-full">
-                                            <div
-                                                class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
-                                            </div>
-                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                                <div class="flex flex-col gap-[1rem]">
-                                                    <h4 class="font-bold uppercase">
-                                                        Sea
-                                                        </h5>
-                                                        <p>
-                                                            Secure maritime superiority with AI-enhanced naval
-                                                            systems—robust, agile, and mission-ready from
-                                                            Modirum | Gespi.
-                                                        </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div
-                                    class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                    <a href="javascript:;"
-                                        class="hero-slide block h-full flex items-center justify-center">
-                                        {# <img class="w-full h-full object-cover object-center"
-                                            src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                        <video muted playsinline preload="auto"
-                                            class="hero-slide-video w-full h-full object-cover object-center"
-                                            alt="Land">
-                                            <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
-                                        </video>
-                                        <div class="hero-card-slide-content h-full">
-                                            <div
-                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
-                                            </div>
-                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                                <div class="flex flex-col gap-[1rem]">
-                                                    <h4 class="font-bold uppercase">
-                                                        Land
-                                                    </h4>
-                                                    <p>
-                                                        Elevate ground dominance with our advanced C2 and ISR
-                                                        solutions—seamless intelligence, resilient communications,
-                                                        decisive action.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                    <a class="hero-slide block h-full flex items-center justify-center"
-                                        href="javascript:;">
-                                        {# <img class="w-full h-full object-cover object-center"
-                                            src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                        <video muted playsinline preload="auto"
-                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
-                                            <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
-                                        </video>
-                                        <div class="hero-card-slide-content h-full">
-                                            <div
-                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
-                                            </div>
-                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                                <div class="flex flex-col gap-[1rem]">
-                                                    <h4 class="font-bold uppercase">
-                                                        Air
-                                                    </h4>
-                                                    <p>
-                                                        Command the skies with cutting-edge UAVs, swarming drones, and
-                                                        precision optics by Modirum | Gespi.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="swiper-button-prev hero-swiper-prev"></div>
-                            <div class="swiper-button-next hero-swiper-next"></div>
-                        </div>
-                        <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
-                            A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and
-                            cutting-edge technologies.
-                        </p>
-                        <div class="hover-blob-wrap">
-                            <a href="javascript:;"
-                                class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                                <div
-                                    class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
-                                    <span
-                                        class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
-                                    <span class="btn-text relative !z-[12]">
-                                        About Gespi
-                                    </span>
-                                    <span class="btn-icon !z-[12]">
-                                        <div class="arrow-hover-btn" href="">
-                                            <span class="arrow">
-                                                {% partial 'icons/arrow-right--diagonal' %}
-                                            </span>
+                            <div
+                                class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;"
+                                    class="hero-slide block h-full flex items-center justify-center">
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center"
+                                        alt="Land">
+                                        <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
                                         </div>
-                                    </span>
-                                    <div class="blob blob--btn z-[-1]"></div>
-                                    <div class="fakeblob z-[-1]"></div>
-                                </div>
-                            </a>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Land
+                                                </h4>
+                                                <p>
+                                                    Elevate ground dominance with our advanced C2 and ISR
+                                                    solutions—seamless intelligence, resilient communications,
+                                                    decisive action.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                <a class="hero-slide block h-full flex items-center justify-center"
+                                    href="javascript:;">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                        <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Air
+                                                </h4>
+                                                <p>
+                                                    Command the skies with cutting-edge UAVs, swarming drones, and
+                                                    precision optics by Modirum | Gespi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;"
+                                    class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                        <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Sea
+                                                    </h5>
+                                                    <p>
+                                                        Secure maritime superiority with AI-enhanced naval
+                                                        systems—robust, agile, and mission-ready from
+                                                        Modirum | Gespi.
+                                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div
+                                class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                <a href="javascript:;"
+                                    class="hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center"
+                                        alt="Land">
+                                        <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Land
+                                                </h4>
+                                                <p>
+                                                    Elevate ground dominance with our advanced C2 and ISR
+                                                    solutions—seamless intelligence, resilient communications,
+                                                    decisive action.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                <a class="hero-slide block h-full flex items-center justify-center"
+                                    href="javascript:;">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                        <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
+                                    </video>
+                                    <div class="hero-card-slide-content h-full">
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                            <div class="flex flex-col gap-[1rem]">
+                                                <h4 class="font-bold uppercase">
+                                                    Air
+                                                </h4>
+                                                <p>
+                                                    Command the skies with cutting-edge UAVs, swarming drones, and
+                                                    precision optics by Modirum | Gespi.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                        <div class="swiper-button-prev hero-swiper-prev"></div>
+                        <div class="swiper-button-next hero-swiper-next"></div>
+                    </div>
+                    <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
+                        A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and
+                        cutting-edge technologies.
+                    </p>
+                    <div class="hover-blob-wrap">
+                        <a href="javascript:;"
+                            class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                            <div
+                                class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                <span
+                                    class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                <span class="btn-text relative !z-[12]">
+                                    About Gespi
+                                </span>
+                                <span class="btn-icon !z-[12]">
+                                    <div class="arrow-hover-btn" href="">
+                                        <span class="arrow">
+                                            {% partial 'icons/arrow-right--diagonal' %}
+                                        </span>
+                                    </div>
+                                </span>
+                                <div class="blob blob--btn z-[-1]"></div>
+                                <div class="fakeblob z-[-1]"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <div class="flex min-w-[100%]">
                     <div class="hidden lg:block hero-card-swiper desktop-hero-swiper swiper reveal-fade-in">
