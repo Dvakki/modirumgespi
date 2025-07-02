@@ -23,7 +23,8 @@ use RainLab\Blog\Models\Post;
 <section class="hero-banner overflow-hidden">
     <div class="grid grid-cols-1 relative h-full">
         <div class="banner--wrapper flex items-center justify-between offset-top">
-            <div class="xl:container w-full grid grid-cols-1 lg:grid-cols-[.8fr,1fr] gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem] 2xl:!px-[6rem] section-padding--y">
+            <div
+                class="xl:container w-full grid grid-cols-1 lg:grid-cols-[.8fr,1fr] gap-[2rem] xl:gap-[5rem] items-center relative section-padding--x z-[3] xl:!px-[3rem] 2xl:!px-[6rem] section-padding--y">
                 <div class="content py-[3rem]relative z-2 reveal-fade-in">
                     <h1 class="hero-title mb-5 lg:mb-10 text-white">
                         A new style<br>
@@ -31,199 +32,258 @@ use RainLab\Blog\Models\Post;
                     </h1>
                     <h4 class="mb-5 lg:mb-10 text-white">
                         Excellence across <span class="text-primary--lighter">land, sea and air.</span>
-                    </h3>
-                    <div class="block lg:hidden hero-card-swiper mobile-hero-swiper swiper my-10">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
-                                        <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
-                                    </video>
-                                    <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
-                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                            <div class="flex flex-col gap-[1rem]">
-                                                <h4 class="font-bold uppercase">
-                                                    Sea
-                                                </h5>
-                                                <p>
-                                                    Secure maritime superiority with AI-enhanced naval systems—robust, agile, and mission-ready from Modirum | Gespi.
-                                                </p>
+                        </h3>
+                        <div class="block lg:hidden hero-card-swiper mobile-hero-swiper swiper my-10">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                    <a href="javascript:;"
+                                        class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                        <video muted playsinline preload="auto"
+                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                            <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
+                                        </video>
+                                        <div class="hero-card-slide-content h-full">
+                                            <div
+                                                class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                            </div>
+                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                                <div class="flex flex-col gap-[1rem]">
+                                                    <h4 class="font-bold uppercase">
+                                                        Sea
+                                                        </h5>
+                                                        <p>
+                                                            Secure maritime superiority with AI-enhanced naval
+                                                            systems—robust, agile, and mission-ready from
+                                                            Modirum | Gespi.
+                                                        </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
-                                        <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
-                                    </video>
-                                    <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
-                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                            <div class="flex flex-col gap-[1rem]">
-                                                <h4 class="font-bold uppercase">
-                                                    Land
-                                                </h4>
-                                                <p>
-                                                    Elevate ground dominance with our advanced C2 and ISR solutions—seamless intelligence, resilient communications, decisive action.
-                                                </p>
+                                    </a>
+                                </div>
+                                <div
+                                    class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                    <a href="javascript:;"
+                                        class="hero-slide block h-full flex items-center justify-center">
+                                        <video muted playsinline preload="auto"
+                                            class="hero-slide-video w-full h-full object-cover object-center"
+                                            alt="Land">
+                                            <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
+                                        </video>
+                                        <div class="hero-card-slide-content h-full">
+                                            <div
+                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                            </div>
+                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                                <div class="flex flex-col gap-[1rem]">
+                                                    <h4 class="font-bold uppercase">
+                                                        Land
+                                                    </h4>
+                                                    <p>
+                                                        Elevate ground dominance with our advanced C2 and ISR
+                                                        solutions—seamless intelligence, resilient communications,
+                                                        decisive action.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
-                                        <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
-                                    </video>
-                                    <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
-                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                            <div class="flex flex-col gap-[1rem]">
-                                                <h4 class="font-bold uppercase">
-                                                    Air
-                                                </h4>
-                                                <p>
-                                                    Command the skies with cutting-edge UAVs, swarming drones, and precision optics by Modirum | Gespi.
-                                                </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                    <a class="hero-slide block h-full flex items-center justify-center"
+                                        href="javascript:;">
+                                        {# <img class="w-full h-full object-cover object-center"
+                                            src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                        <video muted playsinline preload="auto"
+                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                            <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
+                                        </video>
+                                        <div class="hero-card-slide-content h-full">
+                                            <div
+                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                            </div>
+                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                                <div class="flex flex-col gap-[1rem]">
+                                                    <h4 class="font-bold uppercase">
+                                                        Air
+                                                    </h4>
+                                                    <p>
+                                                        Command the skies with cutting-edge UAVs, swarming drones, and
+                                                        precision optics by Modirum | Gespi.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
-                                        <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
-                                    </video>
-                                    <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
-                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                            <div class="flex flex-col gap-[1rem]">
-                                                <h4 class="font-bold uppercase">
-                                                    Sea
-                                                </h5>
-                                                <p>
-                                                    Secure maritime superiority with AI-enhanced naval systems—robust, agile, and mission-ready from Modirum | Gespi.
-                                                </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                    <a href="javascript:;"
+                                        class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                        {# <img class="w-full h-full object-cover object-center"
+                                            src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
+                                        <video muted playsinline preload="auto"
+                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                            <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
+                                        </video>
+                                        <div class="hero-card-slide-content h-full">
+                                            <div
+                                                class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                            </div>
+                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                                <div class="flex flex-col gap-[1rem]">
+                                                    <h4 class="font-bold uppercase">
+                                                        Sea
+                                                        </h5>
+                                                        <p>
+                                                            Secure maritime superiority with AI-enhanced naval
+                                                            systems—robust, agile, and mission-ready from
+                                                            Modirum | Gespi.
+                                                        </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
-                                        <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
-                                    </video>
-                                    <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
-                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                            <div class="flex flex-col gap-[1rem]">
-                                                <h4 class="font-bold uppercase">
-                                                    Land
-                                                </h4>
-                                                <p>
-                                                    Elevate ground dominance with our advanced C2 and ISR solutions—seamless intelligence, resilient communications, decisive action.
-                                                </p>
+                                    </a>
+                                </div>
+                                <div
+                                    class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                    <a href="javascript:;"
+                                        class="hero-slide block h-full flex items-center justify-center">
+                                        {# <img class="w-full h-full object-cover object-center"
+                                            src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                        <video muted playsinline preload="auto"
+                                            class="hero-slide-video w-full h-full object-cover object-center"
+                                            alt="Land">
+                                            <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
+                                        </video>
+                                        <div class="hero-card-slide-content h-full">
+                                            <div
+                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                            </div>
+                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                                <div class="flex flex-col gap-[1rem]">
+                                                    <h4 class="font-bold uppercase">
+                                                        Land
+                                                    </h4>
+                                                    <p>
+                                                        Elevate ground dominance with our advanced C2 and ISR
+                                                        solutions—seamless intelligence, resilient communications,
+                                                        decisive action.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
-                                <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
-                                        <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
-                                    </video>
-                                    <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
-                                        <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
-                                            <div class="flex flex-col gap-[1rem]">
-                                                <h4 class="font-bold uppercase">
-                                                    Air
-                                                </h4>
-                                                <p>
-                                                    Command the skies with cutting-edge UAVs, swarming drones, and precision optics by Modirum | Gespi.
-                                                </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide aspect-[1.05] rounded-[var(--btn-border-radius)]">
+                                    <a class="hero-slide block h-full flex items-center justify-center"
+                                        href="javascript:;">
+                                        {# <img class="w-full h-full object-cover object-center"
+                                            src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                        <video muted playsinline preload="auto"
+                                            class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                            <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
+                                        </video>
+                                        <div class="hero-card-slide-content h-full">
+                                            <div
+                                                class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                            </div>
+                                            <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
+                                                <div class="flex flex-col gap-[1rem]">
+                                                    <h4 class="font-bold uppercase">
+                                                        Air
+                                                    </h4>
+                                                    <p>
+                                                        Command the skies with cutting-edge UAVs, swarming drones, and
+                                                        precision optics by Modirum | Gespi.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
+                            <div class="swiper-button-prev hero-swiper-prev"></div>
+                            <div class="swiper-button-next hero-swiper-next"></div>
                         </div>
-                        <div class="swiper-button-prev hero-swiper-prev"></div>
-                        <div class="swiper-button-next hero-swiper-next"></div>
-                    </div>
-                    <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
-                        A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and cutting-edge technologies.
-                    </p>
-                    <div class="hover-blob-wrap">
-                        <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                            <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
-                                <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
-                                <span class="btn-text relative !z-[12]">
-                                    About Gespi
-                                </span>
-                                <span class="btn-icon !z-[12]">
-                                    <div class="arrow-hover-btn" href="">
-                                        <span class="arrow">
-                                            {% partial 'icons/arrow-right--diagonal' %}
-                                        </span>
-                                    </div>
-                                </span>
-                                <div class="blob blob--btn z-[-1]"></div>
-                                <div class="fakeblob z-[-1]"></div>
-                            </div>
-                        </a>
-                    </div>
+                        <p class="p-size--big max-w-[50ch] mb-5 lg:mb-10">
+                            A full-spectrum defense organization, delivering end-to-end solutions, powered by AI and
+                            cutting-edge technologies.
+                        </p>
+                        <div class="hover-blob-wrap">
+                            <a href="javascript:;"
+                                class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                <div
+                                    class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                    <span
+                                        class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                    <span class="btn-text relative !z-[12]">
+                                        About Gespi
+                                    </span>
+                                    <span class="btn-icon !z-[12]">
+                                        <div class="arrow-hover-btn" href="">
+                                            <span class="arrow">
+                                                {% partial 'icons/arrow-right--diagonal' %}
+                                            </span>
+                                        </div>
+                                    </span>
+                                    <div class="blob blob--btn z-[-1]"></div>
+                                    <div class="fakeblob z-[-1]"></div>
+                                </div>
+                            </a>
+                        </div>
                 </div>
                 <div class="flex min-w-[100%]">
                     <div class="hidden lg:block hero-card-swiper desktop-hero-swiper swiper reveal-fade-in">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
-                                <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                <a href="javascript:;"
+                                    class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
                                         <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
                                         <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
                                             <div class="flex flex-col gap-[1rem]">
                                                 <h4 class="font-bold uppercase">
                                                     Sea
-                                                </h5>
-                                                <p>
-                                                    Secure maritime superiority with AI-enhanced naval systems—robust, agile, and mission-ready from Modirum | Gespi.
-                                                </p>
+                                                    </h5>
+                                                    <p>
+                                                        Secure maritime superiority with AI-enhanced naval
+                                                        systems—robust, agile, and mission-ready from Modirum | Gespi.
+                                                    </p>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                            <div
+                                class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
                                         <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
                                         <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
                                             <div class="flex flex-col gap-[1rem]">
                                                 <h4 class="font-bold uppercase">
                                                     Land
                                                 </h4>
                                                 <p>
-                                                    Elevate ground dominance with our advanced C2 and ISR solutions—seamless intelligence, resilient communications, decisive action.
+                                                    Elevate ground dominance with our advanced C2 and ISR
+                                                    solutions—seamless intelligence, resilient communications, decisive
+                                                    action.
                                                 </p>
                                             </div>
                                         </div>
@@ -232,19 +292,24 @@ use RainLab\Blog\Models\Post;
                             </div>
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
                                         <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
                                         <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
                                             <div class="flex flex-col gap-[1rem]">
                                                 <h4 class="font-bold uppercase">
                                                     Air
                                                 </h4>
                                                 <p>
-                                                    Command the skies with cutting-edge UAVs, swarming drones, and precision optics by Modirum | Gespi.
+                                                    Command the skies with cutting-edge UAVs, swarming drones, and
+                                                    precision optics by Modirum | Gespi.
                                                 </p>
                                             </div>
                                         </div>
@@ -252,41 +317,54 @@ use RainLab\Blog\Models\Post;
                                 </a>
                             </div>
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
-                                <a href="javascript:;" class="hero-slide hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
+                                <a href="javascript:;"
+                                    class="hero-slide hero-slide block h-full flex items-center justify-center">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/naval-system-3.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Sea">
                                         <source src="{{ 'home/sea.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 xl:h-[50%] w-full h-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
                                         <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
                                             <div class="flex flex-col gap-[1rem]">
                                                 <h4 class="font-bold uppercase">
                                                     Sea
-                                                </h5>
-                                                <p>
-                                                    Secure maritime superiority with AI-enhanced naval systems—robust, agile, and mission-ready from Modirum | Gespi.
-                                                </p>
+                                                    </h5>
+                                                    <p>
+                                                        Secure maritime superiority with AI-enhanced naval
+                                                        systems—robust, agile, and mission-ready from Modirum | Gespi.
+                                                    </p>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
+                            <div
+                                class="swiper-slide swiper-slide-fully-visible swiper-slide-visible swiper-slide-active aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a href="javascript:;" class="hero-slide block h-full flex items-center justify-center">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Land">
                                         <source src="{{ 'home/land.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
                                         <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
                                             <div class="flex flex-col gap-[1rem]">
                                                 <h4 class="font-bold uppercase">
                                                     Land
                                                 </h4>
                                                 <p>
-                                                    Elevate ground dominance with our advanced C2 and ISR solutions—seamless intelligence, resilient communications, decisive action.
+                                                    Elevate ground dominance with our advanced C2 and ISR
+                                                    solutions—seamless intelligence, resilient communications, decisive
+                                                    action.
                                                 </p>
                                             </div>
                                         </div>
@@ -295,19 +373,24 @@ use RainLab\Blog\Models\Post;
                             </div>
                             <div class="swiper-slide aspect-[1.25] rounded-[var(--btn-border-radius)]">
                                 <a class="hero-slide block h-full flex items-center justify-center" href="javascript:;">
-                                    {# <img class="w-full h-full object-cover object-center" src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
-                                    <video muted playsinline preload="auto" class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
+                                    {# <img class="w-full h-full object-cover object-center"
+                                        src="{{ 'home/air-systems.jpeg'|media }}" alt=""> #}
+                                    <video muted playsinline preload="auto"
+                                        class="hero-slide-video w-full h-full object-cover object-center" alt="Air">
                                         <source src="{{ 'home/air.mp4'|media }}" type="video/mp4">
                                     </video>
                                     <div class="hero-card-slide-content h-full">
-                                        <div class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]"></div>
+                                        <div
+                                            class="bg-gradient-overlay absolute bottom-0 left-0 h-full xl:h-[50%] w-full opacity-[1] rounded-[var(--btn-border-radius)]">
+                                        </div>
                                         <div class="absolute bottom-0 left-0 p-[1.5rem] lg:p-[2rem] xl:p-[3rem]">
                                             <div class="flex flex-col gap-[1rem]">
                                                 <h4 class="font-bold uppercase">
                                                     Air
                                                 </h4>
                                                 <p>
-                                                    Command the skies with cutting-edge UAVs, swarming drones, and precision optics by Modirum | Gespi.
+                                                    Command the skies with cutting-edge UAVs, swarming drones, and
+                                                    precision optics by Modirum | Gespi.
                                                 </p>
                                             </div>
                                         </div>
@@ -320,233 +403,231 @@ use RainLab\Blog\Models\Post;
                     </div>
                 </div>
                 {% put scripts %}
-                    <script>
-                        let desktopSwiper = null;
-                        let mobileSwiper = null;
+                <script>
+                    let desktopSwiper = null;
+                    let mobileSwiper = null;
 
-                        function initSwipers() {
-                            const isMobile = window.innerWidth <= 1024;
+                    function initSwipers() {
+                        const isMobile = window.innerWidth <= 1024;
 
-                            if (isMobile && !mobileSwiper) {
-                                const heroSwiper = new Swiper(".mobile-hero-swiper", {
-                                    effect: "creative",
-                                    // grabCursor: true,
-                                    allowTouchMove: false,
-                                    initialSlide: 2,
-                                    loop: true,
-                                    centeredSlides: true,
-                                    slidesPerView: 1.2,
-                                    navigation: {
-                                        nextEl: '.hero-swiper-next',
-                                        prevEl: '.hero-swiper-prev',
+                        if (isMobile && !mobileSwiper) {
+                            mobileSwiper = new Swiper(".mobile-hero-swiper", {
+                                effect: "creative",
+                                allowTouchMove: false,
+                                initialSlide: 2,
+                                loop: true,
+                                centeredSlides: true,
+                                slidesPerView: 1.2,
+                                navigation: {
+                                    nextEl: '.hero-swiper-next',
+                                    prevEl: '.hero-swiper-prev',
+                                },
+                                speed: 650,
+                                autoplay: false,
+                                creativeEffect: {
+                                    prev: {
+                                        translate: ["-20%", 0, -250],
+                                        rotate: [0, 0, 0],
                                     },
-                                    speed: 650,
-                                    autoplay: {
-                                        delay: 5000,
+                                    next: {
+                                        translate: ["20%", 0, -250],
+                                        rotate: [0, 0, 0],
                                     },
-                                    creativeEffect: {
-                                        prev: {
-                                            translate: ["-20%", 0, -250],
-                                            rotate: [0, 0, 0],
-                                        },
-                                        next: {
-                                            translate: ["20%", 0, -250],
-                                            rotate: [0, 0, 0],
-                                        },
-                                    },
-                                    on: {
-                                        init: function () {
-                                            handleVideoAndAutoplay(this);
-                                        },
-                                        slideChangeTransitionStart: function () {
-                                            handleVideoAndAutoplay(this);
-
-                                            const allVideos = document.querySelectorAll('.hero-card-swiper .hero-slide-video');
-
-                                            allVideos.forEach((video) => {
-                                                const parentSlide = video.closest('.swiper-slide');
-                                                if (parentSlide.classList.contains('swiper-slide-active')) {
-                                                    video.play();
-                                                } else {
-                                                    video.pause();
-                                                    video.currentTime = 0;
-                                                }
-                                            });
-                                        },
-                                    },
-                                });
-                            }
-
-                            if (!isMobile && !desktopSwiper) {
-                                const heroSwiper = new Swiper(".desktop-hero-swiper", {
-                                    effect: "creative",
-                                    // grabCursor: true,
-                                    allowTouchMove: false,
-                                    initialSlide: 2,
-                                    loop: true,
-                                    centeredSlides: true,
-                                    slidesPerView: 1.2,
-                                    navigation: {
-                                        nextEl: '.hero-swiper-next',
-                                        prevEl: '.hero-swiper-prev',
-                                    },
-                                    speed: 650,
-                                    autoplay: {
-                                        delay: 5000,
-                                    },
-                                    creativeEffect: {
-                                        prev: {
-                                            translate: ["-20%", 0, -250],
-                                            rotate: [0, 0, 0],
-                                        },
-                                        next: {
-                                            translate: ["20%", 0, -250],
-                                            rotate: [0, 0, 0],
-                                        },
-                                    },
-                                    on: {
-                                        init: function () {
-                                            handleVideoAndAutoplay(this);
-                                        },
-                                        slideChangeTransitionStart: function () {
-                                            handleVideoAndAutoplay(this);
-
-                                            const allVideos = document.querySelectorAll('.hero-card-swiper .hero-slide-video');
-
-                                            allVideos.forEach((video) => {
-                                                const parentSlide = video.closest('.swiper-slide');
-                                                if (parentSlide.classList.contains('swiper-slide-active')) {
-                                                    video.play();
-                                                } else {
-                                                    video.pause();
-                                                    video.currentTime = 0;
-                                                }
-                                            });
-                                        },
-                                    },
-                                });
-                            }
+                                },
+                            });
                         }
 
-                        initSwipers();
-                        window.addEventListener('resize', () => {
-                            // Optional: destroy swiper if switching views
-                            const isMobile = window.innerWidth <= 1024;
+                        if (!isMobile && !desktopSwiper) {
+                            desktopSwiper = new Swiper(".desktop-hero-swiper", {
+                                effect: "creative",
+                                allowTouchMove: false,
+                                initialSlide: 2,
+                                loop: true,
+                                centeredSlides: true,
+                                slidesPerView: 1.2,
+                                navigation: {
+                                    nextEl: '.hero-swiper-next',
+                                    prevEl: '.hero-swiper-prev',
+                                },
+                                speed: 650,
+                                autoplay: false,
+                                creativeEffect: {
+                                    prev: {
+                                        translate: ["-20%", 0, -250],
+                                        rotate: [0, 0, 0],
+                                    },
+                                    next: {
+                                        translate: ["20%", 0, -250],
+                                        rotate: [0, 0, 0],
+                                    },
+                                },
+                            });
+                        }
+                    }
 
-                            if (isMobile && desktopSwiper) {
-                                desktopSwiper.destroy();
-                                desktopSwiper = null;
+                    function destroySwipers() {
+                        if (desktopSwiper) {
+                            desktopSwiper.destroy();
+                            desktopSwiper = null;
+                        }
+                        if (mobileSwiper) {
+                            mobileSwiper.destroy();
+                            mobileSwiper = null;
+                        }
+                    }
+
+                    function getActiveHeroSwiper() {
+                        const isMobile = window.innerWidth <= 1024;
+                        return isMobile ? mobileSwiper : desktopSwiper;
+                    }
+
+                    function onVideoAlmostEnded(event) {
+                        const video = event.target;
+                        const threshold = 0.97; // 97% of duration
+
+                        if (video.currentTime >= video.duration * threshold) {
+                            video.removeEventListener('timeupdate', onVideoAlmostEnded);
+
+                            const swiper = getActiveHeroSwiper();
+                            if (!swiper) return;
+
+                            swiper.slideNext();
+                            handleSlideVideo(); // Play video on new slide
+                        }
+                    }
+
+                    function handleSlideVideo() {
+                        const swiper = getActiveHeroSwiper();
+                        if (!swiper) return;
+
+                        const activeSlide = swiper.slides[swiper.activeIndex];
+                        const video = activeSlide.querySelector('.hero-slide-video');
+
+                        // Pause and reset all other videos
+                        document.querySelectorAll('.hero-slide-video').forEach((vid) => {
+                            if (vid !== video) {
+                                vid.pause();
+                                vid.currentTime = 0;
+                                vid.removeEventListener('timeupdate', onVideoAlmostEnded);
                             }
-
-                            if (!isMobile && mobileSwiper) {
-                                mobileSwiper.destroy();
-                                mobileSwiper = null;
-                            }
-
-                            initSwipers();
                         });
 
-                        function handleVideoAndAutoplay(swiperInstance) {
-                        const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
-                        const activeVideo = activeSlide.querySelector('.hero-slide-video');
-
-                        // Stop and reset all videos except the active one
-                        document.querySelectorAll('.hero-card-swiper .hero-slide-video').forEach((video) => {
-                            if (video !== activeVideo) {
-                                video.pause();
-                                video.currentTime = 0;
-                            }
-                            
-                        });
-
-                        if (activeVideo) {
-                            activeVideo.play();
-                            if (activeVideo.readyState >= 1) {
-                                setAutoplayDelayFromVideo(swiperInstance, activeVideo);
+                        if (video) {
+                            if (video.readyState >= 1) {
+                                video.play();
                             } else {
-                            activeVideo.addEventListener('loadedmetadata', () => {
-                                setAutoplayDelayFromVideo(swiperInstance, activeVideo);
-                            }, { once: true });
+                                video.addEventListener('loadedmetadata', () => {
+                                    video.play();
+                                }, { once: true });
                             }
+
+                            video.removeEventListener('timeupdate', onVideoAlmostEnded);
+                            video.addEventListener('timeupdate', onVideoAlmostEnded);
                         }
+                    }
+
+                    function setupSwiperEvents() {
+                        const swiper = getActiveHeroSwiper();
+                        if (!swiper) return;
+
+                        swiper.on('slideChangeTransitionEnd', handleSlideVideo);
+
+                        if (typeof swiper.init === 'function') {
+                            swiper.init();
                         }
 
-                        function setAutoplayDelayFromVideo(swiperInstance, video) {
-                            const duration = Math.ceil(video.duration * 1000) - 600; // ms
-                            swiperInstance.params.autoplay.delay = duration;
-                            swiperInstance.autoplay.start(); // restart autoplay with new delay
-                        }
-                    </script>
+                        // Play first active slide video immediately
+                        handleSlideVideo();
+                    }
+
+                    initSwipers();
+                    setupSwiperEvents();
+
+                    window.addEventListener('resize', () => {
+                        destroySwipers();
+                        initSwipers();
+                        setupSwiperEvents();
+                    });
+
+                </script>
                 {% endput %}
 
                 {% put styles %}
-                    <style>
-                        .hero-card-swiper .swiper-slide {
-                            filter: blur(2px);
-                            opacity: 0 !important;
-                            transition: filter .65s ease;
-                            transition-property: unset !important;
-                        }
+                <style>
+                    .hero-card-swiper .swiper-slide {
+                        filter: blur(2px);
+                        opacity: 0 !important;
+                        transition: filter .65s ease;
+                        transition-property: unset !important;
+                    }
 
-                        .hero-card-swiper .swiper-slide-active .hero-slide:hover video {
-                            transform: scale(1.05);
-                            transition: transform .4s ease;
-                        }
+                    .hero-card-swiper .swiper-slide-active .hero-slide:hover video {
+                        transform: scale(1.05);
+                        transition: transform .4s ease;
+                    }
 
-                        .hero-card-swiper .swiper-slide-active .hero-slide .bg-gradient-overlay {
-                            transition: height .65s ease;
-                        }
-                        .hero-card-swiper .swiper-slide-active .hero-slide:hover .bg-gradient-overlay {
-                            height: 70%;
-                            transition: height .65s ease;
-                        }
-                        
-                        .hero-card-swiper .swiper-slide-next {
-                            opacity: .7 !important;
-                        }
-                        .hero-card-swiper .swiper-slide-prev {
-                            opacity: .7 !important;
-                        }
-                        .hero-card-swiper .swiper-slide-active {
-                            filter: none;
-                            transition: filter .5s ease;
-                            z-index: 3;
-                            opacity: 1 !important;
-                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                    .hero-card-swiper .swiper-slide-active .hero-slide .bg-gradient-overlay {
+                        transition: height .65s ease;
+                    }
 
-                        }
-                        .hero-card-swiper .swiper-slide video {
-                            transform: scale(1);
-                            transition: transform .65s ease;
-                        }
-                        .hero-card-swiper .swiper-slide-active video {
-                            transform: scale(1.15);
-                            transition: transform .65s ease;
-                        }
-                        .hero-card-swiper .swiper-slide .hero-card-slide-content {
-                            opacity: 0;
-                            transition: opacity .65s ease;
-                        }
-                        .hero-card-swiper .swiper-slide-active .hero-card-slide-content {
-                            opacity: 1;
-                            transition: opacity .65s ease;
-                        }
-                        .hero-swiper-next,
-                        .hero-swiper-prev {
-                            top: 0;
-                            height: 100%;
-                            width: 7%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-top: unset;
-                            z-index: 10;
-                            opacity: 0;
-                        }
-                        
-                    </style>
+                    .hero-card-swiper .swiper-slide-active .hero-slide:hover .bg-gradient-overlay {
+                        height: 70%;
+                        transition: height .65s ease;
+                    }
+
+                    .hero-card-swiper .swiper-slide-next {
+                        opacity: .7 !important;
+                    }
+
+                    .hero-card-swiper .swiper-slide-prev {
+                        opacity: .7 !important;
+                    }
+
+                    .hero-card-swiper .swiper-slide-active {
+                        filter: none;
+                        transition: filter .5s ease;
+                        z-index: 3;
+                        opacity: 1 !important;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+                    }
+
+                    .hero-card-swiper .swiper-slide video {
+                        transform: scale(1);
+                        transition: transform .65s ease;
+                    }
+
+                    .hero-card-swiper .swiper-slide-active video {
+                        transform: scale(1.15);
+                        transition: transform .65s ease;
+                    }
+
+                    .hero-card-swiper .swiper-slide .hero-card-slide-content {
+                        opacity: 0;
+                        transition: opacity .65s ease;
+                    }
+
+                    .hero-card-swiper .swiper-slide-active .hero-card-slide-content {
+                        opacity: 1;
+                        transition: opacity .65s ease;
+                    }
+
+                    .hero-swiper-next,
+                    .hero-swiper-prev {
+                        top: 0;
+                        height: 100%;
+                        width: 7%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: unset;
+                        z-index: 10;
+                        opacity: 0;
+                    }
+                </style>
                 {% endput %}
-                <div class="absolute right-0 top-0 section-padding--t flex items-center justify-center reveal-fade-in w-[90%]">
+                <div
+                    class="absolute right-0 top-0 section-padding--t flex items-center justify-center reveal-fade-in w-[90%]">
                     <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
                 </div>
             </div>
@@ -568,7 +649,8 @@ use RainLab\Blog\Models\Post;
                     {% partial 'site/marquee/certificates-marquee' %}
                     <div class="description lg:w-3/6 text-white">
                         <p class="p-size">
-                            AI-powered, fully integrated, turnkey solutions that help clients meet the evolving demands of modern defence and security.
+                            AI-powered, fully integrated, turnkey solutions that help clients meet the evolving demands
+                            of modern defence and security.
                         </p>
                     </div>
                 </div>
@@ -586,7 +668,8 @@ use RainLab\Blog\Models\Post;
                     <span class="text-primary--lighter">for Complex Challenges.</span>
                 </h2>
                 <p class="">
-                    By investing in cutting-edge research and development, and collaborating with premier industry partners, we aim to shape the future of defence and security operations worldwide.
+                    By investing in cutting-edge research and development, and collaborating with premier industry
+                    partners, we aim to shape the future of defence and security operations worldwide.
                 </p>
             </div>
         </div>
@@ -599,7 +682,8 @@ use RainLab\Blog\Models\Post;
         <div class="max-w-[40rem] absolute top-[-13rem] left-[-8rem] floating-el z-[0] reveal-fade-in">
             {% partial 'icons/gespi-radial--blur' %}
         </div>
-        <div class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative sm:aspect-[1.4] md:aspect-[1.6] lg:aspect-[2] reveal-fade-in reveal-fade-in--up">
+        <div
+            class="overflow-hidden w-full rounded-[var(--btn-border-radius)] z-[1] relative sm:aspect-[1.4] md:aspect-[1.6] lg:aspect-[2] reveal-fade-in reveal-fade-in--up">
             <div class="p-[1.5rem] sm:p- py-[3rem] xl:p-[5rem] h-full flex items-end">
                 <div class="grid grid-cols-1 xl:grid-cols-2 z-[1] relative reveal-fade-in reveal-fade-in--up">
                     <div class="">
@@ -610,14 +694,18 @@ use RainLab\Blog\Models\Post;
                             Discover SISU AI
                         </h2>
                         <p class="p-size mb-5 xl:mb-0">
-                            AI-driven system designed for autonomous UAV operations. SISU AI enables UAV’s to operate as a coordinated unit, eliminating the need for human pilots.
+                            AI-driven system designed for autonomous UAV operations. SISU AI enables UAV’s to operate as
+                            a coordinated unit, eliminating the need for human pilots.
                         </p>
                     </div>
                     <div class="flex xl:items-end xl:justify-end">
                         <div class="hover-blob-wrap">
-                            <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                                <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
-                                    <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                            <a href="javascript:;"
+                                class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                <div
+                                    class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                    <span
+                                        class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
                                     <span class="btn-text relative !z-[12]">
                                         Discover More
                                     </span>
@@ -635,10 +723,13 @@ use RainLab\Blog\Models\Post;
                         </div>
                     </div>
                 </div>
-                <video class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover" autoplay muted playsinline loop>
+                <video
+                    class="absolute h-full w-full rounded-[var(--btn-border-radius)] scale-[1.002] inset-0 z-[0] object-cover"
+                    autoplay muted playsinline loop>
                     <source src="{{ 'home/sisu_video.mp4'|media }}" type="video/mp4">
                 </video>
-                <div class="overlay absolute top-0 left-0 bg-[var(--primary-dark)] h-full w-full opacity-[.5] rounded-[var(--btn-border-radius)]">
+                <div
+                    class="overlay absolute top-0 left-0 bg-[var(--primary-dark)] h-full w-full opacity-[.5] rounded-[var(--btn-border-radius)]">
 
                 </div>
             </div>
@@ -653,26 +744,32 @@ use RainLab\Blog\Models\Post;
     {% partial 'site/marquee/solutions-marquee' %}
 </section>
 
-<section class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] rounded reveal-fade-in reveal-fade-in--up">
-    <div class="border-gradient-outline bg-gradient4 rounded-[var(--btn-border-radius)] p-[1.5rem] py-[3rem] sm:p-[3rem] xl:p-[5rem] hover-blob-wrap">
+<section
+    class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] rounded reveal-fade-in reveal-fade-in--up">
+    <div
+        class="border-gradient-outline bg-gradient4 rounded-[var(--btn-border-radius)] p-[1.5rem] py-[3rem] sm:p-[3rem] xl:p-[5rem] hover-blob-wrap">
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-[5rem] mb-10">
             <div class="hidden xl:block reveal-fade-in reveal-fade-in--up">
-                <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
+                <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}"
+                    alt="">
             </div>
             <div class="flex justify-center flex-col reveal-fade-in reveal-fade-in--up">
                 <h2 class="text-white mb-5 lg:mb-10 fs-inbetween">
                     Our Products
                 </h2>
                 <div class="block xl:hidden mb-5 lg:mb-10">
-                    <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}" alt="">
+                    <img class="img-fluid rounded-[var(--btn-border-radius)]" src="{{ 'home/our-products.jpg'|media }}"
+                        alt="">
                 </div>
                 <p class="text-white mb-5 lg:mb-10">
                     Empowering UAV operations with autonomous, adaptable, and seamlessly integrated solutions.
                 </p>
                 <div class="hover-blob-wrap">
-                    <a href="javascript:;" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                    <a href="javascript:;"
+                        class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
                         <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
-                            <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                            <span
+                                class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
                             <span class="btn-text relative !z-[12]">
                                 Discover More
                             </span>
@@ -691,99 +788,119 @@ use RainLab\Blog\Models\Post;
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
-                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
+            <a href="javascript:;"
+                class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div
+                    class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         COMMAND &<br>
                         CONTROL
-                    </h5>
-                    <div class="flex items-center justify-center img-cont relative z-[5]">
-                        <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
-                    </div>
-                    <div class="flex items-end justify-end mt-[1.3rem] relative z-[5]">
-                        <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </button>
-                    </div>
+                        </h5>
+                        <div class="flex items-center justify-center img-cont relative z-[5]">
+                            <img class="img-fluid" src="{{ 'products/command-control.png'|media }}" alt="">
+                        </div>
+                        <div class="flex items-end justify-end mt-[1.3rem] relative z-[5]">
+                            <button
+                                class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative"
+                                href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </button>
+                        </div>
                 </div>
                 <div class="blob"></div>
                 <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
-                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+            <a href="javascript:;"
+                class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div
+                    class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         AIR SYSTEMS
-                    </h5>
-                    <div class="flex items-center justify-center img-cont relative z-[5]">
-                        <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
-                    </div>
-                    <div class="flex items-end justify-end mt-5 relative z-[5]">
-                        <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </button>
-                    </div>
+                        </h5>
+                        <div class="flex items-center justify-center img-cont relative z-[5]">
+                            <img class="img-fluid" src="{{ 'products/air-systems.png'|media }}" alt="">
+                        </div>
+                        <div class="flex items-end justify-end mt-5 relative z-[5]">
+                            <button
+                                class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative"
+                                href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </button>
+                        </div>
                 </div>
                 <div class="blob"></div>
                 <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
-                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+            <a href="javascript:;"
+                class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div
+                    class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         NAVAL SYSTEMS
-                    </h5>
-                    <div class="flex items-center justify-center img-cont relative z-[5]">
-                        <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
-                    </div>
-                    <div class="flex items-end justify-end mt-5 relative z-[5]">
-                        <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </button>
-                    </div>
+                        </h5>
+                        <div class="flex items-center justify-center img-cont relative z-[5]">
+                            <img class="img-fluid" src="{{ 'products/naval-systems.png'|media }}" alt="">
+                        </div>
+                        <div class="flex items-end justify-end mt-5 relative z-[5]">
+                            <button
+                                class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative"
+                                href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </button>
+                        </div>
                 </div>
                 <div class="blob"></div>
                 <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
-                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
+            <a href="javascript:;"
+                class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div
+                    class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full">
                     <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         AMMUNITION
-                    </h5>
-                    <div class="flex items-center justify-center img-cont relative z-[5]">
-                        <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
-                    </div>
-                    <div class="flex items-end justify-end mt-5 relative z-[5]">
-                        <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </button>
-                    </div>
+                        </h5>
+                        <div class="flex items-center justify-center img-cont relative z-[5]">
+                            <img class="img-fluid" src="{{ 'products/ammunition.png'|media }}" alt="">
+                        </div>
+                        <div class="flex items-end justify-end mt-5 relative z-[5]">
+                            <button
+                                class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative"
+                                href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </button>
+                        </div>
                 </div>
                 <div class="blob"></div>
                 <div class="fakeblob"></div>
             </a>
-            <a href="javascript:;" class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
-                <div class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full hover-blob--inner">
+            <a href="javascript:;"
+                class="hover-blob-container gradient-card block rounded-[var(--btn-border-radius)] z-[3] reveal-fade-in reveal-fade-in--up p-[2px]">
+                <div
+                    class="hover-blob--inner gradient-card--content rounded-[var(--btn-border-radius)] bg-gradient3 p-[2rem] z-[1] h-full hover-blob--inner">
                     <h4 class="uppercase text-white mb-10 font-bold relative z-[5]">
                         ENGINEERING &<br>
                         SERVICES
-                    </h5>
-                    <div class="flex items-center justify-center img-cont relative z-[5]">
-                        <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
-                    </div>
-                    <div class="flex items-end justify-end mt-5 relative z-[5]">
-                        <button class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative" href="">
-                            <span class="arrow">
-                                {% partial 'icons/arrow-right--diagonal' %}
-                            </span>
-                        </button>
-                    </div>
+                        </h5>
+                        <div class="flex items-center justify-center img-cont relative z-[5]">
+                            <img class="img-fluid" src="{{ 'products/engineering-services.png'|media }}" alt="">
+                        </div>
+                        <div class="flex items-end justify-end mt-5 relative z-[5]">
+                            <button
+                                class="gespi-cta gespi-cta--transparent p-[1.5rem] bg-transparent inline-block p-size flex w-fit uppercase border-[var(--primary-lighter)] border-[1px] rounded-[var(--btn-border-radius)] relative"
+                                href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </button>
+                        </div>
                 </div>
                 <div class="blob"></div>
                 <div class="fakeblob"></div>
@@ -801,14 +918,17 @@ use RainLab\Blog\Models\Post;
     {% partial 'site/marquee/partners-marquee' %}
 </section>
 
-<section class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] reveal-fade-in reveal-fade-in--up hover-blob-wrap">
+<section
+    class="xl:container section-padding--x section-padding-lg--b xl:!px-[3rem] reveal-fade-in reveal-fade-in--up hover-blob-wrap">
     <div class="flex items-center justify-center">
         <h2 class="text-white mb-5 lg:mb-10 text-center">
             Partners & Memberships
         </h2>
     </div>
-    <div class="partners-section border-gradient-outline bg-[var(--primary-mid)] p-[1.5rem] md:p-[3rem] rounded-[var(--btn-border-radius)]">
-        <div class="hidden sm:grid partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] md:gap-[2px] bg-gradient5 w-full">
+    <div
+        class="partners-section border-gradient-outline bg-[var(--primary-mid)] p-[1.5rem] md:p-[3rem] rounded-[var(--btn-border-radius)]">
+        <div
+            class="hidden sm:grid partners-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] md:gap-[2px] bg-gradient5 w-full">
             <div class="absolute top-0 left-0 w-full h-full z-[-1]">
                 <div class="hover-blob-container">
                     <div class="blob !max-w-[70%] !opacity-[1]"></div>
@@ -816,57 +936,68 @@ use RainLab\Blog\Models\Post;
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/clc.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/embraer.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/emgepron.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/erillisverkot.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/GOL.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/IFI.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/imbel.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/dde.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/finish-defence.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/meprolight.png'|media }}" alt="">
                 </div>
             </div>
             <div class="bg-[var(--primary-mid)] p-[2rem] py-[3rem]">
-                <div class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
+                <div
+                    class="z-[10] relative w-full h-full flex items-center justify-center reveal-fade-in reveal-fade-in--up">
                     <img class="img-fluid" src="{{ 'partners/arnold.png'|media }}" alt="">
                 </div>
             </div>
@@ -976,9 +1107,11 @@ use RainLab\Blog\Models\Post;
                 <h2 class="text-white">Latest News</h2>
             </div>
             <div class="hover-blob-wrap">
-                <a href="{{ "news/index"|page }}" class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                <a href="{{ " news/index"|page }}"
+                    class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
                     <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
-                        <span class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                        <span
+                            class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
                         <span class="btn-text relative !z-[12]">
                             Discover More
                         </span>
@@ -1001,19 +1134,25 @@ use RainLab\Blog\Models\Post;
                 <div class="flex flex-col justify-between h-full">
                     <div class="">
                         <div class="post-thumbnail mb-5 flex items-center justify-center">
-                            <img src="{{ post.featured_images[0].path }}" alt="Modirum" class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
+                            <img src="{{ post.featured_images[0].path }}" alt="Modirum"
+                                class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
                         </div>
                         <div class="post-content px-6 mb-10">
-                            <h5 class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">{{ post.title|raw }}</h5>
-                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">{{ post.excerpt|raw }}</p>
+                            <h5
+                                class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">
+                                {{ post.title|raw }}</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">{{
+                                post.excerpt|raw }}</p>
                         </div>
                     </div>
                     <div class="hover-blob-wrap">
-                        <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}" class="hover-blob-container btn-lg-arrow primary-dark">
+                        <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}"
+                            class="hover-blob-container btn-lg-arrow primary-dark">
                             <span class="btn-text relative z-[5]">Read article</span>
                             <span class="line relative z-[5]">
                                 {% partial 'icons/arrow-lg-right--icon' %}
-                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon." class="arrow-icon"> #}
+                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon."
+                                    class="arrow-icon"> #}
                             </span>
                             <div class="blob"></div>
                             <div class="fakeblob"></div>
@@ -1027,12 +1166,12 @@ use RainLab\Blog\Models\Post;
 </section>
 
 {% put scripts %}
-    <script>
-        const partnersSlider = new Swiper(".partners-slider", {
-            slidesPerView: 1,
-            autoplay: true,
-            loop: true,
-            speed: 700, 
-        });
-    </script>
+<script>
+    const partnersSlider = new Swiper(".partners-slider", {
+        slidesPerView: 1,
+        autoplay: true,
+        loop: true,
+        speed: 700,
+    });
+</script>
 {% endput %}
