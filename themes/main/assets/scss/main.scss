@@ -621,13 +621,12 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
         }
         .gespi-logo--small, .logo-big{
             opacity: 0;
-            display: none;
-            transition: opacity 1s ease;
+            transition: opacity .2s ease;
         
             &.visible {
                 opacity: 1;
                 display: block;
-                transition: opacity 1s ease;
+                transition: opacity .2s ease;
             }
         }
     }

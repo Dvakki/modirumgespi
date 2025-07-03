@@ -18,7 +18,10 @@ const isProduction = process.env.NODE_ENV != "production";
 
 export default defineConfig({
     // Included assets will use this path as the base URL.
-    base: `/themes/${themeName}/assets/build/`,
+    base: isProduction
+        ? `/themes/${themeName}/assets/build/`
+        : `/modirumgespi/themes/${themeName}/assets/build/`,
+    // base: `/themes/${themeName}/assets/build/`,
     build: {
         rollupOptions: {
             input,
