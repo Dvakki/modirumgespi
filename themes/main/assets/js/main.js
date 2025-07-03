@@ -1,6 +1,6 @@
 import Lenis from 'lenis'
 
-import gsap from "gsap";
+import { gsap } from "gsap";
     
 import { CustomEase } from "gsap/CustomEase";
     
@@ -9,9 +9,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
-gsap.registerPlugin(Flip,ScrollTrigger,ScrollToPlugin,MotionPathPlugin,TextPlugin,CustomEase,DrawSVGPlugin);
+gsap.registerPlugin(Flip,ScrollTrigger,ScrollToPlugin,MotionPathPlugin,TextPlugin,CustomEase);
 
 window.gsap = gsap;
 
