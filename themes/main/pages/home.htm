@@ -640,7 +640,7 @@ use RainLab\Blog\Models\Post;
                 </style>
                 {% endput %}
                 <div
-                    class="absolute right-0 top-0 section-padding--t flex items-center justify-center reveal-fade-in w-[90%]">
+                    class="absolute right-0 top-0 section-padding--t flex items-center justify-center reveal-fade-in w-[90%] z-[-1]">
                     <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
                 </div>
             </div>
@@ -656,7 +656,7 @@ use RainLab\Blog\Models\Post;
                 </div>
             </div>
         </div>
-        <div class="xl:container flex items-end section-padding--x xl:!px-[3rem] reveal-fade-in reveal-fade-in--up">
+        <div class="xl:container flex items-end section-padding--x xl:!px-[3rem] reveal-fade-in reveal-fade-in--up z-[3]">
             <div class="hero-slider py-5 overflow-hidden self-end">
                 <div class="lg:flex lg:items-center justify-between gap-[5vw]">
                     {% partial 'site/marquee/certificates-marquee' %}

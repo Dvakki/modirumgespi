@@ -1,6 +1,6 @@
 import Lenis from 'lenis'
 
-import { gsap } from "gsap";
+import gsap from "gsap";
     
 import { CustomEase } from "gsap/CustomEase";
     
@@ -9,9 +9,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
-// import { DrawSVG } from "gsap/DrawSVGPlugin";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
-gsap.registerPlugin(Flip,ScrollTrigger,ScrollToPlugin,MotionPathPlugin,TextPlugin,CustomEase);
+gsap.registerPlugin(Flip,ScrollTrigger,ScrollToPlugin,MotionPathPlugin,TextPlugin,CustomEase,DrawSVGPlugin);
 
 window.gsap = gsap;
 
@@ -333,16 +333,27 @@ window.addEventListener('DOMContentLoaded', () => {
     const initHeader = () => {
         let header = document.querySelector('.site-header');
         let heroBanner = document.querySelector('.hero-banner');
-        let prevScrollpos = window.scrollY;
         let headerHeight = header.offsetHeight;
         let logo = header.querySelector('.header-logo img');
         let logoSmall = document.querySelector('.gespi-logo--small');
-        let logoLight = logo.getAttribute('data-light');
 
         // DROPDOWN
         let dropdownParents = header.querySelectorAll('.dropdown-parent');
 
         if(!header) return;
+
+        window.onscroll = function () {
+            let currentScrollPos = window.scrollY;
+            if (currentScrollPos < 20) {
+                logoSmall.classList.remove('visible');
+                logo.classList.add('visible');
+                
+            } else {
+                logoSmall.classList.add('visible');
+                logo.classList.remove('visible');
+                
+            }
+        }
 
         if(desktopMQ.matches) {
             dropdownParents.forEach((parent) => {
@@ -385,19 +396,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 });
         });
 
-        window.onscroll = function () {
-            let currentScrollPos = window.scrollY;
-            if (currentScrollPos < 20) {
-                // header.style.top = "0";
-                logoSmall.classList.remove('visible');
-                logo.classList.add('visible');
-                
-            } else {
-                logoSmall.classList.add('visible');
-                logo.classList.remove('visible');
-                
-            }
-        }
+        
 
         if(!heroBanner) return;
 
