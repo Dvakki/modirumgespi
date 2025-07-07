@@ -463,7 +463,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: "/themes/main/assets/js/gespi-logo--small.json",
+                path: "../themes/main/assets/js/gespi-logo--small.json",
             });
 
             console.log("✅ Lottie initialized");
