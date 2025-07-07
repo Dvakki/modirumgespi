@@ -445,6 +445,7 @@ window.addEventListener("DOMContentLoaded", () => {
         let lastScrollY = window.scrollY;
 
         let lottieLogo = document.querySelector(".gespi-logo--small");
+        let lottieLogoPath = lottieLogo.getAttribute('data-path');
         let logo = document.querySelector(".header-logo .logo-big");
 
         if (!lottieLogo || !logo) return;
@@ -463,7 +464,7 @@ window.addEventListener("DOMContentLoaded", () => {
                 renderer: "svg",
                 loop: false,
                 autoplay: false,
-                path: "../themes/main/assets/js/gespi-logo--small.json",
+                path: lottieLogoPath,
             });
 
             console.log("✅ Lottie initialized");
