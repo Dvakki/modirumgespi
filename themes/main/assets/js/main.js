@@ -339,10 +339,43 @@ window.addEventListener('DOMContentLoaded', () => {
         // DROPDOWN
         let dropdownParents = header.querySelectorAll('.dropdown-parent');
 
-        if(!header) return;
+        let animation; // store the Lottie animation instance
+        let hasPlayed = false; // track if animation was already played in current scroll cycle
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const container = document.querySelector('.gespi-logo--small');
+            if (!container) return;
+
+            // Scroll crossed from below → above 20px
+            if (scrollY > 20 && !hasPlayed) {
+                hasPlayed = true;
+
+                // If animation already exists, destroy and reinitialize it
+                if (animation) {
+                    animation.destroy();
+                }
+
+                // Load and play the Lottie animation
+                animation = lottie.loadAnimation({
+                    container: container,
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: 'themes/main/assets/js/gespi-logo--small.json',
+                });
+            }
+
+            // Reset when user scrolls back below 20px
+            if (scrollY <= 20 && hasPlayed) {
+                hasPlayed = false;
+
+            }
+        });
 
         window.onscroll = function () {
             let currentScrollPos = window.scrollY;
+
             if (currentScrollPos < 20) {
                 logoSmall.classList.remove('visible');
                 logo.classList.add('visible');
@@ -350,7 +383,6 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 logoSmall.classList.add('visible');
                 logo.classList.remove('visible');
-                
             }
         }
 
