@@ -617,17 +617,24 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
             mix-blend-mode: multiply;
         }
         .gespi-logo--small {
+            opacity: 0;
             width: 2rem;
         }
-        .gespi-logo--small, .logo-big{
+        .logo-big, .gespi-logo--small {
             opacity: 0;
-            transition: opacity .3s ease;
         
             &.visible {
                 opacity: 1;
                 display: block;
-                transition: opacity .3s ease;
+                transition: opacity 1s ease;
             }
+        }
+
+        .logo-big {
+            transition: opacity .3s ease;
+        }
+        .gespi-logo--small {
+            transition: opacity .3s ease;
         }
     }
 
