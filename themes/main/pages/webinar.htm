@@ -313,8 +313,8 @@ use RainLab\Blog\Models\Post;
 
 <section class="latest-news-section overflow-x-hidden reveal-fade-in reveal-fade-in--up">
     <div class="xl:container section-padding--x xl:!px-[3rem] overflow-hidden">
-        <div class="section-header flex gap-5 flex-col lg:flex-row justify-between md:items-end mb-10 lg:mb-20">
-            <div class="flex flex-col">
+        <div class="section-header flex gap-5 flex-col lg:flex-row justify-between mb-10 lg:mb-20">
+            <div class="flex flex-col w-full">
                 <h2 class="lg:pl-[4rem] opacity-[.3] mb-5 lg:mb-10 fs-inbetween">
                     Latest News.
                 </h2>
@@ -337,30 +337,33 @@ use RainLab\Blog\Models\Post;
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt repellat laboriosam amet dolorem, molestiae rerum similique illo accusamus ratione. Repellat!
                             </p>
                         </div>
+                        <div class="flex lg:justify-center items-end">
+                            <div class="hover-blob-wrap">
+                                <a href="{{ " news/index"|page }}"
+                                    class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                    <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                        <span
+                                            class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                        <span class="btn-text relative !z-[12]">
+                                            Discover More
+                                        </span>
+                                        <span class="btn-icon !z-[12]">
+                                            <div class="arrow-hover-btn" href="">
+                                                <span class="arrow">
+                                                    {% partial 'icons/arrow-right--diagonal' %}
+                                                </span>
+                                            </div>
+                                        </span>
+                                        <div class="blob blob--btn z-[-1]"></div>
+                                        <div class="fakeblob z-[-1]"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hover-blob-wrap">
-                <a href="{{ " news/index"|page }}"
-                    class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
-                    <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
-                        <span
-                            class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
-                        <span class="btn-text relative !z-[12]">
-                            Discover More
-                        </span>
-                        <span class="btn-icon !z-[12]">
-                            <div class="arrow-hover-btn" href="">
-                                <span class="arrow">
-                                    {% partial 'icons/arrow-right--diagonal' %}
-                                </span>
-                            </div>
-                        </span>
-                        <div class="blob blob--btn z-[-1]"></div>
-                        <div class="fakeblob z-[-1]"></div>
-                    </div>
-                </a>
-            </div>
+            
         </div>
         <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {% for post in news %}
