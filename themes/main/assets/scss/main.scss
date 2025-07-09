@@ -1407,7 +1407,7 @@ $sec_padd_lg: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
     background-size: var(--btn-size);
     overflow: hidden;
     position: relative;
-    width: fit-content;
+    width: max-content;
 
     &::before {
         content: '';

@@ -1,0 +1,400 @@
+url = "/webinar"
+title = "Webinar"
+layout = "default"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 100
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = 404
+==
+<?php
+use RainLab\Blog\Models\Post;
+
+    function onStart() {
+
+        $this['news'] = Post::where('published','1')->orderBy('published_at', 'desc')->paginate(50);
+
+    }
+?>
+==
+<section class="hero-banner overflow-hidden">
+    <div class="grid grid-cols-1 relative h-full">
+        <div class="banner--wrapper flex items-center justify-between offset-top">
+            <div class="xl:container w-full items-center relative section-padding--x z-[3] xl:!px-[3rem] 2xl:!px-[6rem] section-padding--y">
+                <div class="content flex flex-col items-center justify-center py-[3rem]relative z-2 reveal-fade-in">
+                    <h1 class="hero-title mb-5 lg:mb-10 text-white text-center">
+                        Modirum Gespi is where<br class="hidden sm:block">
+                        chemistry innovation thrives!
+                    </h1>
+                    <h4 class="mb-5 lg:mb-10 text-white text-center">
+                        Join our SpiroWebinars to learn and exchange<br class="hidden sm:block">
+                        on latest discovery chemistry topics
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="intersecting-section bg-gradient-document relative overflow-hidden">
+    <div class="xl:container section-padding--x xl:!px-[3rem] z-[10] relative">
+        <div class="flex flex-col reveal-fade-in reveal-fade-in--up">
+            <h2 class="lg:pl-[4rem] opacity-[.3] mb-5 lg:mb-10">
+                Who's speaking?
+            </h2>
+            <div class="flex gap-[3rem]">
+                <div class="hidden lg:flex flex-col gap-[1rem]">
+                    <h5 class="leading-none flex items-center justify-center gap-[1rem] p--big [writing-mode:sideways-lr]">
+                        Speakers
+                        <div class="w-[3px] h-[70px] bg-[var(--primary-lighter)]"></div>
+                    </h5>
+                </div>
+                <div class="flex flex-col w-full">
+                    <div class="max-w-[79ch]">
+                        <h4 class="mb-5 lg:mb-10 text-primary--lighter">
+                            About
+                        </h4>
+                        <h2 class="mb-5 lg:mb-10 text-white">
+                            Welcome to the <br class="hidden sm:block">
+                            Modirum Gespi Webinars.
+                        </h2>
+                        <p class="mb-5">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt repellat laboriosam amet dolorem, molestiae rerum similique illo accusamus ratione. Repellat!
+                        </p>
+                        <p class="mb-5 lg:mb-10">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ut autem commodi voluptates quibusdam, voluptate dolores explicabo deleniti modi possimus.
+                        </p>
+                        <div class="hover-blob-wrap">
+                            <a href="javascript:;"
+                                class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                <div
+                                    class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                    <span
+                                        class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                    <span class="btn-text relative !z-[12]">
+                                        Get to know us
+                                    </span>
+                                    <span class="btn-icon !z-[12]">
+                                        <div class="arrow-hover-btn" href="">
+                                            <span class="arrow">
+                                                {% partial 'icons/arrow-right--diagonal' %}
+                                            </span>
+                                        </div>
+                                    </span>
+                                    <div class="blob blob--btn z-[-1]"></div>
+                                    <div class="fakeblob z-[-1]"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section-padding-lg--t relative z[3]">
+                        <div class="max-w-[40rem] absolute top-[-13rem] left-[-8rem] floating-el z-[0] reveal-fade-in">
+                            {% partial 'icons/gespi-radial--blur' %}
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[3rem] relative z-[3]">
+                            <div class="flex flex-col lg:flex-row gap-[2rem] reveal-fade-in reveal-fade-in--up">
+                                <div class="rounded-[var(--btn-border-radius)]">
+                                    <img class="w-full h-auto img-fluid" src="https://placehold.co/250x250" alt="lorem ipsum">
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h4 class="mb-5">
+                                        Lorem Ipsum
+                                    </h4>
+                                    <p class="mb-5">
+                                        Lorem ipsum, Modirum Gespi
+                                    </p>
+                                    <div class="mb-5 w-[70px] bg-[var(--primary-lighter)] h-[3px]"></div>
+                                    <div class="hover-blob-wrap">
+                                        <a href="javascript:;"
+                                            class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                            <div
+                                                class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                                <span
+                                                    class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                                <span class="btn-text relative !z-[12]">
+                                                    Full bio
+                                                </span>
+                                                {# <span class="btn-icon !z-[12]">
+                                                    <div class="arrow-hover-btn" href="">
+                                                        <span class="arrow">
+                                                            {% partial 'icons/arrow-right--diagonal' %}
+                                                        </span>
+                                                    </div>
+                                                </span> #}
+                                                <div class="blob blob--btn z-[-1]"></div>
+                                                <div class="fakeblob z-[-1]"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col lg:flex-row gap-[2rem] reveal-fade-in reveal-fade-in--up">
+                                <div class="rounded-[var(--btn-border-radius)]">
+                                    <img class="w-full h-auto img-fluid" src="https://placehold.co/250x250" alt="lorem ipsum">
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h4 class="mb-5">
+                                        Lorem Ipsum
+                                    </h4>
+                                    <p class="mb-5">
+                                        Lorem ipsum, Modirum Gespi
+                                    </p>
+                                    <div class="mb-5 w-[70px] bg-[var(--primary-lighter)] h-[3px]"></div>
+                                    <div class="hover-blob-wrap">
+                                        <a href="javascript:;"
+                                            class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                            <div
+                                                class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                                <span
+                                                    class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                                <span class="btn-text relative !z-[12]">
+                                                    Full bio
+                                                </span>
+                                                {# <span class="btn-icon !z-[12]">
+                                                    <div class="arrow-hover-btn" href="">
+                                                        <span class="arrow">
+                                                            {% partial 'icons/arrow-right--diagonal' %}
+                                                        </span>
+                                                    </div>
+                                                </span> #}
+                                                <div class="blob blob--btn z-[-1]"></div>
+                                                <div class="fakeblob z-[-1]"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col lg:flex-row gap-[2rem] reveal-fade-in reveal-fade-in--up">
+                                <div class="rounded-[var(--btn-border-radius)]">
+                                    <img class="w-full h-auto img-fluid" src="https://placehold.co/250x250" alt="lorem ipsum">
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h4 class="mb-5">
+                                        Lorem Ipsum
+                                    </h4>
+                                    <p class="mb-5">
+                                        Lorem ipsum, Modirum Gespi
+                                    </p>
+                                    <div class="mb-5 w-[70px] bg-[var(--primary-lighter)] h-[3px]"></div>
+                                    <div class="hover-blob-wrap">
+                                        <a href="javascript:;"
+                                            class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                            <div
+                                                class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                                <span
+                                                    class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                                <span class="btn-text relative !z-[12]">
+                                                    Full bio
+                                                </span>
+                                                {# <span class="btn-icon !z-[12]">
+                                                    <div class="arrow-hover-btn" href="">
+                                                        <span class="arrow">
+                                                            {% partial 'icons/arrow-right--diagonal' %}
+                                                        </span>
+                                                    </div>
+                                                </span> #}
+                                                <div class="blob blob--btn z-[-1]"></div>
+                                                <div class="fakeblob z-[-1]"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col lg:flex-row gap-[2rem] reveal-fade-in reveal-fade-in--up">
+                                <div class="rounded-[var(--btn-border-radius)]">
+                                    <img class="w-full h-auto img-fluid" src="https://placehold.co/250x250" alt="lorem ipsum">
+                                </div>
+                                <div class="flex flex-col justify-center">
+                                    <h4 class="mb-5">
+                                        Lorem Ipsum
+                                    </h4>
+                                    <p class="mb-5">
+                                        Lorem ipsum, Modirum Gespi
+                                    </p>
+                                    <div class="mb-5 w-[70px] bg-[var(--primary-lighter)] h-[3px]"></div>
+                                    <div class="hover-blob-wrap">
+                                        <a href="javascript:;"
+                                            class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                                            <div
+                                                class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                                <span
+                                                    class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                                <span class="btn-text relative !z-[12]">
+                                                    Full bio
+                                                </span>
+                                                {# <span class="btn-icon !z-[12]">
+                                                    <div class="arrow-hover-btn" href="">
+                                                        <span class="arrow">
+                                                            {% partial 'icons/arrow-right--diagonal' %}
+                                                        </span>
+                                                    </div>
+                                                </span> #}
+                                                <div class="blob blob--btn z-[-1]"></div>
+                                                <div class="fakeblob z-[-1]"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute right-0 top-0 flex items-center justify-center reveal-fade-in">
+        <img src="{{ 'globals/modirum-icon.png'|media }}" alt="">
+    </div>
+</section>
+
+<section class="xl:container section-padding--x xl:!px-[3rem] relative section-padding-lg--y reveal-fade-in reveal-fade-in--up">
+    <div class="border-gradient-outline rounded-[var(--btn-border-radius)] section-padding lg:!px-[4rem] bg-gradient4 relative">
+        <div class="reveal-fade-in reveal-fade-in--up">
+            <div class="flex flex-col">
+                <h2 class="lg:pl-[4rem] opacity-[.3] mb-5 lg:mb-10 fs-inbetween">
+                    Register.
+                </h2>
+                <div class="flex gap-[3rem]">
+                    <div class="hidden lg:flex flex-col gap-[1rem]">
+                        <h5 class="leading-none flex items-center justify-center gap-[1rem] p--big [writing-mode:sideways-lr]">
+                            Registration
+                            <div class="w-[3px] h-[70px] bg-[var(--primary-lighter)]"></div>
+                        </h5>
+                    </div>
+                    <div class="flex flex-col lg:flex-row gap-[3rem] justify-between w-full">
+                        <div class="max-w-[79ch]">
+                            <h4 class="mb-5 lg:mb-10 text-primary--lighter">
+                                Join us
+                            </h4>
+                            <h2 class="mb-5 lg:mb-10 text-white fs-inbetween">
+                                Lorem ipsum dolor <br class="hidden sm:block">sit amet consectetur.
+                            </h2>
+                            <p class="">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt repellat laboriosam amet dolorem, molestiae rerum similique illo accusamus ratione. Repellat!
+                            </p>
+                        </div>
+                        <div class="flex flex-col justify-center gap-[2rem]">
+                            <div class="order-2 lg:order-1 flex justify-start lg:justify-end">
+                                <img class="max-w-[100px] w-full h-auto img-fluid" src="{{ 'assets/images/microsoft-teams.svg'|theme }}" alt="">
+                            </div>
+                            <div class="order-1 lg:order-2 hover-blob-wrap">
+                                <a href="javascript:;"
+                                    class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] block p-size">
+                                    <div
+                                        class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                                        <span
+                                            class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                                        <span class="btn-text relative !z-[12]">
+                                            Register now
+                                        </span>
+                                        <span class="btn-icon !z-[12]">
+                                            <div class="arrow-hover-btn" href="">
+                                                <span class="arrow">
+                                                    {% partial 'icons/arrow-right--diagonal' %}
+                                                </span>
+                                            </div>
+                                        </span>
+                                        <div class="blob blob--btn z-[-1]"></div>
+                                        <div class="fakeblob z-[-1]"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+
+<section class="latest-news-section overflow-x-hidden reveal-fade-in reveal-fade-in--up">
+    <div class="xl:container section-padding--x xl:!px-[3rem] overflow-hidden">
+        <div class="section-header flex gap-5 flex-col lg:flex-row justify-between md:items-end mb-10 lg:mb-20">
+            <div class="flex flex-col">
+                <h2 class="lg:pl-[4rem] opacity-[.3] mb-5 lg:mb-10 fs-inbetween">
+                    Latest News.
+                </h2>
+                <div class="flex gap-[3rem]">
+                    <div class="hidden lg:flex flex-col gap-[1rem]">
+                        <h5 class="leading-none flex items-center justify-center gap-[1rem] p--big [writing-mode:sideways-lr]">
+                            lorem ipsum
+                            <div class="w-[3px] h-[70px] bg-[var(--primary-lighter)]"></div>
+                        </h5>
+                    </div>
+                    <div class="flex flex-col lg:flex-row gap-[3rem] justify-between w-full">
+                        <div class="max-w-[79ch]">
+                            <h4 class="mb-5 lg:mb-10 text-primary--lighter">
+                                Lorem ipsum
+                            </h4>
+                            <h2 class="mb-5 lg:mb-10 text-white fs-inbetween">
+                                Lorem ipsum dolor <br class="hidden sm:block">sit amet consectetur.
+                            </h2>
+                            <p class="">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt repellat laboriosam amet dolorem, molestiae rerum similique illo accusamus ratione. Repellat!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hover-blob-wrap">
+                <a href="{{ " news/index"|page }}"
+                    class="hover-blob-container gespi-cta btn-bg-gradient rounded-[var(--btn-border-radius)] inline-block p-size">
+                    <div class="hover-blob--inner rounded-[var(--btn-border-radius)] relative z-[11] flex w-fit">
+                        <span
+                            class="btn-bg-gradient2 absolute top-0 left-0 w-full h-full z-[1] rounded-[var(--btn-border-radius)]"></span>
+                        <span class="btn-text relative !z-[12]">
+                            Discover More
+                        </span>
+                        <span class="btn-icon !z-[12]">
+                            <div class="arrow-hover-btn" href="">
+                                <span class="arrow">
+                                    {% partial 'icons/arrow-right--diagonal' %}
+                                </span>
+                            </div>
+                        </span>
+                        <div class="blob blob--btn z-[-1]"></div>
+                        <div class="fakeblob z-[-1]"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="fp-news-wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {% for post in news %}
+            <article class="fp-post rounded-[var(--btn-border-radius)] bg-white reveal-fade-in reveal-fade-in--up">
+                <div class="flex flex-col justify-between h-full">
+                    <div class="">
+                        <div class="post-thumbnail mb-5 flex items-center justify-center">
+                            <img src="{{ post.featured_images[0].path }}" alt="Modirum"
+                                class="img-fluid lazyload rounded-[var(--btn-border-radius)]">
+                        </div>
+                        <div class="post-content px-6 mb-10">
+                            <h5
+                                class="text-lg text-[var(--primary-dark)] mb-5 lg:mb-7 font-bold overflow-hidden text-ellipsis line-clamp-3">
+                                {{ post.title|raw }}</h5>
+                            <p class="text-[var(--text-light)] text-base overflow-hidden text-ellipsis line-clamp-3">{{
+                                post.excerpt|raw }}</p>
+                        </div>
+                    </div>
+                    <div class="hover-blob-wrap">
+                        <a href="{{ 'news/news-single'|page({ slug:post.slug }) }}"
+                            class="hover-blob-container btn-lg-arrow primary-dark">
+                            <span class="btn-text relative z-[5]">Read article</span>
+                            <span class="line relative z-[5]">
+                                {% partial 'icons/arrow-lg-right--icon' %}
+                                {# <img src="{{ 'assets/images/icons/triangle.png'|theme }}" alt="Arrow right icon."
+                                    class="arrow-icon"> #}
+                            </span>
+                            <div class="blob"></div>
+                            <div class="fakeblob"></div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
